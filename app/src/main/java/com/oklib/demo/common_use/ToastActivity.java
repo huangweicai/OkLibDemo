@@ -18,7 +18,7 @@ import static com.oklib.demo.AppOkLib.application;
  * 时间：2017/8/3
  * 作者：黄伟才
  * 简书：http://www.jianshu.com/p/87e7392a16ff
- * github：https://github.com/huangweicai/oklib
+ * github：https://github.com/huangweicai/OkLibDemo
  * 描述：Toast及Snackbar使用演示
  */
 

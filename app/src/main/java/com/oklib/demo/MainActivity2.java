@@ -12,7 +12,7 @@ import com.oklib.demo.base.BaseAppActivity;
  * 时间：2017/8/5
  * 作者：黄伟才
  * 简书：http://www.jianshu.com/p/87e7392a16ff
- * github：https://github.com/huangweicai/oklib
+ * github：https://github.com/huangweicai/OkLibDemo
  * 描述：首页功能展示入口
  */
 
