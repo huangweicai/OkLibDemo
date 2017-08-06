@@ -5,7 +5,7 @@ package com.oklib.demo;
  * 作者：黄伟才
  * 简书：http://www.jianshu.com/p/87e7392a16ff
  * github：https://github.com/huangweicai/oklib
- * 描述：常用数据
+ * 描述：常用数据管理
  */
 
 public final class Common {
