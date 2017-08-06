@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">OkLibDemo</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
     <string name="normal_toast_with_icon">NORMAL TOAST (WITH ICON)</string>
     <string name="normal_toast_without_icon">NORMAL TOAST (WITHOUT ICON)</string>
     <string name="warning_toast">WARNING TOAST</string>

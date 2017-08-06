@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/exceptional_support"
+            android:icon="@mipmap/qr_code_icon"
+            android:title="打赏支持" />
+        <item
+            android:id="@+id/feedback_to_improve"
+            android:icon="@mipmap/feedback_icon"
+            android:title="反馈改进" />
+        <item
+            android:id="@+id/change_skin"
+            android:icon="@mipmap/skin_icon"
+            android:title="一键换肤" />
+        <item
+            android:id="@+id/about_author"
+            android:icon="@mipmap/about_icon"
+            android:title="关于作者" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/jianshu"
+                android:icon="@mipmap/jianshu_icon"
+                android:title="简书" />
+            <item
+                android:id="@+id/github"
+                android:icon="@mipmap/github_icon"
+                android:title="GitHub" />
+        </menu>
+    </item>
+
+</menu>

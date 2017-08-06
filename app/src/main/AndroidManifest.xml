@@ -28,6 +28,7 @@
         <activity android:name=".view.TextViewActivity" />
         <activity android:name="com.oklib.demo.view.TextViewActivity" />
         <activity android:name="com.oklib.demo.view.SuperTextViewActivity" />
+        <activity android:name="com.oklib.demo.PayActivity" />
 
         <!--7.0适配临时权限-->
         <provider
