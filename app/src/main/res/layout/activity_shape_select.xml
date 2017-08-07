@@ -11,6 +11,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <com.oklib.view.CommonToolBar
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color" />
+
         <com.oklib.view.StateImageView
             android:id="@+id/iv_text_test"
             android:layout_width="80dp"

@@ -1,9 +1,14 @@
-package com.oklib.demo.view;
+package com.oklib.demo.common_components;
 
 import android.view.View;
 
+import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
+import com.oklib.demo.integration_framework.PermissionActivity;
+import com.oklib.demo.window_related.CenterWinListDialog;
+import com.oklib.view.CommonToolBar;
 import com.oklib.view.StateButton;
 import com.oklib.view.StateImageView;
 
@@ -41,7 +46,27 @@ public class ShapeSelectActivity extends BaseAppActivity {
 
     @Override
     protected void initTitle() {
-
+        CommonToolBar tb_toolbar = findView(R.id.tb_toolbar);
+        tb_toolbar.setImmerseState(this, true)//是否侵入，默认侵入
+                .setNavIcon(R.drawable.white_back_icon)//返回图标
+                .setNavigationListener(new View.OnClickListener() {//返回图标监听
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                }).setCenterTitle(getIntent().getStringExtra(Common.TITLE), 17, R.color.app_white_color)//中间标题
+                .setRightTitle("更多", 14, R.color.app_white_color)//右标题
+                .setRightTitleListener(new View.OnClickListener() {//有标题监听
+                    @Override
+                    public void onClick(View v) {
+                        FunctionDetailBean[] beans = {
+                                new FunctionDetailBean(context.getClass().getSimpleName(), "https://github.com/huangweicai/OkLibDemo"),
+                        };
+                        final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
+                        centerWinListDialog.show();
+                        centerWinListDialog.addDataList(ShapeSelectActivity.this, beans);
+                    }
+                });
     }
 
     @Override

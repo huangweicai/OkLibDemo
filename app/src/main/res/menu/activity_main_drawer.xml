@@ -11,9 +11,9 @@
             android:icon="@mipmap/feedback_icon"
             android:title="反馈改进" />
         <item
-            android:id="@+id/change_skin"
-            android:icon="@mipmap/skin_icon"
-            android:title="一键换肤" />
+            android:id="@+id/check_updates"
+            android:icon="@mipmap/check_update_icon"
+            android:title="检测更新" />
         <item
             android:id="@+id/about_author"
             android:icon="@mipmap/about_icon"

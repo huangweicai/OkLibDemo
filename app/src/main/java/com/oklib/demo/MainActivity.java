@@ -12,13 +12,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.view.CommonToolBar;
 
 
 /**
@@ -31,6 +31,7 @@ import com.oklib.demo.base.BaseAppActivity;
 public class MainActivity extends BaseAppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private CommonToolBar toolbar;
     private TabLayout toolbar_tl_tab;
     private ViewPager vp_container;
     private String[] titles = {"集成框架", "常用组件", "常用工具", "窗口相关"};
@@ -42,21 +43,28 @@ public class MainActivity extends BaseAppActivity
 
     @Override
     protected void initVariable() {
-
+        setStateBarStyle();
     }
 
     @Override
     protected void initTitle() {
-
+        toolbar = (CommonToolBar) findViewById(R.id.toolbar);
+        //toolbar与菜单栏不联系，不会作用到
+        //setSupportActionBar(toolbar);
+        toolbar.setCenterTitle("OkLib库演示", 17, R.color.app_white_color);
+        toolbar.setImmerseState(this);
+        toolbar.setRightTitle("支持详细", 14, R.color.app_white_color).setRightTitleListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, SupportingDetailsActivity.class);
+                intent.putExtra(Common.TITLE, "支持详细");
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
     protected void initView() {
-        setStateBarStyle();
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -148,14 +156,14 @@ public class MainActivity extends BaseAppActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.exceptional_support) {
-            Intent intent = new Intent(this, PayActivity.class);
+            Intent intent = new Intent(this, SupportExceptionalActivity.class);
             startActivity(intent);
         } else if (id == R.id.feedback_to_improve) {
-            Toast.makeText(this, "开发中···", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.change_skin) {
-            Toast.makeText(this, "开发中···", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.check_updates) {
+            Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
         } else if (id == R.id.about_author) {
-            Toast.makeText(this, "开发中···", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
         } else if (id == R.id.jianshu) {//简书
             Intent intent= new Intent();
             intent.setAction("android.intent.action.VIEW");
@@ -165,7 +173,7 @@ public class MainActivity extends BaseAppActivity
         } else if (id == R.id.github) {//GitHub
             Intent intent= new Intent();
             intent.setAction("android.intent.action.VIEW");
-            Uri content_url = Uri.parse("https://github.com/huangweicai/oklib");
+            Uri content_url = Uri.parse("https://github.com/huangweicai/OkLibDemo");
             intent.setData(content_url);
             startActivity(intent);
         }

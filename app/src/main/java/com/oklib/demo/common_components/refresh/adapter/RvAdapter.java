@@ -1,4 +1,4 @@
-package com.oklib.demo.refresh.adapter;
+package com.oklib.demo.common_components.refresh.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.oklib.base.BaseRcvAdapter;
 import com.oklib.demo.R;
-import com.oklib.demo.refresh.bean.ViewHolderBeam;
+import com.oklib.demo.common_components.refresh.bean.ViewHolderBeam;
 
 
 /**

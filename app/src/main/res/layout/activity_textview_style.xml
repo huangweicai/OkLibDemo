@@ -9,6 +9,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.oklib.view.CommonToolBar
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color" />
+
         <!--淡入淡出TextView-->
         <com.oklib.view.FadingTextView
             android:id="@+id/fadingTextView"

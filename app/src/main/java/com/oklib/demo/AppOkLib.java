@@ -18,6 +18,7 @@ public class AppOkLib extends Application {
     public void onCreate() {
         super.onCreate();
         application = this;
+        //使用OkLib库必须先调用初始化方法
         OkLib.init(this);
     }
 }

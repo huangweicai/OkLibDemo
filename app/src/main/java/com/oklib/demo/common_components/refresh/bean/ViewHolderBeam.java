@@ -1,4 +1,4 @@
-package com.oklib.demo.refresh.bean;
+package com.oklib.demo.common_components.refresh.bean;
 
 /**
  * 创建时间：2017/4/18

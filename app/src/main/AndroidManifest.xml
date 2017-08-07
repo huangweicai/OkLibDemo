@@ -5,9 +5,9 @@
     <application
         android:name=".AppOkLib"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/app_icon"
         android:supportsRtl="true"
         android:theme="@style/oklibAppTheme">
         <activity android:name=".MainActivity">
@@ -17,18 +17,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.oklib.demo.refresh.RefreshActivity"/>
-        <activity android:name="com.oklib.demo.glide_imageview.GlideImageViewActivity"/>
-        <activity android:name=".permission.PermissionActivity" />
-        <activity android:name="com.oklib.demo.camera.CameraActivity" />
-        <activity android:name="com.oklib.demo.common_use.LoggerActivity" />
-        <activity android:name="com.oklib.demo.common_use.ToastActivity" />
-        <activity android:name="com.oklib.demo.common_use.ToolbarActivity" />
-        <activity android:name="com.oklib.demo.view.ShapeSelectActivity" />
-        <activity android:name=".view.TextViewActivity" />
-        <activity android:name="com.oklib.demo.view.TextViewActivity" />
+        <activity android:name=".common_components.refresh.RefreshActivity"/>
+        <activity android:name="com.oklib.demo.common_components.GlideImageViewActivity"/>
+        <activity android:name="com.oklib.demo.integration_framework.PermissionActivity" />
+        <activity android:name="com.oklib.demo.integration_framework.CameraActivity" />
+        <activity android:name="com.oklib.demo.commo_tools.LoggerActivity" />
+        <activity android:name="com.oklib.demo.commo_tools.ToastActivity" />
+        <activity android:name="com.oklib.demo.common_components.ToolbarActivity" />
+        <activity android:name="com.oklib.demo.common_components.ShapeSelectActivity" />
+        <activity android:name=".common_components.TextViewActivity" />
+        <activity android:name="com.oklib.demo.common_components.TextViewActivity" />
         <activity android:name="com.oklib.demo.view.SuperTextViewActivity" />
-        <activity android:name="com.oklib.demo.PayActivity" />
+        <activity android:name="com.oklib.demo.SupportExceptionalActivity" />
+        <activity android:name="com.oklib.demo.SupportingDetailsActivity" />
 
         <!--7.0适配临时权限-->
         <provider

@@ -1,4 +1,4 @@
-package com.oklib.demo.common_use;
+package com.oklib.demo.common_components;
 
 import android.view.View;
 
