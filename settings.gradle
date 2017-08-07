@@ -1,1 +1,1 @@
-include ':app', ':oklib', ':multi-image-selector'
+include ':app', ':oklib', ':multi-image-selector', ':bmoblib'
