@@ -1,7 +1,9 @@
 package com.oklib.demo;
 
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -64,6 +66,7 @@ public class SupportingDetailsActivity extends BaseAppActivity {
                 });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
     protected void initView() {
         toolbar_tl_tab = findView(R.id.toolbar_tl_tab);

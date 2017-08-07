@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OkLibDemo.iml" filepath="$PROJECT_DIR$/OkLibDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bmoblib/bmoblib.iml" filepath="$PROJECT_DIR$/bmoblib/bmoblib.iml" />
       <module fileurl="file://$PROJECT_DIR$/multi-image-selector/multi-image-selector.iml" filepath="$PROJECT_DIR$/multi-image-selector/multi-image-selector.iml" />
       <module fileurl="file://$PROJECT_DIR$/oklib/oklib.iml" filepath="$PROJECT_DIR$/oklib/oklib.iml" />
     </modules>
