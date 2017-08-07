@@ -140,7 +140,6 @@ public class MainActivity extends BaseAppActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.exceptional_support) {
             Intent intent = new Intent(this, SupportExceptionalActivity.class);
