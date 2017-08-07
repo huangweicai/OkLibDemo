@@ -1,4 +1,4 @@
-package com.oklib.demo;
+package com.bmoblib;
 
 /**
  * 时间：2017/8/7
@@ -8,5 +8,5 @@ package com.oklib.demo;
  * 描述：
  */
 
-public class TestPull {
+public class BmobTest {
 }
