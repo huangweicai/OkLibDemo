@@ -3,7 +3,6 @@ package com.oklib.demo.window_related;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -15,7 +14,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.oklib.base.BaseDialogFragment;
+import com.oklib.demo.Common;
 import com.oklib.demo.R;
+import com.oklib.demo.WebViewActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.util.SysShareUtil;
 
@@ -193,10 +194,9 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
                 @Override
                 public void onClick(View v) {
                     //直接打开
-                    Intent intent= new Intent();
-                    intent.setAction("android.intent.action.VIEW");
-                    Uri content_url = Uri.parse(bean.getUrl());
-                    intent.setData(content_url);
+                    Intent intent = new Intent(getContext(), WebViewActivity.class);
+                    intent.putExtra(Common.TITLE, "进度WebView使用演示");
+                    intent.putExtra(Common.URL, bean.getUrl());
                     getContext().startActivity(intent);
                 }
             });

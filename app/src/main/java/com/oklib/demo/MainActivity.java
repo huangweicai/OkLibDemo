@@ -1,9 +1,9 @@
 package com.oklib.demo;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -128,25 +128,12 @@ public class MainActivity extends BaseAppActivity
         }
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -165,17 +152,26 @@ public class MainActivity extends BaseAppActivity
         } else if (id == R.id.about_author) {
             Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
         } else if (id == R.id.jianshu) {//简书
-            Intent intent= new Intent();
-            intent.setAction("android.intent.action.VIEW");
-            Uri content_url = Uri.parse("http://www.jianshu.com/p/87e7392a16ff");
-            intent.setData(content_url);
-            startActivity(intent);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    intent.putExtra(Common.TITLE, "进度WebView使用演示");
+                    intent.putExtra(Common.URL, "http://www.jianshu.com/p/87e7392a16ff");
+                    startActivity(intent);
+                }
+            }, 200);
+
         } else if (id == R.id.github) {//GitHub
-            Intent intent= new Intent();
-            intent.setAction("android.intent.action.VIEW");
-            Uri content_url = Uri.parse("https://github.com/huangweicai/OkLibDemo");
-            intent.setData(content_url);
-            startActivity(intent);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    intent.putExtra(Common.TITLE, "进度WebView使用演示");
+                    intent.putExtra(Common.URL, "https://github.com/huangweicai/OkLibDemo");
+                    startActivity(intent);
+                }
+            }, 200);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

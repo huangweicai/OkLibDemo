@@ -77,5 +77,6 @@ public final class Common {
     //---------------------------
 
     public static final String TITLE = "title";
+    public static final String URL = "url";
 
 }

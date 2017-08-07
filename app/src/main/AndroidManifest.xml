@@ -30,6 +30,7 @@
         <activity android:name="com.oklib.demo.view.SuperTextViewActivity" />
         <activity android:name="com.oklib.demo.SupportExceptionalActivity" />
         <activity android:name="com.oklib.demo.SupportingDetailsActivity" />
+        <activity android:name=".WebViewActivity" />
 
         <!--7.0适配临时权限-->
         <provider
