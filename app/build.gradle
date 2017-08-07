@@ -27,6 +27,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile project(':oklib')
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile project(':oklib')//稳定版本换成命令引入
+    compile project(':bmoblib')//稳定版本注释掉
 }
