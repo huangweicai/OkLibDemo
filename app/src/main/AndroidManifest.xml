@@ -26,11 +26,10 @@
         <activity android:name="com.oklib.demo.common_components.ToolbarActivity" />
         <activity android:name="com.oklib.demo.common_components.ShapeSelectActivity" />
         <activity android:name=".common_components.TextViewActivity" />
-        <activity android:name="com.oklib.demo.common_components.TextViewActivity" />
-        <activity android:name="com.oklib.demo.view.SuperTextViewActivity" />
         <activity android:name="com.oklib.demo.SupportExceptionalActivity" />
         <activity android:name="com.oklib.demo.SupportingDetailsActivity" />
         <activity android:name=".WebViewActivity" />
+        <activity android:name=".FeedBackActivity" />
 
         <!--7.0适配临时权限-->
         <provider

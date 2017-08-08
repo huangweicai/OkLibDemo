@@ -52,7 +52,7 @@ public class PermissionActivity extends BaseAppActivity {
                         };
                         final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
                         centerWinListDialog.show();
-                        centerWinListDialog.addDataList(PermissionActivity.this, beans);
+                        centerWinListDialog.addDataList(context, beans);
                     }
                 });
     }

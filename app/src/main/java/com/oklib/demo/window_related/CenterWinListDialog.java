@@ -2,6 +2,7 @@ package com.oklib.demo.window_related;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -99,13 +100,35 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
         addDataList(getActivity(), titles);
     }
     //注意：多个窗口切换显示，使用该方法，getActivity()在多次切换容易null
-    public void addDataList(final Activity activity, final FunctionDetailBean... titles) {
+//    public void addDataList(final Activity activity, final FunctionDetailBean... titles) {
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                while (null == lv_title) {
+//                }
+//                activity.runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        if (null != titles) {
+//                            dataList.clear();
+//                            dataList.addAll(Arrays.asList(titles));
+//                            listAdapter.notifyDataSetChanged();
+//                            if (dataList.size() > 7) {
+//                                setWHSize(getScreenWidth(getContext()) * 4 / 5, getScreenWidth(getContext()));
+//                            }
+//                        }
+//                    }
+//                });
+//            }
+//        }).start();
+//    }
+    public void addDataList(final Context context, final FunctionDetailBean... titles) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while (null == lv_title) {
                 }
-                activity.runOnUiThread(new Runnable() {
+                ((Activity)context).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         if (null != titles) {
@@ -195,7 +218,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
                 public void onClick(View v) {
                     //直接打开
                     Intent intent = new Intent(getContext(), WebViewActivity.class);
-                    intent.putExtra(Common.TITLE, "进度WebView使用演示");
+                    intent.putExtra(Common.TITLE, bean.getName());
                     intent.putExtra(Common.URL, bean.getUrl());
                     getContext().startActivity(intent);
                 }

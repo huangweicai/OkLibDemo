@@ -139,40 +139,36 @@ public class MainActivity extends BaseAppActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.exceptional_support) {
-            Intent intent = new Intent(this, SupportExceptionalActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.feedback_to_improve) {
-            Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.check_updates) {
-            Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.about_author) {
-            Toast.makeText(this, "功能开放中···", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.jianshu) {//简书
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
+    public boolean onNavigationItemSelected(final MenuItem item) {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                int id = item.getItemId();
+                if (id == R.id.exceptional_support) {
+                    Intent intent = new Intent(context, SupportExceptionalActivity.class);
+                    intent.putExtra(Common.TITLE, "打赏界面");
+                    startActivity(intent);
+                } else if (id == R.id.feedback_to_improve) {
+                    Intent intent = new Intent(context, FeedBackActivity.class);
+                    intent.putExtra(Common.TITLE, "反馈界面");
+                    startActivity(intent);
+                } else if (id == R.id.check_updates) {
+                    Toast.makeText(context, "功能开放中···", Toast.LENGTH_LONG).show();
+                } else if (id == R.id.about_author) {
+                    Toast.makeText(context, "功能开放中···", Toast.LENGTH_LONG).show();
+                } else if (id == R.id.jianshu) {//简书
                     Intent intent = new Intent(context, WebViewActivity.class);
-                    intent.putExtra(Common.TITLE, "进度WebView使用演示");
-                    intent.putExtra(Common.URL, "http://www.jianshu.com/p/87e7392a16ff");
+                    intent.putExtra(Common.TITLE, "简书");
+                    intent.putExtra(Common.URL, getResources().getString(R.string.jianshu_url));
+                    startActivity(intent);
+                } else if (id == R.id.github) {//GitHub
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    intent.putExtra(Common.TITLE, "GitHub");
+                    intent.putExtra(Common.URL, getResources().getString(R.string.github_url));
                     startActivity(intent);
                 }
-            }, 200);
-
-        } else if (id == R.id.github) {//GitHub
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(context, WebViewActivity.class);
-                    intent.putExtra(Common.TITLE, "进度WebView使用演示");
-                    intent.putExtra(Common.URL, "https://github.com/huangweicai/OkLibDemo");
-                    startActivity(intent);
-                }
-            }, 200);
-        }
-
+            }
+        }, 200);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
