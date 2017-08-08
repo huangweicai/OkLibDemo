@@ -4,8 +4,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.oklib.demo.base.BaseAppActivity;
-import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.demo.window_related.CenterWinListDialog;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.ProgressWebView;
 
@@ -41,19 +39,7 @@ public class WebViewActivity extends BaseAppActivity {
                     public void onClick(View v) {
                         finish();
                     }
-                }).setCenterTitle(getIntent().getStringExtra(Common.TITLE), 17, R.color.app_white_color)//中间标题
-                .setRightTitle("更多", 14, R.color.app_white_color)//右标题
-                .setRightTitleListener(new View.OnClickListener() {//有标题监听
-                    @Override
-                    public void onClick(View v) {
-                        FunctionDetailBean[] beans = {
-                                new FunctionDetailBean(context.getClass().getSimpleName(), "https://github.com/huangweicai/OkLibDemo"),
-                        };
-                        final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
-                        centerWinListDialog.show();
-                        centerWinListDialog.addDataList(WebViewActivity.this, beans);
-                    }
-                });
+                }).setCenterTitle(getIntent().getStringExtra(Common.TITLE), 17, R.color.app_white_color);
     }
 
     @Override
