@@ -43,6 +43,7 @@ public class MainActivity extends BaseAppActivity
 
     @Override
     protected void initVariable() {
+        ifShowExit = true;
         setStateBarStyle();
     }
 
