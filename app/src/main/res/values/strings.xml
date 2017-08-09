@@ -1,4 +1,4 @@
-<resources>
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">OkLibDemo</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

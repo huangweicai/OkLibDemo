@@ -79,4 +79,7 @@ public final class Common {
     public static final String TITLE = "title";
     public static final String URL = "url";
 
+
+    public static final String BASE_JAVA= "https://github.com/huangweicai/OkLibDemo/tree/master/app/src/main/java/";
+    public static final String BASE_RES = "https://github.com/huangweicai/OkLibDemo/tree/master/app/src/main/res";
 }

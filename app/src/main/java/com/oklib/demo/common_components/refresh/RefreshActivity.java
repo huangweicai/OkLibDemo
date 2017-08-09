@@ -7,11 +7,8 @@ import com.oklib.base.BaseRcvAdapter;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
-import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.demo.common_components.refresh.adapter.RvAdapter;
 import com.oklib.demo.common_components.refresh.bean.ViewHolderBeam;
-import com.oklib.demo.integration_framework.PermissionActivity;
-import com.oklib.demo.window_related.CenterWinListDialog;
 import com.oklib.view.CommonRefreshLayout;
 import com.oklib.view.CommonToolBar;
 
@@ -52,12 +49,7 @@ public class RefreshActivity extends BaseAppActivity implements CommonRefreshLay
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        FunctionDetailBean[] beans = {
-                                new FunctionDetailBean(context.getClass().getSimpleName(), "https://github.com/huangweicai/OkLibDemo"),
-                        };
-                        final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
-                        centerWinListDialog.show();
-                        centerWinListDialog.addDataList(RefreshActivity.this, beans);
+                        showDetail(null);
                     }
                 });
     }

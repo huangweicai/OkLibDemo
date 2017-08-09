@@ -9,9 +9,6 @@ import android.view.View;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
-import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.demo.integration_framework.PermissionActivity;
-import com.oklib.demo.window_related.CenterWinListDialog;
 import com.oklib.util.toast.SnackbarUtil;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
@@ -53,12 +50,7 @@ public class ToastActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        FunctionDetailBean[] beans = {
-                                new FunctionDetailBean(context.getClass().getSimpleName(), "https://github.com/huangweicai/OkLibDemo"),
-                        };
-                        final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
-                        centerWinListDialog.show();
-                        centerWinListDialog.addDataList(ToastActivity.this, beans);
+                        showDetail(null);
                     }
                 });
     }

@@ -57,7 +57,7 @@ public class ToolbarActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        ToastUtil.success("确定");
+                        showDetail(null);
                     }
                 });
     }

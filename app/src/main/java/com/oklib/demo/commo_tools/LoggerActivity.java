@@ -6,9 +6,6 @@ import android.widget.TextView;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
-import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.demo.integration_framework.PermissionActivity;
-import com.oklib.demo.window_related.CenterWinListDialog;
 import com.oklib.view.CommonToolBar;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
@@ -54,12 +51,7 @@ public class LoggerActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        FunctionDetailBean[] beans = {
-                                new FunctionDetailBean(context.getClass().getSimpleName(), "https://github.com/huangweicai/OkLibDemo"),
-                        };
-                        final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
-                        centerWinListDialog.show();
-                        centerWinListDialog.addDataList(LoggerActivity.this, beans);
+                        showDetail(null);
                     }
                 });
     }

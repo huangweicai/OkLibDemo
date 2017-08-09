@@ -4,8 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
-import com.bmoblib.BmoBHelp;
 import com.oklib.OkLib;
+
+//import com.bmoblib.BmoBHelp;
 
 /**
  * 时间：2017/8/1
@@ -29,9 +30,6 @@ public class AppOkLib extends Application {
                 .isDebug(true)
                 .isShowToast(true)
                 .build();
-
-        //初始化比目
-        BmoBHelp.initBmob(this);
     }
 
     @Override

@@ -3,8 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
-    //兼容Android6.0系统所需，如果这句话报错，可在dependencies标签下使用compile 'cn.bmob.android:http-legacy:1.0'
-    //useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.oklib.demo"
         minSdkVersion 15
@@ -19,7 +17,48 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
+    signingConfigs {
+        release {
+            try {
+                storeFile file("oklib.jks")
+                storePassword KEY_STORE_PASSWORD
+                keyAlias KEY_STORE_KEY_ALIAS
+                keyPassword KEY_STORE_KEY_PASSWORD
+            }
+            catch (ex) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+//        debug {
+//            keyAlias KEY_STORE_KEY_ALIAS
+//            keyPassword KEY_STORE_PASSWORD
+//            storeFile file('../oklib.jks')
+//            storePassword KEY_STORE_KEY_PASSWORD
+//        }
+    }
+
+    // 自定义输出配置
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    fileName = "OkLib库${defaultConfig.versionName}_${releaseTime()}.apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    fileName = "OkLib库${defaultConfig.versionName}_${releaseTime()}_debug.apk"
+                }
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+}
+
+//对debug、release模式都生效
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
 }
 
 dependencies {
@@ -32,7 +71,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile project(':oklib')
-    //稳定版本换成命令引入
-    compile project(':bmoblib')
+    compile 'com.oklib:oklib:1.0.6'
 }
