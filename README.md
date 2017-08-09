@@ -23,6 +23,7 @@ new OkLib.Builder()
         .build();
 ```
 
+[简书·使用文档地址](http://www.jianshu.com/p/87e7392a16ff)
 [gitbub地址](https://github.com/huangweicai/OkLibDemo)
 [apk下载地址](https://fir.im/tsd6)
 
