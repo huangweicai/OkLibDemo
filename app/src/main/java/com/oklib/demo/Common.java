@@ -44,6 +44,9 @@ public final class Common {
     };
     //窗口相关
     public static final String[] WINDOW_RELATED = {
+            "居中确定取消窗口",
+            "加载等待窗口",
+            "多选pop列表演示",
     };
 
 

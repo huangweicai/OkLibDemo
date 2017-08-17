@@ -1,4 +1,4 @@
-package com.oklib.demo.window_related;
+package com.oklib.demo.widget;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

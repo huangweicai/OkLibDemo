@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.oklib.base.BaseActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.demo.window_related.CenterWinListDialog;
+import com.oklib.demo.widget.CenterWinListDialog;
 import com.oklib.util.toast.ToastUtil;
 import com.orhanobut.logger.Logger;
 

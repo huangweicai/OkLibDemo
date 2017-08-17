@@ -9,15 +9,18 @@ import android.widget.ListView;
 
 import com.oklib.base.BaseFragment;
 import com.oklib.demo.adapter.MainListAdapter;
-import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.commo_tools.LoggerActivity;
 import com.oklib.demo.commo_tools.ToastActivity;
-import com.oklib.demo.common_components.ToolbarActivity;
 import com.oklib.demo.common_components.GlideImageViewActivity;
-import com.oklib.demo.integration_framework.PermissionActivity;
-import com.oklib.demo.common_components.refresh.RefreshActivity;
 import com.oklib.demo.common_components.ShapeSelectActivity;
 import com.oklib.demo.common_components.TextViewActivity;
+import com.oklib.demo.common_components.ToolbarActivity;
+import com.oklib.demo.common_components.refresh.RefreshActivity;
+import com.oklib.demo.integration_framework.CameraActivity;
+import com.oklib.demo.integration_framework.PermissionActivity;
+import com.oklib.demo.window_related.ConfirmDialogActivity;
+import com.oklib.demo.window_related.LoadingDialogActivity;
+import com.oklib.demo.window_related.MultiSelectListPopActivity;
 
 /**
  * 时间：2017/8/5
@@ -114,7 +117,7 @@ public class MainFragment extends BaseFragment {
                 break;
             case "GlideImageView，补充高斯模糊、默认无按下效果等":
                 intent = new Intent(context, GlideImageViewActivity.class);
-                intent.putExtra(Common.TITLE, "GlideImageView，补充高斯模糊、默认无按下效果等");
+                intent.putExtra(Common.TITLE, "GlideImageView");
                 break;
             case "动态shape，select":
                 intent = new Intent(context, ShapeSelectActivity.class);
@@ -151,7 +154,17 @@ public class MainFragment extends BaseFragment {
     private void windowRelated(int position) {
         Intent intent = null;
         switch (mainListAdapter.getTitle(position)) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
-            case "":
+            case "居中确定取消窗口":
+                intent = new Intent(context, ConfirmDialogActivity.class);
+                intent.putExtra(Common.TITLE, "居中确定取消窗口");
+                break;
+            case "加载等待窗口":
+                intent = new Intent(context, LoadingDialogActivity.class);
+                intent.putExtra(Common.TITLE, "加载等待窗口");
+                break;
+            case "多选pop列表演示":
+                intent = new Intent(context, MultiSelectListPopActivity.class);
+                intent.putExtra(Common.TITLE, "多选pop列表演示");
                 break;
         }
         if (null != intent) {
