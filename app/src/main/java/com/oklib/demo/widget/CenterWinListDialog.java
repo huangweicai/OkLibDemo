@@ -99,29 +99,6 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
     public void addDataList(final FunctionDetailBean... titles) {
         addDataList(getActivity(), titles);
     }
-    //注意：多个窗口切换显示，使用该方法，getActivity()在多次切换容易null
-//    public void addDataList(final Activity activity, final FunctionDetailBean... titles) {
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (null == lv_title) {
-//                }
-//                activity.runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        if (null != titles) {
-//                            dataList.clear();
-//                            dataList.addAll(Arrays.asList(titles));
-//                            listAdapter.notifyDataSetChanged();
-//                            if (dataList.size() > 7) {
-//                                setWHSize(getScreenWidth(getContext()) * 4 / 5, getScreenWidth(getContext()));
-//                            }
-//                        }
-//                    }
-//                });
-//            }
-//        }).start();
-//    }
     public void addDataList(final Context context, final FunctionDetailBean... titles) {
         new Thread(new Runnable() {
             @Override

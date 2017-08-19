@@ -18,6 +18,7 @@ import com.oklib.demo.common_components.ToolbarActivity;
 import com.oklib.demo.common_components.refresh.RefreshActivity;
 import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
+import com.oklib.demo.window_related.CenterListDialogActivity;
 import com.oklib.demo.window_related.ConfirmDialogActivity;
 import com.oklib.demo.window_related.LoadingDialogActivity;
 import com.oklib.demo.window_related.MultiSelectListPopActivity;
@@ -157,6 +158,10 @@ public class MainFragment extends BaseFragment {
             case "居中确定取消窗口":
                 intent = new Intent(context, ConfirmDialogActivity.class);
                 intent.putExtra(Common.TITLE, "居中确定取消窗口");
+                break;
+            case "居中列表显示窗口":
+                intent = new Intent(context, CenterListDialogActivity.class);
+                intent.putExtra(Common.TITLE, "居中列表显示窗口");
                 break;
             case "加载等待窗口":
                 intent = new Intent(context, LoadingDialogActivity.class);

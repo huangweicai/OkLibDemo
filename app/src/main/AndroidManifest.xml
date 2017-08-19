@@ -33,6 +33,7 @@
         <activity android:name=".window_related.ConfirmDialogActivity" />
         <activity android:name=".window_related.LoadingDialogActivity" />
         <activity android:name=".window_related.MultiSelectListPopActivity" />
+        <activity android:name=".window_related.CenterListDialogActivity" />
 
         <!--7.0适配临时权限-->
         <provider
