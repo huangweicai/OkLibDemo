@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.oklib.view.letters_nav.widget.LetterNavRecyclerView
+            android:id="@+id/rvLettersNavList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_dialog"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/letters_nav_dialog"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:visibility="gone" />
+
+        <com.oklib.view.letters_nav.LetterSideBar
+            android:id="@+id/sidebar"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp" />
+    </RelativeLayout>
+</LinearLayout>

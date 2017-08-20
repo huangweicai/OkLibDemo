@@ -12,6 +12,7 @@ import com.oklib.demo.adapter.MainListAdapter;
 import com.oklib.demo.commo_tools.LoggerActivity;
 import com.oklib.demo.commo_tools.ToastActivity;
 import com.oklib.demo.common_components.GlideImageViewActivity;
+import com.oklib.demo.common_components.LetterNavActivity;
 import com.oklib.demo.common_components.ShapeSelectActivity;
 import com.oklib.demo.common_components.TextViewActivity;
 import com.oklib.demo.common_components.ToolbarActivity;
@@ -20,8 +21,10 @@ import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
 import com.oklib.demo.window_related.CenterListDialogActivity;
 import com.oklib.demo.window_related.ConfirmDialogActivity;
+import com.oklib.demo.window_related.DateTimeActivity;
 import com.oklib.demo.window_related.LoadingDialogActivity;
 import com.oklib.demo.window_related.MultiSelectListPopActivity;
+import com.oklib.demo.window_related.RegionSelectActivity;
 
 /**
  * 时间：2017/8/5
@@ -128,6 +131,10 @@ public class MainFragment extends BaseFragment {
                 intent = new Intent(context, TextViewActivity.class);
                 intent.putExtra(Common.TITLE, "TextView炫酷效果");
                 break;
+            case "字母导航·RecyclerView":
+                intent = new Intent(context, LetterNavActivity.class);
+                intent.putExtra(Common.TITLE, "字母导航·RecyclerView");
+                break;
         }
         if (null != intent) {
             startActivity(intent);
@@ -170,6 +177,14 @@ public class MainFragment extends BaseFragment {
             case "多选pop列表演示":
                 intent = new Intent(context, MultiSelectListPopActivity.class);
                 intent.putExtra(Common.TITLE, "多选pop列表演示");
+                break;
+            case "地区选择窗口":
+                intent = new Intent(context, RegionSelectActivity.class);
+                intent.putExtra(Common.TITLE, "地区选择窗口");
+                break;
+            case "日期选择器窗口":
+                intent = new Intent(context, DateTimeActivity.class);
+                intent.putExtra(Common.TITLE, "日期选择器窗口");
                 break;
         }
         if (null != intent) {

@@ -34,6 +34,9 @@
         <activity android:name=".window_related.LoadingDialogActivity" />
         <activity android:name=".window_related.MultiSelectListPopActivity" />
         <activity android:name=".window_related.CenterListDialogActivity" />
+        <activity android:name=".window_related.RegionSelectActivity" />
+        <activity android:name=".window_related.DateTimeActivity" />
+        <activity android:name=".common_components.LetterNavActivity" />
 
         <!--7.0适配临时权限-->
         <provider

@@ -36,6 +36,7 @@ public final class Common {
             "GlideImageView，补充高斯模糊、默认无按下效果等",
             "动态shape，select",
             "TextView炫酷效果",
+            "字母导航·RecyclerView",
     };
     //常用工具
     public static final String[] COMMON_TOOLS = {
@@ -48,6 +49,8 @@ public final class Common {
             "居中列表显示窗口",
             "加载等待窗口",
             "多选pop列表演示",
+            "地区选择窗口",
+            "日期选择器窗口",
     };
 
 
