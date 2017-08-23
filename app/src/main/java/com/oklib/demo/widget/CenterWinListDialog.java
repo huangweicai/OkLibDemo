@@ -47,7 +47,11 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
 
     @Override
     public void initOnResume() {
-        setWHSize(getScreenWidth(getContext()) - dp2px(getContext(), 20), getScreenHeight(getContext()) * 2 / 3);
+        if (dataList.size() > 7) {
+            setWHSize(getScreenWidth(getContext()) - dp2px(getContext(), 20), getScreenHeight(getContext()) * 2 / 3);
+        }else{
+            setWHSize(getScreenWidth(getContext()) - dp2px(getContext(), 20), ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
     }
 
     @Override
