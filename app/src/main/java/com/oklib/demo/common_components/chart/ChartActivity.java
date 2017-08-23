@@ -17,6 +17,7 @@ import com.oklib.demo.common_components.chart.fragment.BarChartFragment;
 import com.oklib.demo.common_components.chart.fragment.LineChartFragment;
 import com.oklib.view.CommonToolBar;
 
+import static com.oklib.demo.Common.BASE_JAVA;
 import static com.oklib.demo.Common.BASE_RES;
 
 /**
@@ -57,6 +58,23 @@ public class ChartActivity extends BaseAppActivity {
                     @Override
                     public void onClick(View v) {
                         mBeans.add(new FunctionDetailBean("activity_chart.xml", BASE_RES +"/layout/activity_chart.xml"));
+
+                        String fragmentPackage = "com/oklib/demo/common_components/chart/fragment/";
+                        mBeans.add(new FunctionDetailBean("LineChartFragment.java", BASE_JAVA + fragmentPackage+"LineChartFragment.java"));
+                        mBeans.add(new FunctionDetailBean("fragment_linechart.xml", BASE_RES +"/layout/fragment_linechart.xml"));
+
+                        mBeans.add(new FunctionDetailBean("CurveChartFragment.java", BASE_JAVA + fragmentPackage+"CurveChartFragment.java"));
+                        mBeans.add(new FunctionDetailBean("fragment_rate_chart.xml", BASE_RES +"/layout/fragment_rate_chart.xml"));
+
+                        mBeans.add(new FunctionDetailBean("BarChartFragment.java", BASE_JAVA + fragmentPackage+"BarChartFragment.java"));
+                        mBeans.add(new FunctionDetailBean("fragment_barchart.xml", BASE_RES +"/layout/fragment_barchart.xml"));
+
+                        mBeans.add(new FunctionDetailBean("HistogramBarChartFragment.java", BASE_JAVA + fragmentPackage+"HistogramBarChartFragment.java"));
+                        mBeans.add(new FunctionDetailBean("fragment_histogram_bar_chart.xml", BASE_RES +"/layout/fragment_histogram_bar_chart.xml"));
+
+                        mBeans.add(new FunctionDetailBean("CustomBloodChartFragment.java", BASE_JAVA + fragmentPackage+"CustomBloodChartFragment.java"));
+                        mBeans.add(new FunctionDetailBean("fragment_blood_chart.xml", BASE_RES +"/layout/fragment_blood_chart.xml"));
+
                         showDetail();
                     }
                 });

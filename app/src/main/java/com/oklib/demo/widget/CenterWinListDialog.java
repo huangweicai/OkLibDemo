@@ -32,7 +32,6 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
     private ListView lv_title;
     private ListAdapter listAdapter;
     private List<FunctionDetailBean> dataList = new ArrayList<>();
-    private int topMargin = 0;
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -48,7 +47,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
 
     @Override
     public void initOnResume() {
-        setWHSize(getScreenWidth(getContext()) * 8 / 9, ViewGroup.LayoutParams.WRAP_CONTENT);
+        setWHSize(getScreenWidth(getContext()) - dp2px(getContext(), 20), getScreenHeight(getContext()) * 2 / 3);
     }
 
     @Override
@@ -83,14 +82,13 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
 
     @Override
     public void initView(View view) {
-        topMargin = dp2px(getContext(), 15);
-
         lv_title = findView(view, R.id.lv_title);
         lv_title.setAdapter(listAdapter = new ListAdapter());
         lv_title.setOnItemClickListener(this);
     }
 
     private List<FunctionDetailBean> titles;
+
     /**
      * 追加数据
      */
@@ -109,7 +107,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
                             dataList.addAll(titles);
                             listAdapter.notifyDataSetChanged();
                             if (dataList.size() > 7) {
-                                setWHSize(getScreenWidth(getContext()) * 4 / 5, getScreenWidth(getContext()));
+                                setWHSize(getScreenWidth(getContext()) - dp2px(getContext(), 20), getScreenHeight(getContext()) * 2 / 3);
                             }
                         }
                     }
@@ -127,8 +125,10 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
     private static FragmentManager fm;
     private static FragmentTransaction ft;
     private static CenterWinListDialog dialog;
+
     @SuppressLint("ValidFragment")
-    private CenterWinListDialog() {}
+    private CenterWinListDialog() {
+    }
 
     /**
      * 显示dialog
@@ -150,7 +150,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
         private TextView tv_directly_open;//直接打开
     }
 
-    private class ListAdapter extends BaseAdapter{
+    private class ListAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
