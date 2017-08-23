@@ -9,4 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/app_color" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始撒花" />
+
+    <com.oklib.view.FllowerAnimView
+        android:id="@+id/fllower"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

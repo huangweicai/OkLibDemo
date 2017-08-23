@@ -7,8 +7,11 @@ import android.widget.TextView;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.view.CommonToolBar;
 import com.oklib.widget.LoadingDialog;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 /**
  * 时间：2017/8/17
@@ -44,7 +47,8 @@ public class LoadingDialogActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_loading_dialog.xml", BASE_RES +"/layout/activity_loading_dialog.xml"));
+                        showDetail();
                     }
                 });
     }
@@ -52,7 +56,7 @@ public class LoadingDialogActivity extends BaseAppActivity {
     private LoadingDialog loadingDialog;
     @Override
     protected void initView() {
-        loadingDialog = LoadingDialog.getInstance(context);
+        loadingDialog = new LoadingDialog(context);
 
         //显示窗口
         ((TextView)findView(R.id.tv_showDialog)).setOnClickListener(new View.OnClickListener() {

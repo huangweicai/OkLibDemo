@@ -8,11 +8,14 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.gimage.GlideImageView;
 import com.oklib.view.gimage.ShapeImageView;
 import com.oklib.view.gimage.progress.OnGlideImageViewListener;
 import com.oklib.view.gimage.progress.OnProgressListener;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 /**
  * 时间：2017/8/2
@@ -68,7 +71,8 @@ public class GlideImageViewActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_glide_imageview.xml", BASE_RES +"/layout/activity_glide_imageview.xml"));
+                        showDetail();
                     }
                 });
     }

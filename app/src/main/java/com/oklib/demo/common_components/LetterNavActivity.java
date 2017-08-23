@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.letters_nav.LetterSideBar;
 import com.oklib.view.letters_nav.OnLetterTouchListener;
@@ -16,6 +17,8 @@ import com.oklib.view.letters_nav.widget.LetterNavRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 /**
  * 时间：2017/8/20
@@ -51,7 +54,8 @@ public class LetterNavActivity extends BaseAppActivity implements BaseSortRecycl
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_letter_nav.xml", BASE_RES +"/layout/activity_letter_nav.xml"));
+                        showDetail();
                     }
                 });
     }

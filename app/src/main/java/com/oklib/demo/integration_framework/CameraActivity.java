@@ -16,6 +16,7 @@ import com.oklib.assist.camera.help.CameraUtil;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.util.FileUtil;
 import com.oklib.util.permission.PermissionFail;
 import com.oklib.util.permission.PermissionGen;
@@ -24,6 +25,8 @@ import com.oklib.view.CommonToolBar;
 
 import java.io.File;
 import java.util.List;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 
 /**
@@ -65,7 +68,8 @@ public class CameraActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_camera.xml", BASE_RES +"/layout/activity_camera.xml"));
+                        showDetail();
                     }
                 });
     }

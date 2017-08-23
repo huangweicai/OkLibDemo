@@ -37,6 +37,8 @@ public final class Common {
             "动态shape，select",
             "TextView炫酷效果",
             "字母导航·RecyclerView",
+            "自定义图表封装",
+            "微信撒花动画",
     };
     //常用工具
     public static final String[] COMMON_TOOLS = {

@@ -1,8 +1,6 @@
 package com.oklib.demo.widget;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -22,7 +20,6 @@ import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.util.SysShareUtil;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -93,24 +90,23 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
         lv_title.setOnItemClickListener(this);
     }
 
+    private List<FunctionDetailBean> titles;
     /**
      * 追加数据
      */
-    public void addDataList(final FunctionDetailBean... titles) {
-        addDataList(getActivity(), titles);
-    }
-    public void addDataList(final Context context, final FunctionDetailBean... titles) {
+    public void addDataList(final List<FunctionDetailBean> titles) {
+        this.titles = titles;
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while (null == lv_title) {
                 }
-                ((Activity)context).runOnUiThread(new Runnable() {
+                getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         if (null != titles) {
                             dataList.clear();
-                            dataList.addAll(Arrays.asList(titles));
+                            dataList.addAll(titles);
                             listAdapter.notifyDataSetChanged();
                             if (dataList.size() > 7) {
                                 setWHSize(getScreenWidth(getContext()) * 4 / 5, getScreenWidth(getContext()));
@@ -122,6 +118,11 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
         }).start();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        titles.clear();
+    }
 
     private static FragmentManager fm;
     private static FragmentTransaction ft;

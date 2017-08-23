@@ -1,29 +1,31 @@
 package com.oklib.demo.common_components;
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
+import com.oklib.view.FllowerAnimView;
 
 import static com.oklib.demo.Common.BASE_RES;
 
 /**
- * 时间：2017/8/3
+ * 时间：2017/8/18
  * 作者：黄伟才
  * 简书：http://www.jianshu.com/p/87e7392a16ff
  * github：https://github.com/huangweicai/OkLibDemo
- * 描述：CommonToolbar使用演示
+ * 描述：微信撒花动画使用演示
  */
 
-public class ToolbarActivity extends BaseAppActivity {
-    private CommonToolBar tb_toolbar;
+public class FllowerViewActivity extends BaseAppActivity {
 
     @Override
     protected int initLayoutId() {
-        return R.layout.activity_toolbar;
+        return R.layout.activity_fllower_view;
     }
 
     @Override
@@ -33,13 +35,7 @@ public class ToolbarActivity extends BaseAppActivity {
 
     @Override
     protected void initTitle() {
-
-    }
-
-    @Override
-    protected void initView() {
-        //注意：高度一定要用wrap_content属性
-        tb_toolbar = findView(R.id.tb_toolbar);
+        CommonToolBar tb_toolbar = findView(R.id.tb_toolbar);
         tb_toolbar.setImmerseState(this, true)//是否侵入，默认侵入
                 .setNavIcon(R.drawable.white_back_icon)//返回图标
                 .setNavigationListener(new View.OnClickListener() {//返回图标监听
@@ -47,23 +43,29 @@ public class ToolbarActivity extends BaseAppActivity {
                     public void onClick(View v) {
                         finish();
                     }
-                }).setCenterTitle("中间标题", 16, R.color.white)//中间标题
-                .setCenterDraw(R.mipmap.maotouying_icon, CommonToolBar.LEFT, 10)//中间标题内设置图标
-                .setCenterTitleListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        ToastUtil.success("中间标题");
-                    }
-                })
-                .setRightTitle("确定", 14, R.color.red)//右标题
-                .setRightImage(R.color.blue, true)//有标题背景图或背景色 R.mipmap.maotouying_icon
+                }).setCenterTitle(getIntent().getStringExtra(Common.TITLE), 17, R.color.app_white_color)//中间标题
+                .setRightTitle("更多", 14, R.color.app_white_color)//右标题
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        mBeans.add(new FunctionDetailBean("activity_toolbar.xml", BASE_RES +"/layout/activity_toolbar.xml"));
+                        mBeans.add(new FunctionDetailBean("activity_fllower_view.xml", BASE_RES +"/layout/activity_fllower_view.xml"));
                         showDetail();
                     }
                 });
+    }
+
+    @Override
+    protected void initView() {
+        final FllowerAnimView fllower = (FllowerAnimView) findViewById(R.id.fllower);
+
+        Button btn_start = (Button) findViewById(R.id.btn_start);
+        btn_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "撒花", Toast.LENGTH_LONG).show();
+                fllower.startAnimation();
+            }
+        });
     }
 
     @Override

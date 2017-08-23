@@ -7,10 +7,13 @@ import android.widget.Toast;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.util.permission.PermissionFail;
 import com.oklib.util.permission.PermissionGen;
 import com.oklib.util.permission.PermissionSuccess;
 import com.oklib.view.CommonToolBar;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 /**
  * 时间：2017/8/2
@@ -45,7 +48,8 @@ public class PermissionActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_permission.xml", BASE_RES +"/layout/activity_permission.xml"));
+                        showDetail();
                     }
                 });
     }

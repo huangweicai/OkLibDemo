@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.gimage.GlideImageView;
@@ -15,6 +16,7 @@ import com.oklib.widget.CenterWinListDialog;
 
 import java.util.List;
 
+import static com.oklib.demo.Common.BASE_RES;
 import static com.oklib.demo.R.id.iv_headPortrait;
 import static com.oklib.demo.R.id.tv_introduce;
 import static com.oklib.demo.R.id.tv_name;
@@ -53,7 +55,8 @@ public class CenterListDialogActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_confirm_dialog.xml", BASE_RES +"/layout/activity_confirm_dialog.xml"));
+                        showDetail();
                     }
                 });
     }

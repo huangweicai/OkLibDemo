@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.view.CommonToolBar;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
@@ -14,6 +15,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 /**
  * 时间：2017/8/3
@@ -51,7 +54,8 @@ public class LoggerActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_logger.xml", BASE_RES +"/layout/activity_logger.xml"));
+                        showDetail();
                     }
                 });
     }

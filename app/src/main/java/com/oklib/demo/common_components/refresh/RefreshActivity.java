@@ -7,6 +7,7 @@ import com.oklib.base.BaseRcvAdapter;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.demo.common_components.refresh.adapter.RvAdapter;
 import com.oklib.demo.common_components.refresh.bean.ViewHolderBeam;
 import com.oklib.view.CommonRefreshLayout;
@@ -14,6 +15,8 @@ import com.oklib.view.CommonToolBar;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.oklib.demo.Common.BASE_RES;
 
 /**
  * 时间：2017/8/2
@@ -49,7 +52,8 @@ public class RefreshActivity extends BaseAppActivity implements CommonRefreshLay
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        showDetail(null);
+                        mBeans.add(new FunctionDetailBean("activity_refresh.xml", BASE_RES +"/layout/activity_refresh.xml"));
+                        showDetail();
                     }
                 });
     }

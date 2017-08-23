@@ -11,11 +11,13 @@ import com.oklib.base.BaseFragment;
 import com.oklib.demo.adapter.MainListAdapter;
 import com.oklib.demo.commo_tools.LoggerActivity;
 import com.oklib.demo.commo_tools.ToastActivity;
+import com.oklib.demo.common_components.FllowerViewActivity;
 import com.oklib.demo.common_components.GlideImageViewActivity;
 import com.oklib.demo.common_components.LetterNavActivity;
 import com.oklib.demo.common_components.ShapeSelectActivity;
 import com.oklib.demo.common_components.TextViewActivity;
 import com.oklib.demo.common_components.ToolbarActivity;
+import com.oklib.demo.common_components.chart.ChartActivity;
 import com.oklib.demo.common_components.refresh.RefreshActivity;
 import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
@@ -134,6 +136,14 @@ public class MainFragment extends BaseFragment {
             case "字母导航·RecyclerView":
                 intent = new Intent(context, LetterNavActivity.class);
                 intent.putExtra(Common.TITLE, "字母导航·RecyclerView");
+                break;
+            case "自定义图表封装":
+                intent = new Intent(context, ChartActivity.class);
+                intent.putExtra(Common.TITLE, "自定义图表封装");
+                break;
+            case "微信撒花动画":
+                intent = new Intent(context, FllowerViewActivity.class);
+                intent.putExtra(Common.TITLE, "微信撒花动画");
                 break;
         }
         if (null != intent) {

@@ -37,6 +37,9 @@
         <activity android:name=".window_related.RegionSelectActivity" />
         <activity android:name=".window_related.DateTimeActivity" />
         <activity android:name=".common_components.LetterNavActivity" />
+        <activity android:name=".PayActivity" />
+        <activity android:name=".common_components.chart.ChartActivity" />
+        <activity android:name=".common_components.FllowerViewActivity" />
 
         <!--7.0适配临时权限-->
         <provider
