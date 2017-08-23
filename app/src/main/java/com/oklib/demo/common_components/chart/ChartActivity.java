@@ -26,6 +26,7 @@ import static com.oklib.demo.Common.BASE_RES;
   * 简书：http://www.jianshu.com/p/87e7392a16ff
   * github：https://github.com/huangweicai/OkLibDemo
   * 描述：图表使用演示
+  * 注意：1.每个x刻度对应一个y数值点 2.数据从左到右升序
   */
 public class ChartActivity extends BaseAppActivity {
    private TabLayout toolbar_tl_tab;
