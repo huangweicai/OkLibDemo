@@ -14,6 +14,7 @@ import com.oklib.view.CommonToolBar;
 import com.oklib.view.gimage.GlideImageView;
 import com.oklib.widget.CenterWinListDialog;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.oklib.demo.Common.BASE_RES;
@@ -66,24 +67,13 @@ public class CenterListDialogActivity extends BaseAppActivity {
         ((TextView) findView(R.id.tv_showDialog)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ListBean[] mBeans = new ListBean[]{
-                        new ListBean(
-                                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003988139,3010807873&fm=117&gp=0.jpg",
-                                "天鬼1",
-                                "专注android客户端开发，微信小程序开发，提供技术辅导及技术源码支持"),
-                        new ListBean(
-                                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003988139,3010807873&fm=117&gp=0.jpg",
-                                "天鬼2",
-                                "专注android客户端开发，微信小程序开发，提供技术辅导及技术源码支持"),
-                        new ListBean(
-                                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003988139,3010807873&fm=117&gp=0.jpg",
-                                "天鬼3",
-                                "专注android客户端开发，微信小程序开发，提供技术辅导及技术源码支持"),
-                        new ListBean(
-                                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003988139,3010807873&fm=117&gp=0.jpg",
-                                "天鬼4",
-                                "专注android客户端开发，微信小程序开发，提供技术辅导及技术源码支持"),
-                };
+                List<ListBean> mBeans = new ArrayList<>();
+                for (int i = 0; i < 5; i++) {
+                    mBeans.add(new ListBean(
+                            "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2003988139,3010807873&fm=117&gp=0.jpg",
+                            "天鬼"+i,
+                            "专注android客户端开发，微信小程序开发，提供技术辅导及技术源码支持"));
+                }
                 CenterWinListDialog.create(getSupportFragmentManager())
                         .addDataList(mBeans)
                         .setOnGetViewListener(new CenterWinListDialog.OnGetViewListener<ListBean>() {
