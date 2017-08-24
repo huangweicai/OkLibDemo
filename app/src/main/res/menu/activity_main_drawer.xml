@@ -4,20 +4,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/exceptional_support"
-            android:icon="@mipmap/qr_code_icon"
+            android:icon="@drawable/qr_code_icon"
             android:title="打赏支持" />
         <item
             android:id="@+id/feedback_to_improve"
-            android:icon="@mipmap/feedback_icon"
+            android:icon="@drawable/feedback_icon"
             android:title="反馈改进" />
         <item
             android:id="@+id/check_updates"
-            android:icon="@mipmap/check_update_icon"
+            android:icon="@drawable/check_update_icon"
             android:title="检测更新" />
         <item
-            android:id="@+id/about_author"
-            android:icon="@mipmap/about_icon"
-            android:title="关于作者" />
+            android:id="@+id/exchange_area"
+            android:icon="@drawable/exchange_icon"
+            android:title="技术交流" />
     </group>
 
     <item android:title="Communicate">

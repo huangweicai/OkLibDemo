@@ -40,6 +40,7 @@
         <activity android:name=".PayActivity" />
         <activity android:name=".common_components.chart.ChartActivity" />
         <activity android:name=".common_components.FllowerViewActivity" />
+        <activity android:name=".ExchangeAreaActivity" />
 
         <!--7.0适配临时权限-->
         <provider

@@ -155,17 +155,21 @@ public class MainActivity extends BaseAppActivity
                     startActivity(intent);
                 } else if (id == R.id.check_updates) {
                     Toast.makeText(context, "功能开放中···", Toast.LENGTH_LONG).show();
-                } else if (id == R.id.about_author) {
-                    Toast.makeText(context, "功能开放中···", Toast.LENGTH_LONG).show();
+                } else if (id == R.id.exchange_area) {
+                    Intent intent = new Intent(context, ExchangeAreaActivity.class);
+                    intent.putExtra(Common.TITLE, "技术交流");
+                    startActivity(intent);
                 } else if (id == R.id.jianshu) {//简书
                     Intent intent = new Intent(context, WebViewActivity.class);
                     intent.putExtra(Common.TITLE, "简书");
                     intent.putExtra(Common.URL, getResources().getString(R.string.jianshu_url));
+                    intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
                     startActivity(intent);
                 } else if (id == R.id.github) {//GitHub
                     Intent intent = new Intent(context, WebViewActivity.class);
                     intent.putExtra(Common.TITLE, "GitHub");
                     intent.putExtra(Common.URL, getResources().getString(R.string.github_url));
+                    intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
                     startActivity(intent);
                 }
             }

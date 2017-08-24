@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.util.SysShareUtil;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.ProgressWebView;
 
@@ -16,8 +17,11 @@ import com.oklib.view.ProgressWebView;
  */
 
 public class WebViewActivity extends BaseAppActivity {
+    public static final String IS_SHOW_WEB_URL = "isShowWebUrl";
+
     private ProgressWebView wv_webview;
     private String url;
+    private boolean isShowWebUrl = false;
 
     @Override
     protected int initLayoutId() {
@@ -27,6 +31,7 @@ public class WebViewActivity extends BaseAppActivity {
     @Override
     protected void initVariable() {
         url = getIntent().getStringExtra(Common.URL);
+        isShowWebUrl = getIntent().getBooleanExtra(IS_SHOW_WEB_URL, false);
     }
 
     @Override
@@ -40,6 +45,16 @@ public class WebViewActivity extends BaseAppActivity {
                         finish();
                     }
                 }).setCenterTitle(getIntent().getStringExtra(Common.TITLE), 17, R.color.app_white_color);
+
+        if (isShowWebUrl) {
+            tb_toolbar.setRightTitle("发送", 14, R.color.app_white_color)//右标题
+                    .setRightTitleListener(new View.OnClickListener() {//有标题监听
+                        @Override
+                        public void onClick(View v) {
+                            SysShareUtil.getInstance().shareText(context, url);
+                        }
+                    });
+        }
     }
 
     @Override
