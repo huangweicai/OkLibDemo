@@ -174,8 +174,6 @@ public class MainActivity extends BaseAppActivity
                     intent.putExtra(Common.URL, getResources().getString(R.string.github_url));
                     intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
                     startActivity(intent);
-                } else if (id == R.id.iv_head_portrait) {
-                    ToastUtil.show("头像");
                 }
             }
         }, 200);
