@@ -13,10 +13,10 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_head_portrait"
+        android:onClick="doHeadClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@mipmap/head_icon" />
 
     <TextView

@@ -14,6 +14,7 @@ import com.oklib.demo.commo_tools.ToastActivity;
 import com.oklib.demo.common_components.FllowerViewActivity;
 import com.oklib.demo.common_components.GlideImageViewActivity;
 import com.oklib.demo.common_components.LetterNavActivity;
+import com.oklib.demo.common_components.ProgressViewActivity;
 import com.oklib.demo.common_components.ShapeSelectActivity;
 import com.oklib.demo.common_components.TextViewActivity;
 import com.oklib.demo.common_components.ToolbarActivity;
@@ -95,14 +96,15 @@ public class MainFragment extends BaseFragment {
     //集成框架
     private void integrationFramework(int position) {
         Intent intent = null;
-        switch (mainListAdapter.getTitle(position)) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
+        String title = mainListAdapter.getTitle(position);
+        switch (title) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
             case "6.0动态权限统一封装框架":
                 intent = new Intent(context, PermissionActivity.class);
-                intent.putExtra(Common.TITLE, "6.0动态权限统一封装框架");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "拍照选择、相册选择":
                 intent = new Intent(context, CameraActivity.class);
-                intent.putExtra(Common.TITLE, "拍照选择、相册选择");
+                intent.putExtra(Common.TITLE, title);
                 break;
         }
         if (null != intent) {
@@ -112,38 +114,43 @@ public class MainFragment extends BaseFragment {
     //常用组件
     private void commonComponents(int position) {
         Intent intent = null;
-        switch (mainListAdapter.getTitle(position)) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
+        String title = mainListAdapter.getTitle(position);
+        switch (title) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
             case "刷新组件":
                 intent = new Intent(context, RefreshActivity.class);
-                intent.putExtra(Common.TITLE, "刷新组件");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "toolbar封装统一菜单栏":
                 intent = new Intent(context, ToolbarActivity.class);
-                intent.putExtra(Common.TITLE, "toolbar封装统一菜单栏");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "GlideImageView，补充高斯模糊、默认无按下效果等":
                 intent = new Intent(context, GlideImageViewActivity.class);
-                intent.putExtra(Common.TITLE, "GlideImageView");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "动态shape，select":
                 intent = new Intent(context, ShapeSelectActivity.class);
-                intent.putExtra(Common.TITLE, "动态shape，select");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "TextView炫酷效果":
                 intent = new Intent(context, TextViewActivity.class);
-                intent.putExtra(Common.TITLE, "TextView炫酷效果");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "字母导航·RecyclerView":
                 intent = new Intent(context, LetterNavActivity.class);
-                intent.putExtra(Common.TITLE, "字母导航·RecyclerView");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "自定义图表封装":
                 intent = new Intent(context, ChartActivity.class);
-                intent.putExtra(Common.TITLE, "自定义图表封装");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "微信撒花动画":
                 intent = new Intent(context, FllowerViewActivity.class);
-                intent.putExtra(Common.TITLE, "微信撒花动画");
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "自定义进度条view":
+                intent = new Intent(context, ProgressViewActivity.class);
+                intent.putExtra(Common.TITLE, title);
                 break;
         }
         if (null != intent) {
@@ -154,14 +161,15 @@ public class MainFragment extends BaseFragment {
     //常用工具
     private void commoTools(int position) {
         Intent intent = null;
-        switch (mainListAdapter.getTitle(position)) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
+        String title = mainListAdapter.getTitle(position);
+        switch (title) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
             case "日志logger":
                 intent = new Intent(context, LoggerActivity.class);
-                intent.putExtra(Common.TITLE, "日志logger");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "拓展Toast，Snackbar":
                 intent = new Intent(context, ToastActivity.class);
-                intent.putExtra(Common.TITLE, "拓展Toast，Snackbar");
+                intent.putExtra(Common.TITLE, title);
                 break;
         }
         if (null != intent) {
@@ -171,22 +179,23 @@ public class MainFragment extends BaseFragment {
     //窗口相关
     private void windowRelated(int position) {
         Intent intent = null;
-        switch (mainListAdapter.getTitle(position)) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
+        String title = mainListAdapter.getTitle(position);
+        switch (title) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
             case "居中确定取消窗口":
                 intent = new Intent(context, ConfirmDialogActivity.class);
-                intent.putExtra(Common.TITLE, "居中确定取消窗口");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "居中列表显示窗口":
                 intent = new Intent(context, CenterListDialogActivity.class);
-                intent.putExtra(Common.TITLE, "居中列表显示窗口");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "加载等待窗口":
                 intent = new Intent(context, LoadingDialogActivity.class);
-                intent.putExtra(Common.TITLE, "加载等待窗口");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "多选pop列表演示":
                 intent = new Intent(context, MultiSelectListPopActivity.class);
-                intent.putExtra(Common.TITLE, "多选pop列表演示");
+                intent.putExtra(Common.TITLE, title);
                 break;
             case "地区选择窗口":
                 intent = new Intent(context, RegionSelectActivity.class);

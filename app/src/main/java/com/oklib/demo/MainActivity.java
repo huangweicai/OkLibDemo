@@ -15,9 +15,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.oklib.demo.base.BaseAppActivity;
+import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 
 
@@ -32,6 +34,7 @@ public class MainActivity extends BaseAppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private CommonToolBar toolbar;
+    private ImageView iv_head_portrait;
     private TabLayout toolbar_tl_tab;
     private ViewPager vp_container;
     private String[] titles = {"集成框架", "常用组件", "常用工具", "窗口相关"};
@@ -96,6 +99,44 @@ public class MainActivity extends BaseAppActivity
                 return titles.length;
             }
         });
+
+//        iv_head_portrait = findView(R.id.iv_head_portrait);
+//        iv_head_portrait.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+
+//            }
+//        });
+    }
+    private long preKeyBackTime = 0L;
+    private int count = 0;
+    public void doHeadClick(View view) {
+        if (System.currentTimeMillis() - this.preKeyBackTime < 2000L) {
+            count++;
+            this.preKeyBackTime = System.currentTimeMillis();
+            if (count == 3) {
+                ToastUtil.show("再按两次打开后台模式");
+            } else if (count==4) {
+                ToastUtil.show("再按一次打开后台模式");
+            }else if (count >= 5) {
+                count = 0;
+                this.preKeyBackTime = 0L;
+                ToastUtil.show("后台模式启动成功");
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(context, BackgroundActivity.class);
+                        intent.putExtra(Common.TITLE, "后台显示界面");
+                        startActivity(intent);
+                    }
+                }, 200);
+            }
+        } else {
+            count++;
+            this.preKeyBackTime = System.currentTimeMillis();
+        }
     }
 
     @Override
@@ -141,6 +182,8 @@ public class MainActivity extends BaseAppActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(final MenuItem item) {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -174,8 +217,6 @@ public class MainActivity extends BaseAppActivity
                 }
             }
         }, 200);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
