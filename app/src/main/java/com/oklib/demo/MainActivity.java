@@ -15,7 +15,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.oklib.demo.base.BaseAppActivity;
@@ -24,17 +23,16 @@ import com.oklib.view.CommonToolBar;
 
 
 /**
-   * 时间：2017/8/1
-   * 作者：黄伟才
-   * 简书：http://www.jianshu.com/p/87e7392a16ff
-   * github：https://github.com/huangweicai/OkLibDemo
-   * 描述：入口类，功能列表展示
-   */
+ * 时间：2017/8/1
+ * 作者：黄伟才
+ * 简书：http://www.jianshu.com/p/87e7392a16ff
+ * github：https://github.com/huangweicai/OkLibDemo
+ * 描述：入口类，功能列表展示
+ */
 public class MainActivity extends BaseAppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private CommonToolBar toolbar;
-    private ImageView iv_head_portrait;
     private TabLayout toolbar_tl_tab;
     private ViewPager vp_container;
     private String[] titles = {"集成框架", "常用组件", "常用工具", "窗口相关"};
@@ -99,44 +97,6 @@ public class MainActivity extends BaseAppActivity
                 return titles.length;
             }
         });
-
-//        iv_head_portrait = findView(R.id.iv_head_portrait);
-//        iv_head_portrait.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-
-//            }
-//        });
-    }
-    private long preKeyBackTime = 0L;
-    private int count = 0;
-    public void doHeadClick(View view) {
-        if (System.currentTimeMillis() - this.preKeyBackTime < 2000L) {
-            count++;
-            this.preKeyBackTime = System.currentTimeMillis();
-            if (count == 3) {
-                ToastUtil.show("再按两次打开后台模式");
-            } else if (count==4) {
-                ToastUtil.show("再按一次打开后台模式");
-            }else if (count >= 5) {
-                count = 0;
-                this.preKeyBackTime = 0L;
-                ToastUtil.show("后台模式启动成功");
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(context, BackgroundActivity.class);
-                        intent.putExtra(Common.TITLE, "后台显示界面");
-                        startActivity(intent);
-                    }
-                }, 200);
-            }
-        } else {
-            count++;
-            this.preKeyBackTime = System.currentTimeMillis();
-        }
     }
 
     @Override
@@ -214,9 +174,47 @@ public class MainActivity extends BaseAppActivity
                     intent.putExtra(Common.URL, getResources().getString(R.string.github_url));
                     intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
                     startActivity(intent);
+                } else if (id == R.id.iv_head_portrait) {
+                    ToastUtil.show("头像");
                 }
             }
         }, 200);
         return true;
+    }
+
+    /**
+     * 作者：黄伟才
+     * 描述：同navigationView.getHeaderView(0).findViewById(R.id.iv_head_portrait);
+     */
+    private long preKeyBackTime = 0L;
+    private int count = 0;
+
+    public void doHeadClick(View view) {
+        if (System.currentTimeMillis() - this.preKeyBackTime < 2000L) {
+            count++;
+            this.preKeyBackTime = System.currentTimeMillis();
+            if (count == 3) {
+                ToastUtil.show("再按两次打开后台模式");
+            } else if (count == 4) {
+                ToastUtil.show("再按一次打开后台模式");
+            } else if (count >= 5) {
+                count = 0;
+                this.preKeyBackTime = 0L;
+                ToastUtil.show("后台模式启动成功");
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(context, BackgroundActivity.class);
+                        intent.putExtra(Common.TITLE, "后台显示界面");
+                        startActivity(intent);
+                    }
+                }, 200);
+            }
+        } else {
+            count++;
+            this.preKeyBackTime = System.currentTimeMillis();
+        }
     }
 }
