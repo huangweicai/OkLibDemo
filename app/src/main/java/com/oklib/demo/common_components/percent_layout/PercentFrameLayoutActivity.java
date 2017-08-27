@@ -1,4 +1,4 @@
-package com.oklib.demo.common_components;
+package com.oklib.demo.common_components.percent_layout;
 
 import android.view.View;
 
@@ -7,23 +7,21 @@ import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.view.CommonToolBar;
-import com.oklib.view.ProgressCircleView;
 
 import static com.oklib.demo.Common.BASE_RES;
 
-
 /**
- * 时间：2017/8/25
+ * 时间：2017/8/26
  * 作者：黄伟才
  * 简书：http://www.jianshu.com/p/87e7392a16ff
  * github：https://github.com/huangweicai/OkLibDemo
- * 描述：自定义进度条view使用演示
+ * 描述：PercentFrameLayout
  */
 
-public class ProgressViewActivity extends BaseAppActivity {
+public class PercentFrameLayoutActivity extends BaseAppActivity {
     @Override
     protected int initLayoutId() {
-        return R.layout.activity_progress_view;
+        return R.layout.activity_percent_framelayout;
     }
 
     @Override
@@ -46,28 +44,19 @@ public class ProgressViewActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        mBeans.add(new FunctionDetailBean("activity_progress_view.xml", BASE_RES +"/layout/activity_progress_view.xml"));
+                        mBeans.add(new FunctionDetailBean("activity_fllower_view.xml", BASE_RES +"/layout/activity_fllower_view.xml"));
                         showDetail();
                     }
                 });
     }
 
-    private ProgressCircleView pcv_circle;
     @Override
     protected void initView() {
-        pcv_circle = findView(R.id.pcv_circle);
+
     }
 
     @Override
     protected void initNet() {
 
-    }
-
-    private int count = 5;
-    public void start(View view) {
-        count++;
-        if (count <= 15) {
-            pcv_circle.setProgressValue(15, count).startAnim();
-        }
     }
 }

@@ -40,6 +40,7 @@ public final class Common {
             "自定义图表封装",
             "微信撒花动画",
             "自定义进度条view",
+            "适配百分比布局",
     };
     //常用工具
     public static final String[] COMMON_TOOLS = {

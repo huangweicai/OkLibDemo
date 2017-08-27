@@ -19,6 +19,7 @@ import com.oklib.demo.common_components.ShapeSelectActivity;
 import com.oklib.demo.common_components.TextViewActivity;
 import com.oklib.demo.common_components.ToolbarActivity;
 import com.oklib.demo.common_components.chart.ChartActivity;
+import com.oklib.demo.common_components.percent_layout.PercentLayoutActivity;
 import com.oklib.demo.common_components.refresh.RefreshActivity;
 import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
@@ -150,6 +151,10 @@ public class MainFragment extends BaseFragment {
                 break;
             case "自定义进度条view":
                 intent = new Intent(context, ProgressViewActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "适配百分比布局":
+                intent = new Intent(context, PercentLayoutActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
         }

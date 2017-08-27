@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <TextView
+        android:onClick="PercentRelativeLayout"
+        android:background="#f0f0f0"
+        android:padding="10dp"
+        android:text="PercentRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:onClick="PercentFrameLayout"
+        android:layout_marginTop="20dp"
+        android:background="#f0f0f0"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:text="PercentFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:background="#f0f0f0"
+        android:onClick="PercentLinearLayout"
+        android:padding="10dp"
+        android:text="PercentLinearLayout（自定义）"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

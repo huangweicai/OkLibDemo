@@ -43,6 +43,10 @@
         <activity android:name=".ExchangeAreaActivity" />
         <activity android:name=".common_components.ProgressViewActivity" />
         <activity android:name=".BackgroundActivity" />
+        <activity android:name=".common_components.percent_layout.PercentLayoutActivity" />
+        <activity android:name=".common_components.percent_layout.PercentRelativeLayoutActivity" />
+        <activity android:name=".common_components.percent_layout.PercentFrameLayoutActivity" />
+        <activity android:name=".common_components.percent_layout.PercentLinearLayoutActivity" />
 
         <!--7.0适配临时权限-->
         <provider
