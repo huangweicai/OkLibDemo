@@ -47,6 +47,8 @@
         <activity android:name=".common_components.percent_layout.PercentRelativeLayoutActivity" />
         <activity android:name=".common_components.percent_layout.PercentFrameLayoutActivity" />
         <activity android:name=".common_components.percent_layout.PercentLinearLayoutActivity" />
+        <activity android:name=".common_components.span.SpanActivity" />
+        <activity android:name=".common_components.MiClockViewActivity" />
 
         <!--7.0适配临时权限-->
         <provider

@@ -14,6 +14,7 @@ import com.oklib.demo.commo_tools.ToastActivity;
 import com.oklib.demo.common_components.FllowerViewActivity;
 import com.oklib.demo.common_components.GlideImageViewActivity;
 import com.oklib.demo.common_components.LetterNavActivity;
+import com.oklib.demo.common_components.MiClockViewActivity;
 import com.oklib.demo.common_components.ProgressViewActivity;
 import com.oklib.demo.common_components.ShapeSelectActivity;
 import com.oklib.demo.common_components.TextViewActivity;
@@ -21,6 +22,7 @@ import com.oklib.demo.common_components.ToolbarActivity;
 import com.oklib.demo.common_components.chart.ChartActivity;
 import com.oklib.demo.common_components.percent_layout.PercentLayoutActivity;
 import com.oklib.demo.common_components.refresh.RefreshActivity;
+import com.oklib.demo.common_components.span.SpanActivity;
 import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
 import com.oklib.demo.window_related.CenterListDialogActivity;
@@ -155,6 +157,14 @@ public class MainFragment extends BaseFragment {
                 break;
             case "适配百分比布局":
                 intent = new Intent(context, PercentLayoutActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "字体多样式":
+                intent = new Intent(context, SpanActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "仿小米时钟":
+                intent = new Intent(context, MiClockViewActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
         }

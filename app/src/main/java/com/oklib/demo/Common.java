@@ -41,6 +41,8 @@ public final class Common {
             "微信撒花动画",
             "自定义进度条view",
             "适配百分比布局",
+            "字体多样式",
+            "仿小米时钟",
     };
     //常用工具
     public static final String[] COMMON_TOOLS = {

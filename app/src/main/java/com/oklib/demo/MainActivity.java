@@ -20,8 +20,6 @@ import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 
-import cn.bmob.v3.update.BmobUpdateAgent;
-
 
 /**
  * 时间：2017/8/1
@@ -103,7 +101,7 @@ public class MainActivity extends BaseAppActivity
     @Override
     protected void initNet() {
         // 自动更新方法通常可以放在应用的启动页
-        BmobUpdateAgent.update(this);
+        //BmobUpdateAgent.update(this);
     }
 
     private void setStateBarStyle() {
@@ -160,8 +158,8 @@ public class MainActivity extends BaseAppActivity
                     startActivity(intent);
                 } else if (id == R.id.check_updates) {
                     // 手动检查更新
-                    BmobUpdateAgent.forceUpdate(context);
-                    ToastUtil.success("手动检查更新");
+                    //BmobUpdateAgent.forceUpdate(context);
+                    //ToastUtil.success("手动检查更新");
                 } else if (id == R.id.exchange_area) {
                     Intent intent = new Intent(context, ExchangeAreaActivity.class);
                     intent.putExtra(Common.TITLE, "技术交流");

@@ -8,6 +8,20 @@
     <color name="app_blue_color">#455ede</color>
     <color name="app_blue_color1">#000001</color>
 
+    <!--字体多样式-->
+    <color name="rainbow_red">#bf0c43</color>
+    <color name="rainbow_yellow">#f9ba15</color>
+    <color name="rainbow_green">#8eac00</color>
+    <color name="rainbow_blue">#127a97</color>
+    <color name="rainbow_purple">#452b72</color>
+    <integer-array name="rainbow">
+        <item>@color/rainbow_red</item>
+        <item>@color/rainbow_yellow</item>
+        <item>@color/rainbow_green</item>
+        <item>@color/rainbow_blue</item>
+        <item>@color/rainbow_purple</item>
+    </integer-array>
+
     <!-- common -->
     <color name="c0">#ff000000</color>
     <color name="c1">#D9000000</color>
