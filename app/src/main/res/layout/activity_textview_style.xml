@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                app:texts="@array/examples"
+                app:texts="@array/oklib_examples"
                 app:timeout="500" />
 
             <View
@@ -52,10 +52,10 @@
                     android:layout_height="80dp"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="10dp"
-                    app:solid="@color/opacity_5_red" />
+                    app:solid="@color/oklib_opacity_5_red" />
 
                 <com.oklib.view.stv.SuperTextView
                     android:id="@+id/stv_2_1"
@@ -64,7 +64,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="全圆角矩形"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="40dp"
                     app:solid="#85219E" />
@@ -76,7 +76,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="方形边框"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:solid="#78C3ED"
                     app:stroke_color="#5166ED"
@@ -89,7 +89,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="圆角边框"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="10dp"
                     app:solid="#228609"
@@ -111,7 +111,7 @@
                     android:layout_height="80dp"
                     android:gravity="center"
                     android:text="圆形"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="40dp"
                     app:solid="#008673" />
@@ -123,7 +123,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="圆形边框"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="40dp"
                     app:solid="#5D4FB0"
@@ -137,11 +137,11 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="圆形边框"
-                    android:textColor="@color/black"
+                    android:textColor="@color/oklib_black"
                     android:textSize="14sp"
                     app:corner="40dp"
-                    app:solid="@color/transparent"
-                    app:stroke_color="@color/a233be"
+                    app:solid="@color/oklib_transparent"
+                    app:stroke_color="@color/oklib_a233be"
                     app:stroke_width="5dp" />
             </LinearLayout>
 
@@ -158,7 +158,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:text="左上圆角"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="15dp"
                     app:left_top_corner="true"
@@ -172,7 +172,7 @@
                     android:layout_toRightOf="@+id/stv_6"
                     android:gravity="center"
                     android:text="右上圆角"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="15dp"
                     app:right_top_corner="true"
@@ -187,7 +187,7 @@
                     android:layout_marginTop="5dp"
                     android:gravity="center"
                     android:text="左下圆角"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="15dp"
                     app:left_bottom_corner="true"
@@ -203,7 +203,7 @@
                     android:layout_toRightOf="@+id/stv_6"
                     android:gravity="center"
                     android:text="右下圆角"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="15dp"
                     app:right_bottom_corner="true"
@@ -217,7 +217,7 @@
                     android:layout_toRightOf="@+id/stv_9"
                     android:gravity="center"
                     android:text="设置两个圆角"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="15dp"
                     app:left_top_corner="true"
@@ -234,7 +234,7 @@
                     android:layout_toRightOf="@+id/stv_9"
                     android:gravity="center"
                     android:text="设置三个圆角"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="15dp"
                     app:left_bottom_corner="true"
@@ -260,7 +260,7 @@
                     android:text="空心文字"
                     android:textSize="18sp"
                     app:solid="#EEF3E2"
-                    app:text_fill_color="@color/transparent"
+                    app:text_fill_color="@color/oklib_transparent"
                     app:text_stroke="true"
                     app:text_stroke_color="#811D99"
                     app:text_stroke_width="1dp" />
@@ -275,7 +275,7 @@
                     android:text="文字描边"
                     android:textSize="18sp"
                     app:solid="#D9B0E2"
-                    app:text_fill_color="@color/white"
+                    app:text_fill_color="@color/oklib_white"
                     app:text_stroke="true"
                     app:text_stroke_color="#461B50"
                     app:text_stroke_width="1dp" />
@@ -296,7 +296,7 @@
                     android:gravity="bottom|center"
                     android:paddingBottom="1dp"
                     android:text="状态图 1"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="10dp"
                     app:isShowState="true"
@@ -311,7 +311,7 @@
                     android:gravity="bottom|center_horizontal"
                     android:paddingBottom="1dp"
                     android:text="状态图 2"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:corner="10dp"
                     app:isShowState="true"
@@ -328,7 +328,7 @@
                     android:gravity="center"
                     android:paddingLeft="23dp"
                     android:text="状态图 3"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="10sp"
                     app:corner="40dp"
                     app:isShowState="true"
@@ -347,7 +347,7 @@
                     android:gravity="center"
                     android:paddingBottom="1dp"
                     android:text="状态图 4"
-                    android:textColor="@color/white"
+                    android:textColor="@color/oklib_white"
                     android:textSize="14sp"
                     app:isShowState="true"
                     app:solid="#4CBDD2"
@@ -366,10 +366,10 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="使用Adjuster实现动画效果"
-                android:textColor="@color/white"
+                android:textColor="@color/oklib_white"
                 android:textSize="16dp"
                 app:corner="25dp"
-                app:solid="@color/purple" />
+                app:solid="@color/oklib_purple" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_18"
@@ -380,7 +380,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="使用Adjuster实现Ripple效果"
-                android:textColor="@color/white"
+                android:textColor="@color/oklib_white"
                 android:textSize="16dp"
                 app:corner="25dp"
                 app:solid="#ED86AE" />
@@ -401,7 +401,7 @@
                     android:layout_marginRight="10dp"
                     android:gravity="center"
                     android:text="BEFORE_DRAWABLE"
-                    android:textColor="@color/black"
+                    android:textColor="@color/oklib_black"
                     android:textSize="7dp"
                     android:textStyle="bold"
                     app:corner="20dp"
@@ -419,7 +419,7 @@
                     android:layout_marginRight="10dp"
                     android:gravity="center"
                     android:text="BEFORE_TEXT"
-                    android:textColor="@color/black"
+                    android:textColor="@color/oklib_black"
                     android:textSize="8dp"
                     android:textStyle="bold"
                     app:corner="20dp"
@@ -437,7 +437,7 @@
                     android:layout_marginRight="10dp"
                     android:gravity="center"
                     android:text="AT_LAST"
-                    android:textColor="@color/black"
+                    android:textColor="@color/oklib_black"
                     android:textSize="8dp"
                     android:textStyle="bold"
                     app:corner="20dp"
@@ -475,14 +475,14 @@
                 android:gravity="center"
                 android:paddingBottom="1dp"
                 android:text="shader_topToBottom"
-                android:textColor="@color/white"
+                android:textColor="@color/oklib_white"
                 android:textSize="14sp"
                 app:corner="10dp"
                 app:shaderEnable="true"
-                app:shaderEndColor="@color/pink"
+                app:shaderEndColor="@color/oklib_pink"
                 app:shaderMode="topToBottom"
-                app:shaderStartColor="@color/main_blue"
-                app:solid="@color/main_blue" />
+                app:shaderStartColor="@color/oklib_main_blue"
+                app:solid="@color/oklib_main_blue" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_23"
@@ -494,14 +494,14 @@
                 android:gravity="center"
                 android:paddingBottom="1dp"
                 android:text="shader_bottomToTop"
-                android:textColor="@color/white"
+                android:textColor="@color/oklib_white"
                 android:textSize="14sp"
                 app:corner="10dp"
                 app:shaderEnable="true"
-                app:shaderEndColor="@color/pink"
+                app:shaderEndColor="@color/oklib_pink"
                 app:shaderMode="bottomToTop"
-                app:shaderStartColor="@color/main_blue"
-                app:solid="@color/main_blue" />
+                app:shaderStartColor="@color/oklib_main_blue"
+                app:solid="@color/oklib_main_blue" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_24"
@@ -513,14 +513,14 @@
                 android:gravity="center"
                 android:paddingBottom="1dp"
                 android:text="shader_leftTopRight"
-                android:textColor="@color/white"
+                android:textColor="@color/oklib_white"
                 android:textSize="14sp"
                 app:corner="10dp"
                 app:shaderEnable="true"
-                app:shaderEndColor="@color/pink"
+                app:shaderEndColor="@color/oklib_pink"
                 app:shaderMode="leftTopRight"
-                app:shaderStartColor="@color/main_blue"
-                app:solid="@color/main_blue" />
+                app:shaderStartColor="@color/oklib_main_blue"
+                app:solid="@color/oklib_main_blue" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_26"
@@ -532,14 +532,14 @@
                 android:gravity="center"
                 android:paddingBottom="1dp"
                 android:text="shader_rightToLeft"
-                android:textColor="@color/white"
+                android:textColor="@color/oklib_white"
                 android:textSize="14sp"
                 app:corner="10dp"
                 app:shaderEnable="true"
-                app:shaderEndColor="@color/pink"
+                app:shaderEndColor="@color/oklib_pink"
                 app:shaderMode="rightToLeft"
-                app:shaderStartColor="@color/main_blue"
-                app:solid="@color/main_blue" />
+                app:shaderStartColor="@color/oklib_main_blue"
+                app:solid="@color/oklib_main_blue" />
 
         </LinearLayout>
     </ScrollView>

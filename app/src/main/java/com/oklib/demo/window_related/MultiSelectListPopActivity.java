@@ -71,7 +71,7 @@ public class MultiSelectListPopActivity extends BaseAppActivity {
         String[] mLabels = new String[]{"标题1", "标题2", "标题3"};
         PopupWindow popupWindow = MultiSelectListPop.getInstance().create(this, true, mLabels);
         popupWindow.showAsDropDown(view);
-        MultiSelectListPop.getInstance().updateBg(getResources().getColor(R.color.red));
+        MultiSelectListPop.getInstance().updateBg(getResources().getColor(R.color.oklib_red));
         MultiSelectListPop.getInstance().updateGou(R.drawable.gougou_icon);
         MultiSelectListPop.getInstance().setOnMultiSelectClickListener(new MultiSelectListPop.OnMultiSelectClickListener() {
             @Override

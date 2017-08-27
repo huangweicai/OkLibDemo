@@ -113,7 +113,7 @@ public class RefreshActivity extends BaseAppActivity implements CommonRefreshLay
                 }
                 //必须，无数据显示状态，请求失败或者网络异常，更新显示效果
                 //备选：R.mipmap.no_net_icon, "暂无网络"
-                adapter.setEmptyDataState(R.mipmap.rv_refresh_component_no_data_icon, "暂无数据");
+                adapter.setEmptyDataState(R.mipmap.oklib_rv_refresh_component_no_data_icon, "暂无数据");
             }
         }, 2000);
 

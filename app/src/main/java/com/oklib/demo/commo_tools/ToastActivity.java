@@ -97,9 +97,9 @@ public class ToastActivity extends BaseAppActivity {
         findViewById(R.id.button_normal_toast_w_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Drawable icon = getResources().getDrawable(R.drawable.ic_pets_white_48dp);
+               /* Drawable icon = getResources().getDrawable(R.drawable.oklib_ic_pets_white_48dp);
                 Toasty.normal(MainActivity.this, "Normal toast w/ icon", icon).show();*/
-                ToastUtil.show("Normal toast w/ icon", R.drawable.ic_pets_white_48dp);
+                ToastUtil.show("Normal toast w/ icon", R.drawable.oklib_ic_pets_white_48dp);
             }
         });
         findViewById(R.id.button_info_toast_with_formatting).setOnClickListener(new View.OnClickListener() {
@@ -134,7 +134,7 @@ public class ToastActivity extends BaseAppActivity {
 
                 //自定义背景，提示文本，文本颜色，时间等
                 //SnackbarUtil.IndefiniteSnackbar(view, "我是弹出的信息", 5000, 0xffffffff, 0xff000000).show();
-                SnackbarUtil.IndefiniteSnackbar(view, "我是弹出的信息", 5000, getResources().getColor(R.color.white), getResources().getColor(R.color.blue)).show();
+                SnackbarUtil.IndefiniteSnackbar(view, "我是弹出的信息", 5000, getResources().getColor(R.color.oklib_white), getResources().getColor(R.color.oklib_blue)).show();
             }
         });
     }

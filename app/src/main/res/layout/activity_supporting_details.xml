@@ -17,8 +17,8 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_gravity="bottom"
         app:layout_scrollFlags="scroll"
-        app:tabIndicatorColor="@color/blue"
-        app:tabSelectedTextColor="@color/blue" />
+        app:tabIndicatorColor="@color/oklib_blue"
+        app:tabSelectedTextColor="@color/oklib_blue" />
 
     <View
         android:layout_width="match_parent"

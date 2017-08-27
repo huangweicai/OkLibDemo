@@ -28,7 +28,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 app:normalBackground="@mipmap/ic_launcher"
-                app:pressedBackground="@mipmap/maotouying_icon" />
+                app:pressedBackground="@mipmap/oklib_maotouying_icon" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/text_test"
@@ -38,11 +38,11 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="change text color"
-                app:normalBackgroundColor="@color/colorPrimary"
+                app:normalBackgroundColor="@color/oklib_colorPrimary"
                 app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/colorPrimary"
+                app:pressedBackgroundColor="@color/oklib_colorPrimary"
                 app:pressedTextColor="@android:color/holo_red_light"
-                app:unableBackgroundColor="@color/colorPrimary"
+                app:unableBackgroundColor="@color/oklib_colorPrimary"
                 app:unableTextColor="@android:color/holo_orange_dark" />
 
 
@@ -55,8 +55,8 @@
                 android:padding="10dp"
                 android:text="change background"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/colorPrimary"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:normalBackgroundColor="@color/oklib_colorPrimary"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:unableBackgroundColor="@android:color/holo_red_light" />
 
 
@@ -69,8 +69,8 @@
                 android:padding="10dp"
                 android:text="with radius"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/colorPrimary"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:normalBackgroundColor="@color/oklib_colorPrimary"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:radius="10dp"
                 app:unableBackgroundColor="@android:color/holo_red_light" />
 
@@ -83,8 +83,8 @@
                 android:padding="10dp"
                 android:text="round radius"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/colorPrimary"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:normalBackgroundColor="@color/oklib_colorPrimary"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:radius="2dp"
                 app:round="true"
                 app:unableBackgroundColor="@android:color/holo_red_light" />
@@ -98,8 +98,8 @@
                 android:padding="10dp"
                 android:text="different_radius"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/colorPrimary"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:normalBackgroundColor="@color/oklib_colorPrimary"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:unableBackgroundColor="@android:color/holo_red_light" />
 
             <com.oklib.view.StateButton
@@ -153,7 +153,7 @@
                 app:normalStrokeColor="@android:color/white"
                 app:normalStrokeWidth="2dp"
                 app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:pressedStrokeColor="@android:color/white"
                 app:pressedStrokeWidth="2dp"
                 app:pressedTextColor="@android:color/white"
@@ -170,7 +170,7 @@
                 app:normalStrokeColor="@android:color/white"
                 app:normalStrokeWidth="2dp"
                 app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:pressedTextColor="@android:color/white"
                 app:radius="5dp" />
 
@@ -186,7 +186,7 @@
                 app:normalStrokeColor="@android:color/white"
                 app:normalStrokeWidth="2dp"
                 app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
                 app:pressedTextColor="@android:color/white"
                 app:radius="5dp" />
         </LinearLayout>

@@ -47,16 +47,16 @@ public class ToolbarActivity extends BaseAppActivity {
                     public void onClick(View v) {
                         finish();
                     }
-                }).setCenterTitle("中间标题", 16, R.color.white)//中间标题
-                .setCenterDraw(R.mipmap.maotouying_icon, CommonToolBar.LEFT, 10)//中间标题内设置图标
+                }).setCenterTitle("中间标题", 16, R.color.oklib_white)//中间标题
+                .setCenterDraw(R.mipmap.oklib_maotouying_icon, CommonToolBar.LEFT, 10)//中间标题内设置图标
                 .setCenterTitleListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         ToastUtil.success("中间标题");
                     }
                 })
-                .setRightTitle("确定", 14, R.color.red)//右标题
-                .setRightImage(R.color.blue, true)//有标题背景图或背景色 R.mipmap.maotouying_icon
+                .setRightTitle("确定", 14, R.color.oklib_red)//右标题
+                .setRightImage(R.color.oklib_blue, true)//有标题背景图或背景色 R.mipmap.oklib_maotouying_icon
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {

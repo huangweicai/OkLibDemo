@@ -71,7 +71,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
 
     @Override
     public int initContentView() {
-        return R.layout.item_common_dialog_list;
+        return R.layout.oklib_item_common_dialog_list;
     }
 
     @Override

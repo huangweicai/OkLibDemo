@@ -117,7 +117,7 @@ public class GlideImageViewActivity extends BaseAppActivity {
     String url = "http://img5.imgtn.bdimg.com/it/u=194685546,499818437&fm=26&gp=0.jpg";
     private void line0() {
         //矩形+遮罩层
-        image00.loadImage(url, R.mipmap.maotouying_icon).listener(new OnProgressListener() {
+        image00.loadImage(url, R.mipmap.oklib_maotouying_icon).listener(new OnProgressListener() {
             @Override
             public void onProgress(String imageUrl, long bytesRead, long totalBytes, boolean isDone, GlideException exception) {
                 Log.d("--->image11", "bytesRead: " + bytesRead + " totalBytes: " + totalBytes + " isDone: " + isDone);
@@ -125,7 +125,7 @@ public class GlideImageViewActivity extends BaseAppActivity {
         });
         //矩形
         image02.setPressedAlpha(0f);
-        image01.loadImage(url, R.mipmap.maotouying_icon).listener(new OnProgressListener() {
+        image01.loadImage(url, R.mipmap.oklib_maotouying_icon).listener(new OnProgressListener() {
             @Override
             public void onProgress(String imageUrl, long bytesRead, long totalBytes, boolean isDone, GlideException exception) {
                 Log.d("--->image11", "bytesRead: " + bytesRead + " totalBytes: " + totalBytes + " isDone: " + isDone);
@@ -133,7 +133,7 @@ public class GlideImageViewActivity extends BaseAppActivity {
         });
         //圆形+模糊+遮罩层
         image02.setPressedAlpha(0.3f);
-        image02.loadBlurCircleImage(url, R.mipmap.maotouying_icon, 13, 2).listener(new OnProgressListener() {
+        image02.loadBlurCircleImage(url, R.mipmap.oklib_maotouying_icon, 13, 2).listener(new OnProgressListener() {
             @Override
             public void onProgress(String imageUrl, long bytesRead, long totalBytes, boolean isDone, GlideException exception) {
                 Log.d("--->image11", "bytesRead: " + bytesRead + " totalBytes: " + totalBytes + " isDone: " + isDone);
@@ -141,7 +141,7 @@ public class GlideImageViewActivity extends BaseAppActivity {
         });
         //圆形+模糊
         image03.setPressedAlpha(0f);
-        image03.loadBlurCircleImage(url, R.mipmap.maotouying_icon, 13, 2).listener(new OnProgressListener() {
+        image03.loadBlurCircleImage(url, R.mipmap.oklib_maotouying_icon, 13, 2).listener(new OnProgressListener() {
             @Override
             public void onProgress(String imageUrl, long bytesRead, long totalBytes, boolean isDone, GlideException exception) {
                 Log.d("--->image11", "bytesRead: " + bytesRead + " totalBytes: " + totalBytes + " isDone: " + isDone);
@@ -169,9 +169,9 @@ public class GlideImageViewActivity extends BaseAppActivity {
 
         image13.setRadius(15);
         image13.setBorderWidth(3);
-        image13.setBorderColor(R.color.blue);
+        image13.setBorderColor(R.color.oklib_blue);
         image13.setPressedAlpha(0.3f);
-        image13.setPressedColor(R.color.blue);
+        image13.setPressedColor(R.color.oklib_blue);
         image13.loadImage(url1, R.color.placeholder_color);
 
         image10.setShapeType(ShapeImageView.ShapeType.CIRCLE);

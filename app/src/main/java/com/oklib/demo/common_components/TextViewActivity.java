@@ -90,7 +90,7 @@ public class TextViewActivity extends BaseAppActivity {
                 .setAutoAdjust(true)
                 .startAnim();
 
-        stv_18.setAdjuster(new RippleAdjuster(getResources().getColor(R.color.opacity_5_a58fed)));
+        stv_18.setAdjuster(new RippleAdjuster(getResources().getColor(R.color.oklib_opacity_5_a58fed)));
 
         OpportunityDemoAdjuster opportunityDemoAdjuster1 = new OpportunityDemoAdjuster();
         opportunityDemoAdjuster1.setOpportunity(SuperTextView.Adjuster.Opportunity.BEFORE_DRAWABLE);

@@ -26,11 +26,11 @@ public class RvAdapter extends BaseRcvAdapter<ViewHolderBeam> {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (FOOTER_TYPE == viewType) {
-            return new FooterViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_refresh_component_foot_loading, parent, false));
+            return new FooterViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.oklib_item_rv_refresh_component_foot_loading, parent, false));
         }else if(EXTRA_NODATA_TYPES == viewType){
-            return new EmptyDataViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_refresh_component_nodata, parent, false));
+            return new EmptyDataViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.oklib_item_rv_refresh_component_nodata, parent, false));
         }else{
-            return new ViewHolderItem(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_refresh_component, parent, false));
+            return new ViewHolderItem(LayoutInflater.from(parent.getContext()).inflate(R.layout.oklib_item_rv_refresh_component, parent, false));
         }
     }
 
