@@ -2,6 +2,7 @@ package com.oklib.demo.integration_framework;
 
 import android.Manifest;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.oklib.demo.Common;
@@ -12,6 +13,7 @@ import com.oklib.util.permission.PermissionFail;
 import com.oklib.util.permission.PermissionGen;
 import com.oklib.util.permission.PermissionSuccess;
 import com.oklib.view.CommonToolBar;
+import com.oklib.view.ProgressWebView;
 
 import static com.oklib.demo.Common.BASE_RES;
 
@@ -24,6 +26,9 @@ import static com.oklib.demo.Common.BASE_RES;
  */
 
 public class PermissionActivity extends BaseAppActivity {
+    private ProgressWebView wv_webview;
+    private String url = "http://www.jianshu.com/p/7236bb0d91ea";
+
     @Override
     protected int initLayoutId() {
         return R.layout.activity_permission;
@@ -48,7 +53,8 @@ public class PermissionActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        mBeans.add(new FunctionDetailBean("activity_permission.xml", BASE_RES +"/layout/activity_permission.xml"));
+                        mBeans.add(new FunctionDetailBean("activity_permission.xml", BASE_RES + "/layout/activity_permission.xml"));
+                        mBeans.add(new FunctionDetailBean("Android6.0动态权限处理方案", url));
                         showDetail();
                     }
                 });
@@ -56,9 +62,14 @@ public class PermissionActivity extends BaseAppActivity {
 
     @Override
     protected void initView() {
-
+        wv_webview = findView(R.id.wv_webview);
+        wv_webview.loadUrl(url);
     }
 
+    /**
+     * 作者：黄伟才
+     * 描述：动态权限使用
+     */
     @Override
     protected void initNet() {
         //具体参考：http://www.jianshu.com/p/7236bb0d91ea
@@ -87,5 +98,20 @@ public class PermissionActivity extends BaseAppActivity {
     public void failOpenCamera(boolean isCompletelyFail) {
         //请求码100，请求失败
         Toast.makeText(context, "权限请求失败", Toast.LENGTH_LONG).show();
+    }
+
+
+    //销毁处需要调用
+    @Override
+    protected void onDestroy() {
+        if (wv_webview != null) {
+            wv_webview.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+            wv_webview.clearHistory();
+
+            ((ViewGroup) wv_webview.getParent()).removeView(wv_webview);
+            wv_webview.destroy();
+            wv_webview = null;
+        }
+        super.onDestroy();
     }
 }

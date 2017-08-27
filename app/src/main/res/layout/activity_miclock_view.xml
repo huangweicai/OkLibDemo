@@ -12,7 +12,7 @@
         android:background="@color/app_color" />
 
     <com.oklib.view.MiClockView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         monkey:oklib_mv_backgroundColor="#237EAD"
