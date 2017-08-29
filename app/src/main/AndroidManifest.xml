@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".common_components.refresh.RefreshActivity"/>
-        <activity android:name="com.oklib.demo.common_components.GlideImageViewActivity"/>
+        <activity android:name="com.oklib.demo.common_components.glide_imageview.GlideImageViewActivity"/>
         <activity android:name="com.oklib.demo.integration_framework.PermissionActivity" />
         <activity android:name="com.oklib.demo.integration_framework.CameraActivity" />
         <activity android:name="com.oklib.demo.commo_tools.LoggerActivity" />
@@ -49,6 +49,12 @@
         <activity android:name=".common_components.percent_layout.PercentLinearLayoutActivity" />
         <activity android:name=".common_components.span.SpanActivity" />
         <activity android:name=".common_components.MiClockViewActivity" />
+        <activity android:name=".common_components.glide_imageview.GlideImageViewListActivity" />
+        <activity android:name=".common_components.glide_imageview.image.SingleImageActivity" />
+        <activity android:name=".common_components.DragLayoutActivity" />
+        <activity android:name=".common_components.vp_hss.VPHorizontalSlidingScaleActivity" />
+        <activity android:name=".common_components.TabSegmentActivity" />
+        <activity android:name=".common_components.AliLoadingViewActivity" />
 
         <!--7.0适配临时权限-->
         <provider
@@ -61,7 +67,6 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <!--spofix热修复-->
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
             android:value="24599847-1" />

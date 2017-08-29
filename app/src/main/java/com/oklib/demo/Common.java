@@ -33,16 +33,21 @@ public final class Common {
     public static final String[] COMMON_COMPONENTS = {
             "刷新组件",
             "toolbar封装统一菜单栏",
-            "GlideImageView，补充高斯模糊、默认无按下效果等",
+            "GlideImageView图片显示",
+//            "GlideImageView列表显示",
             "动态shape，select",
             "TextView炫酷效果",
             "字母导航·RecyclerView",
             "自定义图表封装",
             "微信撒花动画",
-            "自定义进度条view",
+            "进度条相关view",
             "适配百分比布局",
             "字体多样式",
             "仿小米时钟",
+            "拖拽布局",
+            "VP水平滑动缩放图片",
+            "自定义标题tab",
+            "支付宝加载动画",
     };
     //常用工具
     public static final String[] COMMON_TOOLS = {

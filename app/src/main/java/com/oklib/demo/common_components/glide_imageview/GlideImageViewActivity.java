@@ -1,19 +1,33 @@
-package com.oklib.demo.common_components;
+package com.oklib.demo.common_components.glide_imageview;
 
 
+import android.app.Activity;
+import android.content.Intent;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
+import com.oklib.demo.common_components.glide_imageview.image.SingleImageActivity;
 import com.oklib.view.CommonToolBar;
+import com.oklib.view.gimage.GlideImageLoader;
 import com.oklib.view.gimage.GlideImageView;
 import com.oklib.view.gimage.ShapeImageView;
+import com.oklib.view.gimage.progress.CircleProgressView;
 import com.oklib.view.gimage.progress.OnGlideImageViewListener;
 import com.oklib.view.gimage.progress.OnProgressListener;
+
+import java.util.Random;
 
 import static com.oklib.demo.Common.BASE_RES;
 
@@ -45,6 +59,22 @@ public class GlideImageViewActivity extends BaseAppActivity {
     private GlideImageView image31;
     private GlideImageView image32;
     private GlideImageView image33;
+
+    private GlideImageView image41;
+    private CircleProgressView progressView1;
+    private GlideImageView image42;
+    private CircleProgressView progressView2;
+    public static final String KEY_IMAGE_URL = "image_url";
+    public static final String KEY_IMAGE_URL_THUMBNAIL = "image_url_thumbnail";
+
+    public static boolean isLoadAgain = false; // Just for fun when loading images!
+
+    public static final String cat = "https://raw.githubusercontent.com/sfsheng0322/GlideImageView/master/screenshot/cat.jpg";
+    public static final String cat_thumbnail = "https://raw.githubusercontent.com/sfsheng0322/GlideImageView/master/screenshot/cat_thumbnail.jpg";
+
+    public static final String girl = "https://raw.githubusercontent.com/sfsheng0322/GlideImageView/master/screenshot/girl.jpg";
+    public static final String girl_thumbnail = "https://raw.githubusercontent.com/sfsheng0322/GlideImageView/master/screenshot/girl_thumbnail.jpg";
+
 
     @Override
     protected int initLayoutId() {
@@ -103,10 +133,17 @@ public class GlideImageViewActivity extends BaseAppActivity {
         image32 = (GlideImageView) findViewById(R.id.image32);
         image33 = (GlideImageView) findViewById(R.id.image33);
 
+        image41 = (GlideImageView) findViewById(R.id.image41);
+        image42 = (GlideImageView) findViewById(R.id.image42);
+        progressView1 = (CircleProgressView) findViewById(R.id.progressView1);
+        progressView2 = (CircleProgressView) findViewById(R.id.progressView2);
+
         line0();
         line1();
         line2();
         line3();
+        line41();
+        line42();
     }
 
     @Override
@@ -201,5 +238,77 @@ public class GlideImageViewActivity extends BaseAppActivity {
 
         image33.loadImage(gif2, R.mipmap.ic_launcher);
         image30.loadImage(gif3, R.mipmap.ic_launcher);
+    }
+
+
+    private void line41() {
+        image41.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //转场动画
+                Intent intent = new Intent(context, SingleImageActivity.class);
+                intent.putExtra(KEY_IMAGE_URL, cat);
+                intent.putExtra(KEY_IMAGE_URL_THUMBNAIL, cat_thumbnail);
+                ActivityOptionsCompat compat = ActivityOptionsCompat
+                        .makeSceneTransitionAnimation((Activity) context, image41, "the image of transition");
+                ActivityCompat.startActivity(context, intent, compat.toBundle());
+            }
+        });
+
+        RequestOptions requestOptions = image41.requestOptions(R.color.placeholder_color).centerCrop();
+        if (isLoadAgain) {
+            requestOptions.diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true);
+        }
+
+        // 第一种方式加载
+        image41.load(cat_thumbnail, requestOptions).listener(new OnGlideImageViewListener() {
+            @Override
+            public void onProgress(int percent, boolean isDone, GlideException exception) {
+                if (exception != null && !TextUtils.isEmpty(exception.getMessage())) {
+                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_LONG).show();
+                }
+                progressView1.setProgress(percent);
+                progressView1.setVisibility(isDone ? View.GONE : View.VISIBLE);
+            }
+        });
+
+        isLoadAgain = new Random().nextInt(3) == 1;
+    }
+
+
+
+    private void line42() {
+        image42.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent intent = new Intent(context, SingleImageActivity.class);
+            intent.putExtra(KEY_IMAGE_URL, girl);
+            intent.putExtra(KEY_IMAGE_URL_THUMBNAIL, girl_thumbnail);
+            ActivityOptionsCompat compat = ActivityOptionsCompat
+                    .makeSceneTransitionAnimation((Activity) context, image42, "the image of transition");
+            ActivityCompat.startActivity(context, intent, compat.toBundle());
+            }
+        });
+
+        RequestOptions requestOptions = image42.requestOptions(R.color.placeholder_color).centerCrop();
+        if (isLoadAgain) {
+            requestOptions.diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true);
+        }
+
+        // 第二种方式加载：可以解锁更多功能
+        GlideImageLoader imageLoader = image42.getImageLoader();
+        imageLoader.setOnGlideImageViewListener(girl_thumbnail, new OnGlideImageViewListener() {
+            @Override
+            public void onProgress(int percent, boolean isDone, GlideException exception) {
+                if (exception != null && !TextUtils.isEmpty(exception.getMessage())) {
+                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_LONG).show();
+                }
+                progressView2.setProgress(percent);
+                progressView2.setVisibility(isDone ? View.GONE : View.VISIBLE);
+            }
+        });
+        imageLoader.requestBuilder(girl_thumbnail, requestOptions)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(image42);
     }
 }

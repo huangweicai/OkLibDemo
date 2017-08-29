@@ -1,13 +1,16 @@
 package com.oklib.demo.common_components;
 
 import android.view.View;
+import android.widget.Button;
 
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
+import com.oklib.view.progress.CircleProgressView;
 import com.oklib.view.CommonToolBar;
-import com.oklib.view.ProgressCircleView;
+import com.oklib.view.progress.HorizontalProgressBar;
+import com.oklib.view.progress.PercentCircleProgressView;
 
 import static com.oklib.demo.Common.BASE_RES;
 
@@ -52,10 +55,52 @@ public class ProgressViewActivity extends BaseAppActivity {
                 });
     }
 
-    private ProgressCircleView pcv_circle;
     @Override
     protected void initView() {
-        pcv_circle = findView(R.id.pcv_circle);
+        final PercentCircleProgressView pcv_circle = findView(R.id.pcv_circle);
+        Button btn_percent_anim = findView(R.id.btn_percent_anim);
+        btn_percent_anim.setOnClickListener(new View.OnClickListener() {
+            int count = 5;
+            @Override
+            public void onClick(View v) {
+                count++;
+                if (count <= 15) {
+                    pcv_circle.setProgressValue(15, count).startAnim();
+                }
+            }
+        });
+
+
+        final CircleProgressView mCircleBar = (CircleProgressView) findViewById(R.id.circleProgressbar);
+        mCircleBar.setProgress(50);//0-100
+        Button btn_c_start = findView(R.id.btn_c_start);
+        btn_c_start.setOnClickListener(new View.OnClickListener() {
+            int count = 50;
+            @Override
+            public void onClick(View v) {
+                count++;
+                if (count <= 100) {
+                    mCircleBar.setProgress(count);//0-100
+                }
+            }
+        });
+
+
+        final HorizontalProgressBar horizontalProgressBar = (HorizontalProgressBar) findViewById(R.id.horizontalProgressBar);
+        horizontalProgressBar.setMax(100);//必须，设置最大值
+        horizontalProgressBar.setProgress(50);//进度值
+        Button btn_h_start = findView(R.id.btn_h_start);
+        btn_h_start.setOnClickListener(new View.OnClickListener() {
+            int count = 50;
+            @Override
+            public void onClick(View v) {
+                count++;
+                if (count <= 100) {
+                    horizontalProgressBar.setProgress(count);
+                }
+            }
+        });
+
     }
 
     @Override
@@ -63,11 +108,8 @@ public class ProgressViewActivity extends BaseAppActivity {
 
     }
 
-    private int count = 5;
+
     public void start(View view) {
-        count++;
-        if (count <= 15) {
-            pcv_circle.setProgressValue(15, count).startAnim();
-        }
+
     }
 }

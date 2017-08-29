@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+
+    <!--oklib_colors:主色调，选中tab字体默认白色-->
+    <!--oklib_textSelectedColors：定义选中字体颜色-->
+    <com.oklib.view.tabsegment.TabSegment
+        android:id="@+id/tabSegment"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        app:oklib_textSelectedColors="@color/colorAccent"
+        app:oklib_colors="@color/app_blue_color" />
+</LinearLayout>

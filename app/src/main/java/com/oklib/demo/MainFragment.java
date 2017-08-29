@@ -11,18 +11,22 @@ import com.oklib.base.BaseFragment;
 import com.oklib.demo.adapter.MainListAdapter;
 import com.oklib.demo.commo_tools.LoggerActivity;
 import com.oklib.demo.commo_tools.ToastActivity;
+import com.oklib.demo.common_components.AliLoadingViewActivity;
+import com.oklib.demo.common_components.DragLayoutActivity;
 import com.oklib.demo.common_components.FllowerViewActivity;
-import com.oklib.demo.common_components.GlideImageViewActivity;
 import com.oklib.demo.common_components.LetterNavActivity;
 import com.oklib.demo.common_components.MiClockViewActivity;
 import com.oklib.demo.common_components.ProgressViewActivity;
 import com.oklib.demo.common_components.ShapeSelectActivity;
+import com.oklib.demo.common_components.TabSegmentActivity;
 import com.oklib.demo.common_components.TextViewActivity;
 import com.oklib.demo.common_components.ToolbarActivity;
 import com.oklib.demo.common_components.chart.ChartActivity;
+import com.oklib.demo.common_components.glide_imageview.GlideImageViewActivity;
 import com.oklib.demo.common_components.percent_layout.PercentLayoutActivity;
 import com.oklib.demo.common_components.refresh.RefreshActivity;
 import com.oklib.demo.common_components.span.SpanActivity;
+import com.oklib.demo.common_components.vp_hss.VPHorizontalSlidingScaleActivity;
 import com.oklib.demo.integration_framework.CameraActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
 import com.oklib.demo.window_related.CenterListDialogActivity;
@@ -127,10 +131,14 @@ public class MainFragment extends BaseFragment {
                 intent = new Intent(context, ToolbarActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
-            case "GlideImageView，补充高斯模糊、默认无按下效果等":
+            case "GlideImageView图片显示":
                 intent = new Intent(context, GlideImageViewActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
+//            case "GlideImageView列表显示":
+//                intent = new Intent(context, GlideImageViewListActivity.class);
+//                intent.putExtra(Common.TITLE, title);
+//                break;
             case "动态shape，select":
                 intent = new Intent(context, ShapeSelectActivity.class);
                 intent.putExtra(Common.TITLE, title);
@@ -151,7 +159,7 @@ public class MainFragment extends BaseFragment {
                 intent = new Intent(context, FllowerViewActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
-            case "自定义进度条view":
+            case "进度条相关view":
                 intent = new Intent(context, ProgressViewActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
@@ -165,6 +173,22 @@ public class MainFragment extends BaseFragment {
                 break;
             case "仿小米时钟":
                 intent = new Intent(context, MiClockViewActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "拖拽布局":
+                intent = new Intent(context, DragLayoutActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "VP水平滑动缩放图片":
+                intent = new Intent(context, VPHorizontalSlidingScaleActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "自定义标题tab":
+                intent = new Intent(context, TabSegmentActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "支付宝加载动画":
+                intent = new Intent(context, AliLoadingViewActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
         }
