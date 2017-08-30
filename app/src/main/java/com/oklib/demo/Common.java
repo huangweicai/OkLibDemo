@@ -48,6 +48,8 @@ public final class Common {
             "VP水平滑动缩放图片",
             "自定义标题tab",
             "支付宝加载动画",
+            "应用启动动画",
+            "Baidu加载中view",
     };
     //常用工具
     public static final String[] COMMON_TOOLS = {

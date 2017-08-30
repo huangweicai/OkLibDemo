@@ -12,8 +12,10 @@ import com.oklib.demo.adapter.MainListAdapter;
 import com.oklib.demo.commo_tools.LoggerActivity;
 import com.oklib.demo.commo_tools.ToastActivity;
 import com.oklib.demo.common_components.AliLoadingViewActivity;
+import com.oklib.demo.common_components.BaiduLoadCircleViewActivity;
 import com.oklib.demo.common_components.DragLayoutActivity;
 import com.oklib.demo.common_components.FllowerViewActivity;
+import com.oklib.demo.common_components.LauncherViewActivity;
 import com.oklib.demo.common_components.LetterNavActivity;
 import com.oklib.demo.common_components.MiClockViewActivity;
 import com.oklib.demo.common_components.ProgressViewActivity;
@@ -189,6 +191,14 @@ public class MainFragment extends BaseFragment {
                 break;
             case "支付宝加载动画":
                 intent = new Intent(context, AliLoadingViewActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "应用启动动画":
+                intent = new Intent(context, LauncherViewActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
+            case "Baidu加载中view":
+                intent = new Intent(context, BaiduLoadCircleViewActivity.class);
                 intent.putExtra(Common.TITLE, title);
                 break;
         }

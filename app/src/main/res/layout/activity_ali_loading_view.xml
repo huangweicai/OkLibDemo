@@ -18,11 +18,11 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:padding="3dp"
-        app:load_failure_color="#ff0000"
-        app:load_success_color="#00ff00"
-        app:loading_color="#0000ff"
-        app:progress_radius="20dp"
-        app:progress_width="3dp" />
+        app:oklib_load_failure_color="#ff0000"
+        app:oklib_load_success_color="#00ff00"
+        app:oklib_loading_color="#0000ff"
+        app:oklib_progress_radius="20dp"
+        app:oklib_progress_width="3dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
