@@ -9,6 +9,8 @@ package com.oklib.demo;
  */
 
 public final class Common {
+    public static final String[] TITLES = {"集成框架", "常用组件", "常用工具", "窗口相关"};
+
     //0集成框架 1常用组件 2常用工具 3窗口相关
     public static String[] getDatas(int type) {
         switch (type) {

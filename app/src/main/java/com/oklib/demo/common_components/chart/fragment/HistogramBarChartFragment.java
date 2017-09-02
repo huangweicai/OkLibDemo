@@ -50,7 +50,9 @@ public class HistogramBarChartFragment extends Fragment {
                         .setNoMedicineText("未打针")
                         .setMedicineText("打针")
                         .setBloodText("高针114-128/低针68-78")
-                        .setPillarWidth(26f)//以上子类内容，必须写在下面方法上面
+                        .setPillarWidth(26f)
+                        .setShowYCenterText(false)
+                        .setShowTopInfo(false)//以上子类内容，必须写在下面方法上面
                         .isShowDatumLine_X(false)
                         .isShowDatumLine_Y(false)
                         .setType(BaseChartView.DAY)

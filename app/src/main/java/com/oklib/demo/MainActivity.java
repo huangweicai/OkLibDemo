@@ -20,6 +20,8 @@ import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 
+import cn.bmob.v3.update.UpdateResponse;
+
 
 /**
  * 时间：2017/8/1
@@ -34,7 +36,7 @@ public class MainActivity extends BaseAppActivity
     private CommonToolBar toolbar;
     private TabLayout toolbar_tl_tab;
     private ViewPager vp_container;
-    private String[] titles = {"集成框架", "常用组件", "常用工具", "窗口相关"};
+    private UpdateResponse ur;
 
     @Override
     protected int initLayoutId() {
@@ -88,20 +90,18 @@ public class MainActivity extends BaseAppActivity
 
             @Override
             public CharSequence getPageTitle(int position) {
-                return titles[position];
+                return Common.TITLES[position];
             }
 
             @Override
             public int getCount() {
-                return titles.length;
+                return Common.TITLES.length;
             }
         });
     }
 
     @Override
     protected void initNet() {
-        // 自动更新方法通常可以放在应用的启动页
-        //BmobUpdateAgent.update(this);
     }
 
     private void setStateBarStyle() {
@@ -158,8 +158,7 @@ public class MainActivity extends BaseAppActivity
                     startActivity(intent);
                 } else if (id == R.id.check_updates) {
                     // 手动检查更新
-                    //BmobUpdateAgent.forceUpdate(context);
-                    //ToastUtil.success("手动检查更新");
+                    //BmobApkUpdate.update(context);
                 } else if (id == R.id.exchange_area) {
                     Intent intent = new Intent(context, ExchangeAreaActivity.class);
                     intent.putExtra(Common.TITLE, "技术交流");

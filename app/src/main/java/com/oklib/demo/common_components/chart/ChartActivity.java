@@ -10,11 +10,12 @@ import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.demo.common_components.chart.fragment.HistogramBarChartFragment;
-import com.oklib.demo.common_components.chart.fragment.CustomBloodChartFragment;
-import com.oklib.demo.common_components.chart.fragment.CurveChartFragment;
 import com.oklib.demo.common_components.chart.fragment.BarChartFragment;
+import com.oklib.demo.common_components.chart.fragment.CurveChartFragment;
+import com.oklib.demo.common_components.chart.fragment.CustomBloodChartFragment;
+import com.oklib.demo.common_components.chart.fragment.HistogramBarChartFragment;
 import com.oklib.demo.common_components.chart.fragment.LineChartFragment;
+import com.oklib.demo.common_components.chart.fragment.SportBarChartFragment;
 import com.oklib.view.CommonToolBar;
 
 import static com.oklib.demo.Common.BASE_JAVA;
@@ -31,7 +32,7 @@ import static com.oklib.demo.Common.BASE_RES;
 public class ChartActivity extends BaseAppActivity {
    private TabLayout toolbar_tl_tab;
    private ViewPager vp_container;
-   private String[] titles = {"折线图", "曲线图", "柱状图", "镂空柱状图", "定制血压图"};
+   private String[] titles = {"折线图", "曲线图", "柱状图", "镂空柱状图", "定制血压图", "运动柱状图"};
 
     @Override
     protected int initLayoutId() {
@@ -76,6 +77,9 @@ public class ChartActivity extends BaseAppActivity {
                         mBeans.add(new FunctionDetailBean("CustomBloodChartFragment.java", BASE_JAVA + fragmentPackage+"CustomBloodChartFragment.java"));
                         mBeans.add(new FunctionDetailBean("fragment_blood_chart.xml", BASE_RES +"/layout/fragment_blood_chart.xml"));
 
+                        mBeans.add(new FunctionDetailBean("SportBarChartFragment.java", BASE_JAVA + fragmentPackage+"SportBarChartFragment.java"));
+                        mBeans.add(new FunctionDetailBean("fragment_sport_chart.xml", BASE_RES + "/layout/fragment_sport_chart.xml"));
+
                         showDetail();
                     }
                 });
@@ -113,6 +117,11 @@ public class ChartActivity extends BaseAppActivity {
                 } else if (position == 4) {
                     //定制血压图
                     CustomBloodChartFragment chartFragment = new CustomBloodChartFragment();
+                    chartFragment.showChart();
+                    return chartFragment;
+                } else if (position == 5) {
+                    //运动柱状图
+                    SportBarChartFragment chartFragment = new SportBarChartFragment();
                     chartFragment.showChart();
                     return chartFragment;
                 }
