@@ -159,6 +159,7 @@ public class MainActivity extends BaseAppActivity
                 } else if (id == R.id.check_updates) {
                     // 手动检查更新
                     //BmobApkUpdate.update(context);
+                    ToastUtil.show("正在开发中···");
                 } else if (id == R.id.exchange_area) {
                     Intent intent = new Intent(context, ExchangeAreaActivity.class);
                     intent.putExtra(Common.TITLE, "技术交流");
