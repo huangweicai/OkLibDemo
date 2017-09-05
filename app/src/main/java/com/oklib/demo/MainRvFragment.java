@@ -186,12 +186,11 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
      */
     private void processList() {
         if (isRefreshState) {
-            //停止刷新动画
-            rv_layout.isShowRefreshAnim(false);
             //清空数据源
             mainRvAdapter.getDataList().clear();
         }
-
+        //停止刷新动画
+        rv_layout.isShowRefreshAnim(false);
         //追加数据源
         mainRvAdapter.addDataList(mainList);
         //必须，能再次触发加载更多，更新可以加载状态
@@ -213,6 +212,7 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
     public void onRefresh() {
         page = 0;
         isRefreshState = true;
+        rv_layout.isShowRefreshAnim(true);//显示刷新动画
         requestNet();
     }
 

@@ -276,7 +276,7 @@ public class MainActivity extends BaseAppActivity
                         showUpdateWin(versionBean);
                     }
                 }else{
-                    ToastUtil.show("当前版本已是最新版本"+curVersionCode);
+                    ToastUtil.show("当前版本已是最新版本"+PackageInfoUtil.getVersionName(context));
                 }
 
             }

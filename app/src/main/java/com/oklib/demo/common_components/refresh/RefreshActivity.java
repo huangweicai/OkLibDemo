@@ -96,12 +96,11 @@ public class RefreshActivity extends BaseAppActivity implements CommonRefreshLay
                 list.add(new ViewHolderBeam());
 
                 if (isRefreshState) {
-                    //停止刷新动画
-                    rv_layout.isShowRefreshAnim(false);
                     //清空数据源
                     adapter.getDataList().clear();
                 }
-
+                //停止刷新动画
+                rv_layout.isShowRefreshAnim(false);
                 //追加数据源
                 adapter.addDataList(list);
                 //必须，能再次触发加载更多，更新可以加载状态
@@ -124,6 +123,8 @@ public class RefreshActivity extends BaseAppActivity implements CommonRefreshLay
     @Override
     public void onRefresh() {
         isRefreshState = true;
+        //停止刷新动画
+        rv_layout.isShowRefreshAnim(false);
         netSuccess();
     }
 
