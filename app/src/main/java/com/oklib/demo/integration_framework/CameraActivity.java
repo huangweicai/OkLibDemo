@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.oklib.assist.camera.MultiImageSelectorActivity;
-import com.oklib.assist.camera.help.CameraManager;
-import com.oklib.assist.camera.help.CameraUtil;
+import com.oklib.util.camera.MultiImageSelectorActivity;
+import com.oklib.util.camera.help.CameraManager;
+import com.oklib.util.camera.help.CameraUtil;
 import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.base.BaseAppActivity;

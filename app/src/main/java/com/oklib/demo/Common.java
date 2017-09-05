@@ -28,6 +28,7 @@ public final class Common {
 
     //集成框架
     public static final String[] INTEGRATION_FRAMEWORK = {
+            "封装网络请求",
             "6.0动态权限统一封装框架",
             "拍照选择、相册选择",
     };
@@ -60,6 +61,7 @@ public final class Common {
     };
     //窗口相关
     public static final String[] WINDOW_RELATED = {
+            "Dialog常用窗口大全",
             "居中确定取消窗口",
             "居中列表显示窗口",
             "加载等待窗口",

@@ -57,11 +57,8 @@
         <activity android:name=".common_components.AliLoadingViewActivity" />
         <activity android:name=".common_components.LauncherViewActivity" />
         <activity android:name=".common_components.BaiduLoadCircleViewActivity" />
-
-        <activity
-            android:name="cn.bmob.v3.update.UpdateDialogActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
+        <activity android:name=".window_related.DialogActivity" />
+        <activity android:name=".integration_framework.HttpActivity" />
 
         <!--7.0适配临时权限-->
         <provider

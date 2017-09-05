@@ -30,10 +30,12 @@ import com.oklib.demo.common_components.refresh.RefreshActivity;
 import com.oklib.demo.common_components.span.SpanActivity;
 import com.oklib.demo.common_components.vp_hss.VPHorizontalSlidingScaleActivity;
 import com.oklib.demo.integration_framework.CameraActivity;
+import com.oklib.demo.integration_framework.HttpActivity;
 import com.oklib.demo.integration_framework.PermissionActivity;
 import com.oklib.demo.window_related.CenterListDialogActivity;
 import com.oklib.demo.window_related.ConfirmDialogActivity;
 import com.oklib.demo.window_related.DateTimeActivity;
+import com.oklib.demo.window_related.DialogActivity;
 import com.oklib.demo.window_related.LoadingDialogActivity;
 import com.oklib.demo.window_related.MultiSelectListPopActivity;
 import com.oklib.demo.window_related.RegionSelectActivity;
@@ -107,6 +109,10 @@ public class MainFragment extends BaseFragment {
         Intent intent = null;
         String title = mainListAdapter.getTitle(position);
         switch (title) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
+            case "封装网络请求":
+                intent = new Intent(context, HttpActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
             case "6.0动态权限统一封装框架":
                 intent = new Intent(context, PermissionActivity.class);
                 intent.putExtra(Common.TITLE, title);
@@ -230,6 +236,10 @@ public class MainFragment extends BaseFragment {
         Intent intent = null;
         String title = mainListAdapter.getTitle(position);
         switch (title) {//jdk1.7之后支持，整形，枚举类型，boolean，字符串
+            case "Dialog常用窗口大全":
+                intent = new Intent(context, DialogActivity.class);
+                intent.putExtra(Common.TITLE, title);
+                break;
             case "居中确定取消窗口":
                 intent = new Intent(context, ConfirmDialogActivity.class);
                 intent.putExtra(Common.TITLE, title);

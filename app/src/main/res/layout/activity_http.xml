@@ -10,8 +10,15 @@
         android:layout_height="wrap_content"
         android:background="@color/app_color" />
 
-    <com.oklib.view.ProgressWebView
-        android:id="@+id/wv_webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="get"
+        android:text="get请求" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="post"
+        android:text="post请求" />
 </LinearLayout>
