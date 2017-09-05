@@ -59,6 +59,9 @@
         <activity android:name=".common_components.BaiduLoadCircleViewActivity" />
         <activity android:name=".window_related.DialogActivity" />
         <activity android:name=".integration_framework.HttpActivity" />
+        <activity android:name=".common_components.pickerview.JsonDataActivity" />
+        <activity android:name=".common_components.pickerview.FragmentTestActivity" />
+        <activity android:name=".common_components.pickerview.PickerViewActivity" />
 
         <!--7.0适配临时权限-->
         <provider
