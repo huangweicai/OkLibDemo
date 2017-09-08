@@ -2,7 +2,6 @@ package com.oklib.demo;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.bmoblib.BmobQueryHelp;
@@ -84,7 +83,6 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
                 BmobQueryHelp.queryIntegrationFramework(page, new BmobQueryHelp.OnIntegrationFrameworkListener() {
                     @Override
                     public void result(List<IntegrationFramework> object, BmobException e) {
-                        Logger.d("TAG", ""+object.toArray());
                         if (e == null) {
                             String fastJsonStr = FastJsonUtil.list2Json(object);
                             mainList.clear();
@@ -108,7 +106,6 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
                 BmobQueryHelp.queryCommonComponents(page, new BmobQueryHelp.OnCommonComponentsListener() {
                     @Override
                     public void result(List<CommonComponents> object, BmobException e) {
-                        Logger.d("TAG", ""+object.toArray());
                         if (e == null) {
                             String fastJsonStr = FastJsonUtil.list2Json(object);
                             mainList.clear();
@@ -129,11 +126,9 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
                 });
                 break;
             case 2:
-                Log.d("TAG", "type:"+type);
                 BmobQueryHelp.queryCommoTools(page, new BmobQueryHelp.OnCommoToolsListener() {
                     @Override
                     public void result(List<CommoTools> object, BmobException e) {
-                        Logger.d("TAG", ""+object.toArray());
                         if (e == null) {
                             String fastJsonStr = FastJsonUtil.list2Json(object);
                             mainList.clear();
@@ -157,7 +152,6 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
                 BmobQueryHelp.queryWindowRelated(page, new BmobQueryHelp.OnWindowRelatedListener() {
                     @Override
                     public void result(List<WindowRelated> object, BmobException e) {
-                        Logger.d("TAG", ""+object.toArray());
                         if (e == null) {
                             String fastJsonStr = FastJsonUtil.list2Json(object);
                             mainList.clear();

@@ -62,6 +62,8 @@
         <activity android:name=".common_components.pickerview.JsonDataActivity" />
         <activity android:name=".common_components.pickerview.FragmentTestActivity" />
         <activity android:name=".common_components.pickerview.PickerViewActivity" />
+        <activity android:name=".common_components.EmptyDataViewActivity" />
+        <activity android:name=".common_components.RubblerViewActivity" />
 
         <!--7.0适配临时权限-->
         <provider
