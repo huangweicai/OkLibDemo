@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.WindowManager;
 
 import com.bmoblib.BmobQueryHelp;
+import com.bmoblib.bean.Notice;
 import com.bmoblib.bean.Version;
 import com.oklib.base.BaseDialogFragment;
 import com.oklib.demo.base.BaseAppActivity;
@@ -40,12 +41,12 @@ import com.oklib.util.permission.PermissionGen;
 import com.oklib.util.permission.PermissionSuccess;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
+import com.oklib.view.TextViewMarquee;
 import com.oklib.widget.ConfirmDialog;
 
 import java.io.File;
 
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.update.UpdateResponse;
 import okhttp3.Call;
 import okhttp3.Response;
 
@@ -62,8 +63,9 @@ public class MainActivity extends BaseAppActivity
 
     private CommonToolBar toolbar;
     private TabLayout toolbar_tl_tab;
+    private TextViewMarquee tvm_textViewMarquee;
+    private View marqueeLine;
     private ViewPager vp_container;
-    private UpdateResponse ur;
 
     @Override
     protected int initLayoutId() {
@@ -104,6 +106,8 @@ public class MainActivity extends BaseAppActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        tvm_textViewMarquee = findView(R.id.tvm_textViewMarquee);
+        marqueeLine = findView(R.id.marqueeLine);
         toolbar_tl_tab = findView(R.id.toolbar_tl_tab);
         vp_container = findView(R.id.vp_container);
         toolbar_tl_tab.setupWithViewPager(vp_container);
@@ -130,6 +134,29 @@ public class MainActivity extends BaseAppActivity
 
     @Override
     protected void initNet() {
+        BmobQueryHelp.queryNotice(new BmobQueryHelp.OnNoticeListener() {
+            @Override
+            public void result(final Notice notice, BmobException e) {
+                if (notice.isShowNotice()) {
+                    tvm_textViewMarquee.setVisibility(View.VISIBLE);
+                    marqueeLine.setVisibility(View.VISIBLE);
+                }else{
+                    tvm_textViewMarquee.setVisibility(View.GONE);
+                    marqueeLine.setVisibility(View.GONE);
+                }
+                tvm_textViewMarquee.setText(notice.getNoticeText());
+                tvm_textViewMarquee.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(context, WebViewActivity.class);
+                        intent.putExtra(Common.TITLE, "通知");
+                        intent.putExtra(Common.URL, notice.getUrl());
+                        intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 
     private void setStateBarStyle() {

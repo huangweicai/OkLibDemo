@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
-    <string name="supporting_details_text">感谢您阅读本库，如果觉得本库对您有帮助，可以到作者的简书或github点赞，您的支持将鼓励作者继续努力完善本库。\n另外，您可以通过购买赞助商（最低200，按照金额从高到低降序排列）或支持者（最低5元，按照支持时间降序排列）列表的推广位来为您引流，所有收益用于库维护的支出，如为更好的体验的三方平台的付费支出等，谢谢！</string>
+    <string name="supporting_details_text">感谢您阅读本库，如果觉得本库对您有帮助，可以到作者的简书或github点赞，您的支持将鼓励作者继续努力完善本库。\n另外，您可以通过购买赞助商（最低200，显示按照金额从高到低排列）或支持者（最低5元，显示随机排列）列表的推广位来为您引流，所有收益用于库维护的支出，如为更好的体验的三方平台的付费支出等，谢谢！</string>
     <string name="feedback_explain_text">由于时间和精力的限制，本库难免会存在一些忽漏，如果在使用库的过程中，发现有什么不合理或者更好的建议欢迎指出；另外，如果您想要本库添加一些您想要的效果，欢迎反馈留言，如果合理作者将在第一时间更新库，具体详情可在简书文档查阅。</string>
     <string name="jianshu_url">http://www.jianshu.com/p/87e7392a16ff</string>
     <string name="github_url">https://github.com/huangweicai/OkLibDemo</string>

@@ -103,12 +103,12 @@ public class RefreshActivity extends BaseAppActivity implements CommonRefreshLay
                 rv_layout.isShowRefreshAnim(false);
                 //追加数据源
                 adapter.addDataList(list);
-                //必须，能再次触发加载更多，更新可以加载状态
-                rv_layout.loadFinish();
-                //少于默认加载数则没有认为是没有更多数据了
-                if (list.size() < adapter.LOAD_NUM) {
+                if (list.size() < adapter.LOAD_NUM) {//默认加载条数15，这个条数应该同请求一次的条数一致
                     //完成加载更多状态，更新文本
                     adapter.setLoadState(false, "没有更多数据了");
+                }else{
+                    //必须，能再次触发加载更多，更新可以加载状态
+                    rv_layout.loadFinish();
                 }
                 //必须，无数据显示状态，请求失败或者网络异常，更新显示效果
                 //备选：R.mipmap.no_net_icon, "暂无网络"

@@ -64,6 +64,7 @@
         <activity android:name=".common_components.pickerview.PickerViewActivity" />
         <activity android:name=".common_components.EmptyDataViewActivity" />
         <activity android:name=".common_components.RubblerViewActivity" />
+        <activity android:name=".common_components.TextViewMarqueeActivity" />
 
         <!--7.0适配临时权限-->
         <provider
