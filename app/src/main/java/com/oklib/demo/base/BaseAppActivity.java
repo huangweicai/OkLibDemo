@@ -2,12 +2,19 @@ package com.oklib.demo.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 
 import com.oklib.base.BaseActivity;
+import com.oklib.demo.Common;
+import com.oklib.demo.R;
 import com.oklib.demo.bean.FunctionDetailBean;
 import com.oklib.demo.widget.CenterWinListDialog;
 import com.oklib.util.toast.ToastUtil;
+import com.oklib.view.CommonToolBar;
 import com.orhanobut.logger.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.oklib.demo.Common.BASE_JAVA;
 
@@ -28,22 +35,15 @@ public abstract class BaseAppActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
-    protected void showDetail(FunctionDetailBean... beans) {
-        FunctionDetailBean[] mBeans;
-        if (null == beans) {
-            mBeans = new FunctionDetailBean[]{
-                    new FunctionDetailBean(context.getClass().getSimpleName(), BASE_JAVA + context.getClass().getName().replace(".", "/")+".java"),
-            };
-        } else {
-            mBeans = beans;
-        }
-
-        //https://github.com/huangweicai/OkLibDemo/blob/master/app/src/main/java/com/oklib/demo/common_components/ToolbarActivity.java
-        Logger.d("url："+mBeans[0].getUrl());
+    protected List<FunctionDetailBean> mBeans = new ArrayList<>();
+    protected void showDetail() {
+        mBeans.add(0,new FunctionDetailBean(context.getClass().getSimpleName()+".java", BASE_JAVA + context.getClass().getName().replace(".", "/")+".java"));
+        Logger.d("url："+mBeans.get(0).getUrl());
         final CenterWinListDialog centerWinListDialog = CenterWinListDialog.create(getSupportFragmentManager());
         centerWinListDialog.show();
-        centerWinListDialog.addDataList(context, mBeans);
+        centerWinListDialog.addDataList(mBeans);
     }
+
 
     protected boolean ifShowExit = false;
     private long preKeyBackTime = 0L;

@@ -20,17 +20,17 @@ android {
 
     }
     signingConfigs {
-        release {
-            try {
-                storeFile file("oklib.jks")
-                storePassword KEY_STORE_PASSWORD
-                keyAlias KEY_STORE_KEY_ALIAS
-                keyPassword KEY_STORE_KEY_PASSWORD
-            }
-            catch (ex) {
-                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
-            }
-        }
+//        release {
+//            try {
+//                storeFile file("oklib.jks")
+//                storePassword KEY_STORE_PASSWORD
+//                keyAlias KEY_STORE_KEY_ALIAS
+//                keyPassword KEY_STORE_KEY_PASSWORD
+//            }
+//            catch (ex) {
+//                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+//            }
+//        }
 //        debug {
 //            keyAlias KEY_STORE_KEY_ALIAS
 //            keyPassword KEY_STORE_PASSWORD
@@ -71,7 +71,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.oklib:oklib:latest.release'
+    compile 'com.oklib:oklib:1.0.9'
     compile 'com.aliyun.ams:alicloud-android-hotfix:3.0.7'
     //compile 'com.github.chrisbanes:PhotoView:2.0.0'
 //    compile 'com.github.chrisbanes:PhotoView:latest.release.here'
