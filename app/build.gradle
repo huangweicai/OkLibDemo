@@ -7,8 +7,8 @@ android {
         applicationId "com.oklib.demo"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -71,5 +71,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.oklib:oklib:1.0.6'
+    compile 'com.oklib:oklib:latest.release'
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.0.7'
+    //compile 'com.github.chrisbanes:PhotoView:2.0.0'
+//    compile 'com.github.chrisbanes:PhotoView:latest.release.here'
+}
+
+repositories {
+    maven {
+        url "http://maven.aliyun.com/nexus/content/repositories/releases"
+    }
 }
