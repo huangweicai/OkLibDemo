@@ -117,7 +117,7 @@ public class MainActivity extends BaseAppActivity
             public Fragment getItem(int position) {
                 Bundle bundle = new Bundle();
                 bundle.putInt("type", position);
-                return MainRvFragment.getInstance(bundle);
+                return MainFragment.getInstance(bundle);
             }
 
             @Override
