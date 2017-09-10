@@ -27,8 +27,8 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                app:normalBackground="@mipmap/ic_launcher"
-                app:pressedBackground="@mipmap/oklib_maotouying_icon" />
+                app:oklib_normalBackground="@mipmap/ic_launcher"
+                app:oklib_pressedBackground="@mipmap/oklib_maotouying_icon" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/text_test"
@@ -38,12 +38,12 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="change text color"
-                app:normalBackgroundColor="@color/oklib_colorPrimary"
-                app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/oklib_colorPrimary"
-                app:pressedTextColor="@android:color/holo_red_light"
-                app:unableBackgroundColor="@color/oklib_colorPrimary"
-                app:unableTextColor="@android:color/holo_orange_dark" />
+                app:oklib_normalBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_normalTextColor="@android:color/white"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_pressedTextColor="@android:color/holo_red_light"
+                app:oklib_unableBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_unableTextColor="@android:color/holo_orange_dark" />
 
 
             <com.oklib.view.StateButton
@@ -55,9 +55,9 @@
                 android:padding="10dp"
                 android:text="change background"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/oklib_colorPrimary"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:unableBackgroundColor="@android:color/holo_red_light" />
+                app:oklib_normalBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_unableBackgroundColor="@android:color/holo_red_light" />
 
 
             <com.oklib.view.StateButton
@@ -69,10 +69,10 @@
                 android:padding="10dp"
                 android:text="with radius"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/oklib_colorPrimary"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:radius="10dp"
-                app:unableBackgroundColor="@android:color/holo_red_light" />
+                app:oklib_normalBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_radius="10dp"
+                app:oklib_unableBackgroundColor="@android:color/holo_red_light" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/round_test"
@@ -83,11 +83,11 @@
                 android:padding="10dp"
                 android:text="round radius"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/oklib_colorPrimary"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:radius="2dp"
-                app:round="true"
-                app:unableBackgroundColor="@android:color/holo_red_light" />
+                app:oklib_normalBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_radius="2dp"
+                app:oklib_round="true"
+                app:oklib_unableBackgroundColor="@android:color/holo_red_light" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/different_radius_test"
@@ -98,9 +98,9 @@
                 android:padding="10dp"
                 android:text="different_radius"
                 android:textColor="@android:color/white"
-                app:normalBackgroundColor="@color/oklib_colorPrimary"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:unableBackgroundColor="@android:color/holo_red_light" />
+                app:oklib_normalBackgroundColor="@color/oklib_colorPrimary"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_unableBackgroundColor="@android:color/holo_red_light" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/dash_test"
@@ -110,18 +110,18 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="with dash"
-                app:normalStrokeColor="@android:color/white"
-                app:normalStrokeWidth="2dp"
-                app:normalTextColor="@android:color/white"
-                app:pressedStrokeColor="@android:color/holo_red_light"
-                app:pressedStrokeWidth="2dp"
-                app:pressedTextColor="@android:color/holo_red_light"
-                app:radius="5dp"
-                app:strokeDashGap="5dp"
-                app:strokeDashWidth="5dp"
-                app:unableStrokeColor="@android:color/holo_orange_dark"
-                app:unableStrokeWidth="2dp"
-                app:unableTextColor="@android:color/holo_orange_dark" />
+                app:oklib_normalStrokeColor="@android:color/white"
+                app:oklib_normalStrokeWidth="2dp"
+                app:oklib_normalTextColor="@android:color/white"
+                app:oklib_pressedStrokeColor="@android:color/holo_red_light"
+                app:oklib_pressedStrokeWidth="2dp"
+                app:oklib_pressedTextColor="@android:color/holo_red_light"
+                app:oklib_radius="5dp"
+                app:oklib_strokeDashGap="5dp"
+                app:oklib_strokeDashWidth="5dp"
+                app:oklib_unableStrokeColor="@android:color/holo_orange_dark"
+                app:oklib_unableStrokeWidth="2dp"
+                app:oklib_unableTextColor="@android:color/holo_orange_dark" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/stroke_test"
@@ -131,16 +131,16 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="with stroke"
-                app:normalStrokeColor="@android:color/white"
-                app:normalStrokeWidth="2dp"
-                app:normalTextColor="@android:color/white"
-                app:pressedStrokeColor="@android:color/holo_red_light"
-                app:pressedStrokeWidth="2dp"
-                app:pressedTextColor="@android:color/holo_red_light"
-                app:radius="5dp"
-                app:unableStrokeColor="@android:color/holo_orange_dark"
-                app:unableStrokeWidth="2dp"
-                app:unableTextColor="@android:color/holo_orange_dark" />
+                app:oklib_normalStrokeColor="@android:color/white"
+                app:oklib_normalStrokeWidth="2dp"
+                app:oklib_normalTextColor="@android:color/white"
+                app:oklib_pressedStrokeColor="@android:color/holo_red_light"
+                app:oklib_pressedStrokeWidth="2dp"
+                app:oklib_pressedTextColor="@android:color/holo_red_light"
+                app:oklib_radius="5dp"
+                app:oklib_unableStrokeColor="@android:color/holo_orange_dark"
+                app:oklib_unableStrokeWidth="2dp"
+                app:oklib_unableTextColor="@android:color/holo_orange_dark" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/stroke_background_test"
@@ -150,14 +150,14 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="keep stroke"
-                app:normalStrokeColor="@android:color/white"
-                app:normalStrokeWidth="2dp"
-                app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:pressedStrokeColor="@android:color/white"
-                app:pressedStrokeWidth="2dp"
-                app:pressedTextColor="@android:color/white"
-                app:radius="5dp" />
+                app:oklib_normalStrokeColor="@android:color/white"
+                app:oklib_normalStrokeWidth="2dp"
+                app:oklib_normalTextColor="@android:color/white"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_pressedStrokeColor="@android:color/white"
+                app:oklib_pressedStrokeWidth="2dp"
+                app:oklib_pressedTextColor="@android:color/white"
+                app:oklib_radius="5dp" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/stroke_background_test2"
@@ -167,12 +167,12 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="stroke_background"
-                app:normalStrokeColor="@android:color/white"
-                app:normalStrokeWidth="2dp"
-                app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:pressedTextColor="@android:color/white"
-                app:radius="5dp" />
+                app:oklib_normalStrokeColor="@android:color/white"
+                app:oklib_normalStrokeWidth="2dp"
+                app:oklib_normalTextColor="@android:color/white"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_pressedTextColor="@android:color/white"
+                app:oklib_radius="5dp" />
 
             <com.oklib.view.StateButton
                 android:id="@+id/stroke_background_animation_test"
@@ -182,13 +182,13 @@
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="stroke_background_animation"
-                app:animationDuration="200"
-                app:normalStrokeColor="@android:color/white"
-                app:normalStrokeWidth="2dp"
-                app:normalTextColor="@android:color/white"
-                app:pressedBackgroundColor="@color/oklib_colorPrimaryDark"
-                app:pressedTextColor="@android:color/white"
-                app:radius="5dp" />
+                app:oklib_animationDuration="200"
+                app:oklib_normalStrokeColor="@android:color/white"
+                app:oklib_normalStrokeWidth="2dp"
+                app:oklib_normalTextColor="@android:color/white"
+                app:oklib_pressedBackgroundColor="@color/oklib_colorPrimaryDark"
+                app:oklib_pressedTextColor="@android:color/white"
+                app:oklib_radius="5dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

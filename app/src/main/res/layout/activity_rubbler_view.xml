@@ -16,6 +16,6 @@
         android:id="@+id/rubbler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:foreground="@drawable/wechar_jishubang_icon"
+        app:oklib_foreground="@drawable/wechar_jishubang_icon"
         android:layout_gravity="center" />
 </LinearLayout>

@@ -26,8 +26,8 @@
                 android:text=""
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="10dp"
-                app:solid="@color/oklib_opacity_5_red" />
+                app:oklib_corner="10dp"
+                app:oklib_solid="@color/oklib_opacity_5_red" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_2_1"
@@ -38,8 +38,8 @@
                 android:text="全圆角矩形"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="40dp"
-                app:solid="#85219E" />
+                app:oklib_corner="40dp"
+                app:oklib_solid="#85219E" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_1"
@@ -50,9 +50,9 @@
                 android:text="方形边框"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:solid="#78C3ED"
-                app:stroke_color="#5166ED"
-                app:stroke_width="5dp" />
+                app:oklib_solid="#78C3ED"
+                app:oklib_stroke_color="#5166ED"
+                app:oklib_stroke_width="5dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_2"
@@ -63,10 +63,10 @@
                 android:text="圆角边框"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="10dp"
-                app:solid="#228609"
-                app:stroke_color="#FE4926"
-                app:stroke_width="5dp" />
+                app:oklib_corner="10dp"
+                app:oklib_solid="#228609"
+                app:oklib_stroke_color="#FE4926"
+                app:oklib_stroke_width="5dp" />
 
         </LinearLayout>
 
@@ -85,8 +85,8 @@
                 android:text="圆形"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="40dp"
-                app:solid="#008673" />
+                app:oklib_corner="40dp"
+                app:oklib_solid="#008673" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_4"
@@ -97,10 +97,10 @@
                 android:text="圆形边框"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="40dp"
-                app:solid="#5D4FB0"
-                app:stroke_color="#BDAB96"
-                app:stroke_width="5dp" />
+                app:oklib_corner="40dp"
+                app:oklib_solid="#5D4FB0"
+                app:oklib_stroke_color="#BDAB96"
+                app:oklib_stroke_width="5dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_5"
@@ -111,10 +111,10 @@
                 android:text="圆形边框"
                 android:textColor="@color/oklib_black"
                 android:textSize="14sp"
-                app:corner="40dp"
-                app:solid="@color/oklib_transparent"
-                app:stroke_color="@color/oklib_a233be"
-                app:stroke_width="5dp" />
+                app:oklib_corner="40dp"
+                app:oklib_solid="@color/oklib_transparent"
+                app:oklib_stroke_color="@color/oklib_a233be"
+                app:oklib_stroke_width="5dp" />
         </LinearLayout>
 
 
@@ -132,9 +132,9 @@
                 android:text="左上圆角"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="15dp"
-                app:left_top_corner="true"
-                app:solid="#ed652f" />
+                app:oklib_corner="15dp"
+                app:oklib_left_top_corner="true"
+                app:oklib_solid="#ed652f" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_7"
@@ -146,9 +146,9 @@
                 android:text="右上圆角"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="15dp"
-                app:right_top_corner="true"
-                app:solid="#ff443f" />
+                app:oklib_corner="15dp"
+                app:oklib_right_top_corner="true"
+                app:oklib_solid="#ff443f" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_8"
@@ -161,9 +161,9 @@
                 android:text="左下圆角"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="15dp"
-                app:left_bottom_corner="true"
-                app:solid="#ed50a2" />
+                app:oklib_corner="15dp"
+                app:oklib_left_bottom_corner="true"
+                app:oklib_solid="#ed50a2" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_9"
@@ -177,9 +177,9 @@
                 android:text="右下圆角"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="15dp"
-                app:right_bottom_corner="true"
-                app:solid="#c12ded" />
+                app:oklib_corner="15dp"
+                app:oklib_right_bottom_corner="true"
+                app:oklib_solid="#c12ded" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_10"
@@ -191,10 +191,10 @@
                 android:text="设置两个圆角"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="15dp"
-                app:left_top_corner="true"
-                app:right_top_corner="true"
-                app:solid="#ed9581" />
+                app:oklib_corner="15dp"
+                app:oklib_left_top_corner="true"
+                app:oklib_right_top_corner="true"
+                app:oklib_solid="#ed9581" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_11"
@@ -208,11 +208,11 @@
                 android:text="设置三个圆角"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="15dp"
-                app:left_bottom_corner="true"
-                app:right_bottom_corner="true"
-                app:right_top_corner="true"
-                app:solid="#EDD315" />
+                app:oklib_corner="15dp"
+                app:oklib_left_bottom_corner="true"
+                app:oklib_right_bottom_corner="true"
+                app:oklib_right_top_corner="true"
+                app:oklib_solid="#EDD315" />
         </RelativeLayout>
 
         <LinearLayout
@@ -231,11 +231,11 @@
                 android:gravity="center"
                 android:text="空心文字"
                 android:textSize="18sp"
-                app:solid="#EEF3E2"
-                app:text_fill_color="@color/oklib_transparent"
-                app:text_stroke="true"
-                app:text_stroke_color="#811D99"
-                app:text_stroke_width="1dp" />
+                app:oklib_solid="#EEF3E2"
+                app:oklib_text_fill_color="@color/oklib_transparent"
+                app:oklib_text_stroke="true"
+                app:oklib_text_stroke_color="#811D99"
+                app:oklib_text_stroke_width="1dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_13"
@@ -246,11 +246,11 @@
                 android:gravity="center"
                 android:text="文字描边"
                 android:textSize="18sp"
-                app:solid="#D9B0E2"
-                app:text_fill_color="@color/oklib_white"
-                app:text_stroke="true"
-                app:text_stroke_color="#461B50"
-                app:text_stroke_width="1dp" />
+                app:oklib_solid="#D9B0E2"
+                app:oklib_text_fill_color="@color/oklib_white"
+                app:oklib_text_stroke="true"
+                app:oklib_text_stroke_color="#461B50"
+                app:oklib_text_stroke_width="1dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -270,10 +270,10 @@
                 android:text="状态图 1"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="10dp"
-                app:isShowState="true"
-                app:solid="#4CBDD2"
-                app:state_drawable="@drawable/emoji_kiss" />
+                app:oklib_corner="10dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/emoji_kiss" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_15"
@@ -285,12 +285,12 @@
                 android:text="状态图 2"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:corner="10dp"
-                app:isShowState="true"
-                app:solid="#4CBDD2"
-                app:state_drawable="@drawable/emoji_kiss"
-                app:state_drawable_height="20dp"
-                app:state_drawable_width="20dp" />
+                app:oklib_corner="10dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="20dp"
+                app:oklib_state_drawable_width="20dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_16"
@@ -302,14 +302,14 @@
                 android:text="状态图 3"
                 android:textColor="@color/oklib_white"
                 android:textSize="10sp"
-                app:corner="40dp"
-                app:isShowState="true"
-                app:solid="#4CBDD2"
-                app:state_drawable="@drawable/emoji_kiss"
-                app:state_drawable_height="20dp"
-                app:state_drawable_mode="left"
-                app:state_drawable_padding_left="10dp"
-                app:state_drawable_width="20dp" />
+                app:oklib_corner="40dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="20dp"
+                app:oklib_state_drawable_mode="left"
+                app:oklib_state_drawable_padding_left="10dp"
+                app:oklib_state_drawable_width="20dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_16_1"
@@ -321,12 +321,12 @@
                 android:text="状态图 4"
                 android:textColor="@color/oklib_white"
                 android:textSize="14sp"
-                app:isShowState="true"
-                app:solid="#4CBDD2"
-                app:state_drawable="@drawable/triangle"
-                app:state_drawable_height="30dp"
-                app:state_drawable_mode="leftTop"
-                app:state_drawable_width="30dp" />
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/triangle"
+                app:oklib_state_drawable_height="30dp"
+                app:oklib_state_drawable_mode="leftTop"
+                app:oklib_state_drawable_width="30dp" />
         </LinearLayout>
 
         <com.oklib.view.stv.SuperTextView
@@ -340,8 +340,8 @@
             android:text="使用Adjuster实现动画效果"
             android:textColor="@color/oklib_white"
             android:textSize="16dp"
-            app:corner="25dp"
-            app:solid="@color/oklib_purple" />
+            app:oklib_corner="25dp"
+            app:oklib_solid="@color/oklib_purple" />
 
         <com.oklib.view.stv.SuperTextView
             android:id="@+id/stv_18"
@@ -354,8 +354,8 @@
             android:text="使用Adjuster实现Ripple效果"
             android:textColor="@color/oklib_white"
             android:textSize="16dp"
-            app:corner="25dp"
-            app:solid="#ED86AE" />
+            app:oklib_corner="25dp"
+            app:oklib_solid="#ED86AE" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -376,12 +376,12 @@
                 android:textColor="@color/oklib_black"
                 android:textSize="7dp"
                 android:textStyle="bold"
-                app:corner="20dp"
-                app:isShowState="true"
-                app:solid="#FF0000"
-                app:state_drawable="@drawable/emoji_kiss"
-                app:state_drawable_height="20dp"
-                app:state_drawable_width="20dp" />
+                app:oklib_corner="20dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#FF0000"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="20dp"
+                app:oklib_state_drawable_width="20dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_20"
@@ -394,12 +394,12 @@
                 android:textColor="@color/oklib_black"
                 android:textSize="8dp"
                 android:textStyle="bold"
-                app:corner="20dp"
-                app:isShowState="true"
-                app:solid="#A58FED"
-                app:state_drawable="@drawable/emoji_kiss"
-                app:state_drawable_height="30dp"
-                app:state_drawable_width="30dp" />
+                app:oklib_corner="20dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#A58FED"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="30dp"
+                app:oklib_state_drawable_width="30dp" />
 
             <com.oklib.view.stv.SuperTextView
                 android:id="@+id/stv_21"
@@ -412,12 +412,12 @@
                 android:textColor="@color/oklib_black"
                 android:textSize="8dp"
                 android:textStyle="bold"
-                app:corner="20dp"
-                app:isShowState="true"
-                app:solid="#A58FED"
-                app:state_drawable="@drawable/emoji_kiss"
-                app:state_drawable_height="30dp"
-                app:state_drawable_width="30dp" />
+                app:oklib_corner="20dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#A58FED"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="30dp"
+                app:oklib_state_drawable_width="30dp" />
         </LinearLayout>
 
 
@@ -449,12 +449,12 @@
             android:text="shader_topToBottom"
             android:textColor="@color/oklib_white"
             android:textSize="14sp"
-            app:corner="10dp"
-            app:shaderEnable="true"
-            app:shaderEndColor="@color/oklib_pink"
-            app:shaderMode="topToBottom"
-            app:shaderStartColor="@color/oklib_main_blue"
-            app:solid="@color/oklib_main_blue" />
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="topToBottom"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
 
         <com.oklib.view.stv.SuperTextView
             android:id="@+id/stv_23"
@@ -468,12 +468,12 @@
             android:text="shader_bottomToTop"
             android:textColor="@color/oklib_white"
             android:textSize="14sp"
-            app:corner="10dp"
-            app:shaderEnable="true"
-            app:shaderEndColor="@color/oklib_pink"
-            app:shaderMode="bottomToTop"
-            app:shaderStartColor="@color/oklib_main_blue"
-            app:solid="@color/oklib_main_blue" />
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="bottomToTop"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
 
         <com.oklib.view.stv.SuperTextView
             android:id="@+id/stv_24"
@@ -487,12 +487,12 @@
             android:text="shader_leftTopRight"
             android:textColor="@color/oklib_white"
             android:textSize="14sp"
-            app:corner="10dp"
-            app:shaderEnable="true"
-            app:shaderEndColor="@color/oklib_pink"
-            app:shaderMode="leftTopRight"
-            app:shaderStartColor="@color/oklib_main_blue"
-            app:solid="@color/oklib_main_blue" />
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="leftTopRight"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
 
         <com.oklib.view.stv.SuperTextView
             android:id="@+id/stv_26"
@@ -506,12 +506,12 @@
             android:text="shader_rightToLeft"
             android:textColor="@color/oklib_white"
             android:textSize="14sp"
-            app:corner="10dp"
-            app:shaderEnable="true"
-            app:shaderEndColor="@color/oklib_pink"
-            app:shaderMode="rightToLeft"
-            app:shaderStartColor="@color/oklib_main_blue"
-            app:solid="@color/oklib_main_blue" />
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="rightToLeft"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
 
     </LinearLayout>
 </ScrollView>
