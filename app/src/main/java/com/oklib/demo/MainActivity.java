@@ -24,8 +24,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.bmoblib.BmobQueryHelp;
-import com.bmoblib.bean.Notice;
 import com.bmoblib.bean.Version;
 import com.oklib.base.BaseDialogFragment;
 import com.oklib.demo.base.BaseAppActivity;
@@ -46,7 +44,6 @@ import com.oklib.widget.ConfirmDialog;
 
 import java.io.File;
 
-import cn.bmob.v3.exception.BmobException;
 import okhttp3.Call;
 import okhttp3.Response;
 
@@ -134,29 +131,29 @@ public class MainActivity extends BaseAppActivity
 
     @Override
     protected void initNet() {
-        BmobQueryHelp.queryNotice(new BmobQueryHelp.OnNoticeListener() {
-            @Override
-            public void result(final Notice notice, BmobException e) {
-                if (notice.isShowNotice()) {
-                    tvm_textViewMarquee.setVisibility(View.VISIBLE);
-                    marqueeLine.setVisibility(View.VISIBLE);
-                }else{
-                    tvm_textViewMarquee.setVisibility(View.GONE);
-                    marqueeLine.setVisibility(View.GONE);
-                }
-                tvm_textViewMarquee.setText(notice.getNoticeText());
-                tvm_textViewMarquee.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(context, WebViewActivity.class);
-                        intent.putExtra(Common.TITLE, "通知");
-                        intent.putExtra(Common.URL, notice.getUrl());
-                        intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
-                        startActivity(intent);
-                    }
-                });
-            }
-        });
+//        BmobQueryHelp.queryNotice(new BmobQueryHelp.OnNoticeListener() {
+//            @Override
+//            public void result(final Notice notice, BmobException e) {
+//                if (notice.isShowNotice()) {
+//                    tvm_textViewMarquee.setVisibility(View.VISIBLE);
+//                    marqueeLine.setVisibility(View.VISIBLE);
+//                }else{
+//                    tvm_textViewMarquee.setVisibility(View.GONE);
+//                    marqueeLine.setVisibility(View.GONE);
+//                }
+//                tvm_textViewMarquee.setText(notice.getNoticeText());
+//                tvm_textViewMarquee.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Intent intent = new Intent(context, WebViewActivity.class);
+//                        intent.putExtra(Common.TITLE, "通知");
+//                        intent.putExtra(Common.URL, notice.getUrl());
+//                        intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
+//                        startActivity(intent);
+//                    }
+//                });
+//            }
+//        });
     }
 
     private void setStateBarStyle() {
@@ -289,25 +286,25 @@ public class MainActivity extends BaseAppActivity
     //版本更新
     private void versionUpdate() {
         curVersionCode = PackageInfoUtil.getVersionCode(context);
-        BmobQueryHelp.queryUpdate(new BmobQueryHelp.OnUpdateQueryListener() {
-            @Override
-            public void result(Version versionBean, BmobException e) {
-                apkUrl = versionBean.getApkUrl();
-                if (curVersionCode < versionBean.getVersionCode()) {
-                    if (versionBean.isforce()) {
-                        //强制更新
-                        PermissionGen.needPermission(MainActivity.this, 201,
-                                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                    }else{
-                        //更新提示窗口
-                        showUpdateWin(versionBean);
-                    }
-                }else{
-                    ToastUtil.show("当前版本已是最新版本"+PackageInfoUtil.getVersionName(context));
-                }
-
-            }
-        });
+//        BmobQueryHelp.queryUpdate(new BmobQueryHelp.OnUpdateQueryListener() {
+//            @Override
+//            public void result(Version versionBean, BmobException e) {
+//                apkUrl = versionBean.getApkUrl();
+//                if (curVersionCode < versionBean.getVersionCode()) {
+//                    if (versionBean.isforce()) {
+//                        //强制更新
+//                        PermissionGen.needPermission(MainActivity.this, 201,
+//                                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//                    }else{
+//                        //更新提示窗口
+//                        showUpdateWin(versionBean);
+//                    }
+//                }else{
+//                    ToastUtil.show("当前版本已是最新版本"+PackageInfoUtil.getVersionName(context));
+//                }
+//
+//            }
+//        });
     }
 
     //更新提示窗口
