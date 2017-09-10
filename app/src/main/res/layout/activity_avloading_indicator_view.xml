@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+    <!--
+        //indicators
+        public static final int BallPulse = 0;
+        public static final int BallGridPulse = 1;
+        public static final int BallClipRotate = 2;
+        public static final int BallClipRotatePulse = 3;
+
+        public static final int SquareSpin = 4;
+        public static final int BallClipRotateMultiple = 5;
+        public static final int BallPulseRise = 6;
+        public static final int BallRotate = 7;
+
+        public static final int CubeTransition = 8;
+        public static final int BallZigZag = 9;
+        public static final int BallZigZagDeflect = 10;
+        public static final int BallTrianglePath = 11;
+
+        public static final int BallScale = 12;
+        public static final int LineScale = 13;
+        public static final int LineScaleParty = 14;
+        public static final int BallScaleMultiple = 15;
+
+        public static final int BallPulseSync = 16;
+        public static final int BallBeat = 17;
+        public static final int LineScalePulseOut = 18;
+        public static final int LineScalePulseOutRapid = 19;
+
+        public static final int BallScaleRipple = 20;
+        public static final int BallScaleRippleMultiple = 21;
+        public static final int BallSpinFadeLoader = 22;
+        public static final int LineSpinFadeLoader = 23;
+
+        public static final int TriangleSkewSpin = 24;
+        public static final int Pacman = 25;
+        public static final int BallGridBeat = 26;
+        public static final int SemiCircleSpin = 27;-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallPulse"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallGridPulse"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallClipRotate"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallClipRotatePulse"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="SquareSpin"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallClipRotateMultiple"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallPulseRise"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallRotate"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="CubeTransition"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallZigZag"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallZigZagDeflect"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallTrianglePath"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallScale"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="LineScale"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="LineScaleParty"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallScaleMultiple"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallPulseSync"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallBeat"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="LineScalePulseOut"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="LineScalePulseOutRapid"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallScaleRipple"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallScaleRippleMultiple"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallSpinFadeLoader"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="LineSpinFadeLoader"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="TriangleSkewSpin"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="Pacman"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="BallGridBeat"
+                    app:indicator_color="@color/red" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.oklib.view.loadview.AVLoadingIndicatorView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:indicator="SemiCircleSpin"
+                    app:indicator_color="@color/red" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
