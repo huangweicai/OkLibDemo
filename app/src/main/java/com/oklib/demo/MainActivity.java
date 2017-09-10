@@ -24,12 +24,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.bmoblib.bean.Version;
-import com.oklib.base.BaseDialogFragment;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.util.PackageInfoUtil;
 import com.oklib.util.Debug;
-import com.oklib.util.FileUtil;
 import com.oklib.util.NetUtil;
 import com.oklib.util.camera.help.InitAppDirHelp;
 import com.oklib.util.http.OkGo;
@@ -40,7 +37,6 @@ import com.oklib.util.permission.PermissionSuccess;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.TextViewMarquee;
-import com.oklib.widget.ConfirmDialog;
 
 import java.io.File;
 
@@ -308,19 +304,19 @@ public class MainActivity extends BaseAppActivity
     }
 
     //更新提示窗口
-    private void showUpdateWin(final Version versionBean) {
-        ConfirmDialog dialog = ConfirmDialog.create(getSupportFragmentManager());
-        dialog.setTitle("发现新版本：库"+versionBean.getVersionName()+"（"+ FileUtil.formatFileSize(versionBean.getTargetSize())+"）");
-        dialog.setContent(versionBean.getUpdateLog());
-        dialog.show();
-        dialog.setOnConfirmListener(new BaseDialogFragment.OnConfirmListener() {
-            @Override
-            public void confirm(View v) {
-                PermissionGen.needPermission(MainActivity.this, 201,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE);
-            }
-        });
-    }
+//    private void showUpdateWin(final Version versionBean) {
+//        ConfirmDialog dialog = ConfirmDialog.create(getSupportFragmentManager());
+//        dialog.setTitle("发现新版本：库"+versionBean.getVersionName()+"（"+ FileUtil.formatFileSize(versionBean.getTargetSize())+"）");
+//        dialog.setContent(versionBean.getUpdateLog());
+//        dialog.show();
+//        dialog.setOnConfirmListener(new BaseDialogFragment.OnConfirmListener() {
+//            @Override
+//            public void confirm(View v) {
+//                PermissionGen.needPermission(MainActivity.this, 201,
+//                        Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//            }
+//        });
+//    }
 
     @PermissionSuccess(requestCode = 201)
     public void hasPermissionToLoad() {
