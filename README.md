@@ -14,9 +14,9 @@
 2.资源共享：整合以前项目资源及开源代码，快速定位功能代码，重复轮子拿来即用
 
 #####快速使用oklib：
-第一步：引用
+第一步：引用（如下地址会随着更新库而升高，向前兼容，不影响以前版本）
 ```
-compile 'com.oklib:oklib:latest.release'
+compile 'com.oklib:oklib:1.0.9'
 ```
 第二部：在项目的入口，如：Application初始化oklib库
 ```
@@ -29,15 +29,19 @@ new OkLib.Builder()
         .build();
 ```
 
->注意：三方依赖，引入oklib时和项目主工程是否存在一致的包，会冲突
-    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
-    compile 'com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0'
-    compile 'com.alibaba:fastjson:1.2.35'
-    compile 'com.orhanobut:logger:2.1.1'
-    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
-    compile 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
-    compile 'com.squareup.picasso:picasso:2.4.0'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+#####注意：
+1.三方依赖，引入oklib时和项目主工程是否存在一致的包，会冲突
+- compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+- compile 'com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0'
+- compile 'com.alibaba:fastjson:1.2.35'
+- compile 'com.orhanobut:logger:2.1.1'
+- compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+- compile 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+- compile 'com.squareup.picasso:picasso:2.4.0'
+- compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+2.如下图，首页的四大模块入口，可以在apk中查看类找到相应入口，进入复制即可
+![项目结构](http://hwc-yunce.oss-cn-shanghai.aliyuncs.com/QQ%E6%88%AA%E5%9B%BE20170910122714.png)
 
 >补充：在拉取库项目使用演示代码后，如果有引入不存在的情况，请直接注释掉，不影响代码主功能使用演示。另外，部分新功能如果无法进入体验，请随时点击更新检查并等待作者更新apk。如若使用过程中，遇到问题，请扫码加入QQ交流群或者直接在简书下评论留言。对于功能代码的快速定位，可以通过apk查看功能并把该功能的类发送到QQ或者微信，然后电脑端复制粘贴；也可以查阅github的库使用演示，进入到相应类并复制粘贴。
 
