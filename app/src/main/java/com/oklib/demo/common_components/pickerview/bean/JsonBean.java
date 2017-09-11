@@ -4,7 +4,7 @@ import com.oklib.view.pickerview.model.IPickerViewData;
 
 import java.util.List;
 
-public class JsonBean  implements IPickerViewData {
+public class JsonBean implements IPickerViewData {
 
     /**
      * name : 省份
@@ -37,7 +37,6 @@ public class JsonBean  implements IPickerViewData {
     public String getPickerViewText() {
         return this.name;
     }
-
 
 
     public static class CityBean {
