@@ -66,6 +66,7 @@
         <activity android:name=".common_components.RubblerViewActivity" />
         <activity android:name=".common_components.TextViewMarqueeActivity" />
         <activity android:name=".common_components.AVLoadingIndicatorViewActivity" />
+        <activity android:name=".common_components.tablayout.TabLayoutActivity" />
 
         <!--7.0适配临时权限-->
         <provider
