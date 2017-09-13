@@ -10,22 +10,17 @@
         android:layout_height="wrap_content"
         android:background="@color/app_color" />
 
-    <com.oklib.view.EmptyDataView
-        android:id="@+id/emptyDataView"
-        android:background="@color/app_blue_color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="qrCode"
+        android:text="二维码使用相关" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="duanwang"
-        android:text="断网" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="kongshuju"
-        android:text="空数据" />
+        android:onClick="generateQRCode"
+        android:text="二维码生成相关" />
 
 </LinearLayout>

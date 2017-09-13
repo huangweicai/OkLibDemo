@@ -67,6 +67,9 @@
         <activity android:name=".common_components.TextViewMarqueeActivity" />
         <activity android:name=".common_components.AVLoadingIndicatorViewActivity" />
         <activity android:name=".common_components.tablayout.TabLayoutActivity" />
+        <activity android:name=".integration_framework.qrcode.QRCodeActivity" />
+        <activity android:name=".integration_framework.qrcode.QRCodeEntryActivity" />
+        <activity android:name=".integration_framework.qrcode.GenerateQRCodeActivity" />
 
         <!--7.0适配临时权限-->
         <provider
@@ -96,4 +99,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!--二维码相关-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>

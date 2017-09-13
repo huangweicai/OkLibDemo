@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDarkTrans">#CC303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="app_color">#485C6C</color>
     <color name="app_white_color">#ffffff</color>
