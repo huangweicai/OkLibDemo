@@ -95,7 +95,7 @@ public class PermissionActivity extends BaseAppActivity {
     }
 
     @PermissionFail(requestCode = 100)
-    public void failOpenCamera(boolean isCompletelyFail) {
+    public void failOpenCamera() {
         //请求码100，请求失败
         Toast.makeText(context, "权限请求失败", Toast.LENGTH_LONG).show();
     }

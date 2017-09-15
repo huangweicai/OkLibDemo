@@ -67,7 +67,7 @@ public class GlideImageViewActivity extends BaseAppActivity {
     public static final String KEY_IMAGE_URL = "image_url";
     public static final String KEY_IMAGE_URL_THUMBNAIL = "image_url_thumbnail";
 
-    public static boolean isLoadAgain = false; // Just for fun when loading images!
+    public static boolean isLoadAgain = false; // Just for fun when oklib_loading images!
 
     public static final String cat = "https://raw.githubusercontent.com/sfsheng0322/GlideImageView/master/screenshot/cat.jpg";
     public static final String cat_thumbnail = "https://raw.githubusercontent.com/sfsheng0322/GlideImageView/master/screenshot/cat_thumbnail.jpg";

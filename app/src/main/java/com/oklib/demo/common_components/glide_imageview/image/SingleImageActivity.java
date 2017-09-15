@@ -59,7 +59,7 @@ public class SingleImageActivity extends AppCompatActivity {
         loadImage();
     }
 
-    public static boolean isLoadAgain = false; // Just for fun when loading images!
+    public static boolean isLoadAgain = false; // Just for fun when oklib_loading images!
     private void initProgressView() {
         isLoadAgain = new Random().nextInt(3) == 1;
         int randomNum = new Random().nextInt(3);
