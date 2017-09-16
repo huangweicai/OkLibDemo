@@ -7,8 +7,8 @@ android {
         applicationId "com.oklib.demo"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 2
-        versionName "1.1.0"
+        versionCode 4
+        versionName "1.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -76,7 +76,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.oklib:oklib:1.0.11'
+    //compile 'com.oklib:oklib:latest.release'
+    compile 'com.oklib:oklib:1.0.12'
     compile 'com.aliyun.ams:alicloud-android-hotfix:3.0.7'
     compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
     compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
