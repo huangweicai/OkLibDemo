@@ -16,7 +16,7 @@
 #####快速使用oklib：
 第一步：引用（如下地址会随着更新库而升高，向前兼容，不影响以前版本）
 ```
-compile 'com.oklib:oklib:1.0.11'
+compile 'com.oklib:oklib:1.0.12'
 ```
 第二部：在项目的入口，如：Application初始化oklib库
 ```
