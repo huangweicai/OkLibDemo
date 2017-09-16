@@ -28,7 +28,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_pressed_alpha="0.1" />
+                app:oklib_siv_pressed_alpha="0.1" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image01"
@@ -37,7 +37,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_pressed_alpha="0" />
+                app:oklib_siv_pressed_alpha="0" />
             <!--透明度改为0，则按下去的效果看不到-->
 
             <com.oklib.view.gimage.GlideImageView
@@ -47,7 +47,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_pressed_alpha="0.1" />
+                app:oklib_siv_pressed_alpha="0.1" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image03"
@@ -56,7 +56,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_pressed_alpha="0" />
+                app:oklib_siv_pressed_alpha="0" />
         </LinearLayout>
 
 
@@ -114,11 +114,11 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_border_color="@color/oklib_red"
-                app:siv_border_width="1dp"
-                app:siv_pressed_alpha="0.2"
-                app:siv_pressed_color="@color/oklib_red"
-                app:siv_radius="5dp" />
+                app:oklib_siv_border_color="@color/oklib_red"
+                app:oklib_siv_border_width="1dp"
+                app:oklib_siv_pressed_alpha="0.2"
+                app:oklib_siv_pressed_color="@color/oklib_red"
+                app:oklib_siv_radius="5dp" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image22"
@@ -127,12 +127,12 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_border_color="@color/orange"
-                app:siv_border_width="2dp"
-                app:siv_pressed_alpha="0.3"
-                app:siv_pressed_color="@color/orange"
-                app:siv_radius="15dp"
-                app:siv_shape_type="rectangle" />
+                app:oklib_siv_border_color="@color/orange"
+                app:oklib_siv_border_width="2dp"
+                app:oklib_siv_pressed_alpha="0.3"
+                app:oklib_siv_pressed_color="@color/orange"
+                app:oklib_siv_radius="15dp"
+                app:oklib_siv_shape_type="rectangle" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image23"
@@ -141,11 +141,11 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_border_color="@color/oklib_yellow"
-                app:siv_border_width="3dp"
-                app:siv_pressed_alpha="0.3"
-                app:siv_pressed_color="@color/oklib_yellow"
-                app:siv_shape_type="circle" />
+                app:oklib_siv_border_color="@color/oklib_yellow"
+                app:oklib_siv_border_width="3dp"
+                app:oklib_siv_pressed_alpha="0.3"
+                app:oklib_siv_pressed_color="@color/oklib_yellow"
+                app:oklib_siv_shape_type="circle" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image24"
@@ -154,11 +154,11 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:siv_border_color="@color/oklib_colorPrimary"
-                app:siv_border_width="5dp"
-                app:siv_pressed_alpha="0.5"
-                app:siv_pressed_color="@color/oklib_white"
-                app:siv_shape_type="circle" />
+                app:oklib_siv_border_color="@color/oklib_colorPrimary"
+                app:oklib_siv_border_width="5dp"
+                app:oklib_siv_pressed_alpha="0.5"
+                app:oklib_siv_pressed_color="@color/oklib_white"
+                app:oklib_siv_shape_type="circle" />
         </LinearLayout>
 
         <LinearLayout
@@ -180,8 +180,8 @@
                 android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:siv_border_color="@color/oklib_yellow"
-                app:siv_border_width="1dp" />
+                app:oklib_siv_border_color="@color/oklib_yellow"
+                app:oklib_siv_border_width="1dp" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image33"
@@ -189,7 +189,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:siv_radius="5dp" />
+                app:oklib_siv_radius="5dp" />
 
             <com.oklib.view.gimage.GlideImageView
                 android:id="@+id/image34"
@@ -197,9 +197,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:siv_border_color="@color/orange"
-                app:siv_border_width="1dp"
-                app:siv_radius="10dp" />
+                app:oklib_siv_border_color="@color/orange"
+                app:oklib_siv_border_width="1dp"
+                app:oklib_siv_radius="10dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -225,12 +225,12 @@
                     android:layout_height="50dp"
                     android:layout_centerInParent="true"
                     android:progress="0"
-                    app:cpv_innerPadding="2dp"
-                    app:cpv_outerColor="@color/transparent90_white"
-                    app:cpv_outerSize="1dp"
-                    app:cpv_progressNormalColor="@color/transparent"
-                    app:cpv_progressReachColor="@color/transparent90_white"
-                    app:cpv_progressStyle="FillInnerArc"
+                    app:oklib_cpv_innerPadding="2dp"
+                    app:oklib_cpv_outerColor="@color/transparent90_white"
+                    app:oklib_cpv_outerSize="1dp"
+                    app:oklib_cpv_progressNormalColor="@color/transparent"
+                    app:oklib_cpv_progressReachColor="@color/transparent90_white"
+                    app:oklib_cpv_progressStyle="FillInnerArc"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -257,12 +257,12 @@
                     android:layout_centerInParent="true"
                     android:layout_margin="10dp"
                     android:progress="0"
-                    app:cpv_progressNormalColor="@color/transparent10"
-                    app:cpv_progressReachColor="@color/transparent90_white"
-                    app:cpv_progressStyle="FillInner"
-                    app:cpv_progressTextColor="@color/red"
-                    app:cpv_progressTextSize="13sp"
-                    app:cpv_progressTextVisible="false"
+                    app:oklib_cpv_progressNormalColor="@color/transparent10"
+                    app:oklib_cpv_progressReachColor="@color/transparent90_white"
+                    app:oklib_cpv_progressStyle="FillInner"
+                    app:oklib_cpv_progressTextColor="@color/red"
+                    app:oklib_cpv_progressTextSize="13sp"
+                    app:oklib_cpv_progressTextVisible="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -301,12 +301,12 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:progress="0"
-                            app:cpv_innerPadding="2dp"
-                            app:cpv_outerColor="@color/transparent90_white"
-                            app:cpv_outerSize="1dp"
+                            app:oklib_cpv_innerPadding="2dp"
+                            app:oklib_cpv_outerColor="@color/transparent90_white"
+                            app:oklib_cpv_outerSize="1dp"
                             app:oklib_cpv_progressNormalColor="@color/transparent"
-                            app:cpv_progressReachColor="@color/transparent90_white"
-                            app:cpv_progressStyle="FillInnerArc"
+                            app:oklib_cpv_progressReachColor="@color/transparent90_white"
+                            app:oklib_cpv_progressStyle="FillInnerArc"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
@@ -340,11 +340,11 @@
                             android:layout_margin="10dp"
                             android:progress="0"
                             app:oklib_cpv_progressNormalColor="@color/transparent10"
-                            app:cpv_progressReachColor="@color/transparent90_white"
-                            app:cpv_progressStyle="FillInner"
-                            app:cpv_progressTextColor="@color/red"
-                            app:cpv_progressTextSize="13sp"
-                            app:cpv_progressTextVisible="false"
+                            app:oklib_cpv_progressReachColor="@color/transparent90_white"
+                            app:oklib_cpv_progressStyle="FillInner"
+                            app:oklib_cpv_progressTextColor="@color/red"
+                            app:oklib_cpv_progressTextSize="13sp"
+                            app:oklib_cpv_progressTextVisible="false"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"

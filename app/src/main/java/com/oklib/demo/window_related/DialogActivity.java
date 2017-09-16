@@ -237,7 +237,7 @@ public class DialogActivity extends BaseAppActivity implements View.OnClickListe
                 })
                         .setBtnSize(16)
                         .setBtnText("中立", "取消", "确定")
-                        .setBtnColor(R.color.btn_alert, R.color.colorPrimaryDark, R.color.text_red)
+                        .setBtnColor(R.color.oklib_btn_alert, R.color.colorPrimaryDark, R.color.oklib_text_red)
                         .show();
 
                 break;
