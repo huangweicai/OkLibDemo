@@ -13,7 +13,6 @@ import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.bean.MainBean;
 import com.oklib.util.toast.ToastUtil;
-import com.orhanobut.logger.Logger;
 
 /**
  * 时间：2017/9/5
@@ -69,7 +68,6 @@ public class MainRvAdapter extends BaseRcvAdapter<MainBean> {
                 public void onClick(View v) {
                     Intent intent = new Intent();
                     intent.setClassName(context, bean.getClassName());
-                    Logger.d(bean.getClassName());
                     if (context.getPackageManager().resolveActivity(intent, 0) == null) {
                         // 说明系统中不存在这个activity
                         ToastUtil.show("请检测更新，功能在新版本体验");

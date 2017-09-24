@@ -70,6 +70,7 @@
         <activity android:name=".integration_framework.qrcode.QRCodeActivity" />
         <activity android:name=".integration_framework.qrcode.QRCodeEntryActivity" />
         <activity android:name=".integration_framework.qrcode.GenerateQRCodeActivity" />
+        <activity android:name=".integration_framework.SugarActivity" />
 
         <!--7.0适配临时权限-->
         <provider
@@ -82,6 +83,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!--spofix-->
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
             android:value="24599847-1" />
@@ -91,6 +93,12 @@
         <meta-data
             android:name="com.taobao.android.hotfix.RSASECRET"
             android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfUKD3G/Og/a7Lk1Rv1qNBqYRb+KDGeooYiSDYmWgYydg5VHx1OKD/05Q5GJy5MFgdsj9U9crJSjtkI4bOs7luf6Vyrmt6WBhTh+dgG3l8ryVEzRqMhevBc+5JMBIZc9tQZUv54k0vCwmiL9c9/aDBGj3k+Zt0unhfH6L/OWQsVrcBBQ3ssCaw4oxjIOF1C77cUPAt49rurcc3ewPEbU1a/Y6pnHyai5dgk4XlplDaZkUIlFKGjyvVBb1DrI8mQC6aQf94un5r4mYQJifdWMEnRPi7B9Zs+ajyjKaRnWKcMpqiaRXBISl06BylyqGKSuMHasvdxbK5HTX1WA3Iy9J3AgMBAAECggEBAK6jq34Uie649V2XFk1wGbRcEXqrcXBGnICbnOhG8DWShFoxTDOP2bi3ig8sxEO/Hun6X7Tdk3zfZJrnfaFgw/86K/UHml3PTxbkDXoHgnaTsh2gGMcUZE6hjxQFV+I3zKeO0F/XLm0/wITpzPZZxsG89/J9kakzurcJUrst8r0IjSqJ6SwRQDaEO4lMMZ5KCScX6ZIphjH/4OdVyfG5Ff+haDuA6pgUtwZ/Uze+89OZCV2iKTakfLXGUtYgLXL20yVoUVQiHEx82PsDJeiFGkeEB0RfDiNKRDTxLjXria42SwvgAJb62dyXCaY4fS1Q4xYKoG5gsTzzp/d1OLFKCmECgYEA+pz1qXQrKmdnBWK+2i7fjIgFuU7OZcGpD6m/wlSdKMUjpNxTkWdBDprQl9BFwC+wReqLVIjlOY7mPJlp1XrIC8/rV07I19jZo7Ho5SF2OghxJzWGNR4MdkTU2rVkFgIg9s5VaeAYFTNlBdd8RIrW+F3PB3Z11qG4ZTzhIZjWR30CgYEA5B102dJbKqQg1EZ+OaaJWEPde4Lm5zjvmptiVuraWpteXAV2SD2qAHRzyCWMyEcRW+PG0zrz/pHzbJ+JVe91d9KnGfxpugBq2i9EMGTrC5AUstnE6MOWB20tM4oZNrw7/Zs9RE8vtzaUI/x38a2Gk2Bk7jdQqSzEg3alPB0VrAMCgYA38uipPwUP/2uxeR0QipxfvFJCz4QmlXiPxZ7I3KkFXBWcDZAeiwWsJAXjjpyzzjG1OiqG4dUC55Mg/kLxZOraMD3jDPSrs37LG8HZvYGubQoN7dYbb6zqjm1SsmI4w5rmXqQU8fGOch3gkv3sM27QnejFSr39/7ax60h7fqp/5QKBgEpDrL8dVMDVHjr9mCp8pUovDfQf8bxlNNxIqgNSAjRtUJL01EVAjhAH2YnXb7XkLSqVRS2Pi8/dBDrg1X08sCmKUwyKuIDtkdvmd3Sp5juldJelfg2pXzabvJOC6iJ/tagi2hdbEFW9Vw1ALGxp6d4hC7riF0h8Yp3KCpE/hsaxAoGBAKiRiciLWKIDB5PnZTLUqcF4V+otP4X2hn2iHBhnYGi14cmRy9lU9C/0KuIhfRIEoHsZIBmk7EaC//XOw9Ryw91V52fogz6ACNSIlyxmcDSromGeAK8AJExvIXyO69F4N0NQLxzxTdk01hSnJMRW5P56cRIdYOjxOEI0mQ+lgnjH" />
+
+        <!--sugar数据库的名字，版本号，log，你的JavaBean所在的包（会自动找到这个包，通过映射关系，给你生成对应的表）-->
+        <meta-data android:name="DATABASE" android:value="sugar_oklib.db" />
+        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.oklib.demo.bean" />
     </application>
 
 
