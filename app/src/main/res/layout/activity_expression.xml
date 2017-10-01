@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/send_dongtai_background_color">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/send_dongtai_background_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/send_dongtai_background_color"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:background="@android:color/white">
+
+                    <hwc.expression.lib.widget.ExpressionEditText
+                        android:id="@+id/et_send_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="Read the fucking source code"
+                        android:minHeight="117dp"
+                        android:paddingBottom="5.5dp"
+                        android:paddingLeft="17dp"
+                        android:paddingRight="17dp"
+                        android:paddingTop="12dp"
+                        android:textColor="@color/word_normal_color"
+                        android:textColorHint="@color/grey8"
+                        android:textSize="14sp" />
+                </ScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/fl_emogi"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_emogi"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_above="@id/fl_emogi"
+            android:background="@color/send_dongtai_background_color"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="19dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_emogi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fabu_biaoqing_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

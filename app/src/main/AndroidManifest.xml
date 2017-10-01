@@ -71,6 +71,17 @@
         <activity android:name=".integration_framework.qrcode.QRCodeEntryActivity" />
         <activity android:name=".integration_framework.qrcode.GenerateQRCodeActivity" />
         <activity android:name=".integration_framework.SugarActivity" />
+        <activity android:name=".common_components.MenuViewActivity" />
+        <activity android:name=".integration_framework.video.TinyWindowPlayActivity" />
+        <activity android:name=".integration_framework.video.RecyclerViewActivity" />
+        <activity android:name=".integration_framework.video.ChangeClarityActivity" />
+        <activity android:name=".integration_framework.video.UseInFragActivity" />
+        <activity android:name=".integration_framework.video.ProcessHome1Activity" />
+        <activity android:name=".integration_framework.video.ProcessHome2Activity" />
+        <activity android:name=".integration_framework.video.VideoEntryActivity" />
+        <activity android:name=".TechnicalDataAddActivity" />
+        <activity android:name=".common_components.expression.ExpressionActivity" />
+        <activity android:name=".common_components.LoadSirEntryActivity" />
 
         <!--7.0适配临时权限-->
         <provider

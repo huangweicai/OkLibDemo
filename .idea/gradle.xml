@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bmoblib" />
+            <option value="$PROJECT_DIR$/expressionlib" />
+            <option value="$PROJECT_DIR$/loadsir" />
             <option value="$PROJECT_DIR$/multi-image-selector" />
             <option value="$PROJECT_DIR$/oklib" />
           </set>

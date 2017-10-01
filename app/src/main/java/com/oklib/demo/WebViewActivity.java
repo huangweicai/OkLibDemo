@@ -1,5 +1,6 @@
 package com.oklib.demo;
 
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -66,6 +67,15 @@ public class WebViewActivity extends BaseAppActivity {
     @Override
     protected void initNet() {
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && wv_webview.canGoBack()) {
+            wv_webview.goBack();// 返回前一个页面
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     //销毁处需要调用

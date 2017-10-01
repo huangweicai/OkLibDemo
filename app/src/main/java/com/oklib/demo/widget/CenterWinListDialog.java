@@ -17,7 +17,6 @@ import com.oklib.demo.Common;
 import com.oklib.demo.R;
 import com.oklib.demo.WebViewActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
-import com.oklib.util.SysShareUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -150,8 +149,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
 
     private class ViewHolder {
         private TextView tv_name;//类名或相关资源名
-        private TextView tv_send_url;//发送手机内应用
-        private TextView tv_directly_open;//直接打开
+        private TextView tv_browse;//浏览
     }
 
     private class ListAdapter extends BaseAdapter {
@@ -179,8 +177,7 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
                 holder = new ViewHolder();
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dialog_center_win_list, parent, false);
                 holder.tv_name = (TextView) view.findViewById(R.id.tv_name);
-                holder.tv_send_url = (TextView) view.findViewById(R.id.tv_send_url);
-                holder.tv_directly_open = (TextView) view.findViewById(R.id.tv_directly_open);
+                holder.tv_browse = (TextView) view.findViewById(R.id.tv_browse);
                 view.setTag(holder);
             } else {
                 view = convertView;
@@ -188,20 +185,14 @@ public class CenterWinListDialog extends BaseDialogFragment implements AdapterVi
             }
             final FunctionDetailBean bean = dataList.get(position);
             holder.tv_name.setText(bean.getName());
-            holder.tv_send_url.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //发送手机内应用
-                    SysShareUtil.getInstance().shareText(getContext(), bean.getUrl());
-                }
-            });
-            holder.tv_directly_open.setOnClickListener(new View.OnClickListener() {
+            holder.tv_browse.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //直接打开
                     Intent intent = new Intent(getContext(), WebViewActivity.class);
                     intent.putExtra(Common.TITLE, bean.getName());
                     intent.putExtra(Common.URL, bean.getUrl());
+                    intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
                     getContext().startActivity(intent);
                 }
             });

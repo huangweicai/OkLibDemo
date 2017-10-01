@@ -30,7 +30,9 @@
             android:id="@+id/ed_headPortrait"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入头像url" />
+            android:hint="请输入头像url"
+            android:maxLines="4"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <View
@@ -60,7 +62,9 @@
             android:id="@+id/ed_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入名称" />
+            android:hint="请输入名称"
+            android:maxLines="4"
+            android:textSize="14sp" />
     </LinearLayout>
 
 
@@ -91,7 +95,9 @@
             android:id="@+id/ed_introduce"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入介绍内容" />
+            android:hint="请输入介绍内容"
+            android:maxLines="4"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <View
@@ -121,8 +127,10 @@
             android:id="@+id/ed_sum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="请输入金额，最低5元"
             android:inputType="number"
-            android:hint="请输入金额，最低5元" />
+            android:maxLines="4"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <View
@@ -152,7 +160,9 @@
             android:id="@+id/ed_referralLinks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入推广链接url" />
+            android:hint="请输入推广链接url"
+            android:maxLines="4"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <View

@@ -8,6 +8,7 @@
     <string name="pay_insert_success">推广位支付成功，您可以重新打开“支持详细”界面查看，如遇到问题，作者微信：huangweicai872157571</string>
     <string name="pay_insert_fail">推广位支付成功，但推广信息插入数据库失败，请联系作者审核手工插入数据，作者微信：huangweicai872157571</string>
     <string name="pay_fail">推广位支付成功，但推广信息插入数据库失败，请联系作者审核手工插入数据，作者微信：huangweicai872157571</string>
+    <string name="technical_data_intro">添加技术资料方案参考：\n方案一：如下直接输入\n方案二：打开当前界面，在电脑端编辑好内容（头像：xxx 名称：xxx 介绍：xxx 资料链接：xxx）发送到手机端的微信或者QQ，然后长按复制内容即可，再次切换到库界面时内容会自动匹配到对应的输入框中\n注意：\n1.类型内容之间留一个空格\n2.需要邀请码的可在简书联系作者</string>
 
 
 </resources>
