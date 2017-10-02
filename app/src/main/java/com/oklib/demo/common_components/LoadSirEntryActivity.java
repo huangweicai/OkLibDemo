@@ -59,8 +59,34 @@ public class LoadSirEntryActivity extends BaseAppActivity {
                     public void onClick(View v) {
                         mBeans.add(new FunctionDetailBean("activity_loadsir_layout.xml", BASE_RES + "/layout/activity_loadsir_layout.xml"));
 
-                        //
-                        //mBeans.add(new FunctionDetailBean("hwc.loadsir.target.NormalActivity.xml", BASE_RES + "/layout/activity_loadsir_layout.xml"));
+                        String baseJavaUrl = "https://github.com/huangweicai/OkLibDemo/tree/master/loadsir/src/main/java/hwc/loadsir/target/";
+                        String baseResUrl = "https://github.com/huangweicai/OkLibDemo/tree/master/loadsir/src/main/res/layout/";
+                        mBeans.add(new FunctionDetailBean("NormalActivity.xml", baseJavaUrl + "NormalActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_content.xml", baseResUrl + "activity_content.xml"));
+
+                        mBeans.add(new FunctionDetailBean("PlaceholderActivity.xml", baseJavaUrl + "PlaceholderActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_placeholder.xml", baseResUrl + "activity_placeholder.xml"));
+
+                        mBeans.add(new FunctionDetailBean("ConvertorActivity.xml", baseJavaUrl + "ConvertorActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_activity_convertor.xml", baseResUrl + "activity_activity_convertor.xml"));
+
+                        mBeans.add(new FunctionDetailBean("FragmentSingleActivity.xml", baseJavaUrl + "FragmentSingleActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_fragment.xml", baseResUrl + "activity_fragment.xml"));
+
+                        mBeans.add(new FunctionDetailBean("MultiFragmentActivity.xml", baseJavaUrl + "MultiFragmentActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_fragment_mutil.xml", baseResUrl + "activity_fragment_mutil.xml"));
+
+                        mBeans.add(new FunctionDetailBean("MultiFragmentWithViewPagerActivity.xml", baseJavaUrl + "MultiFragmentWithViewPagerActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_fragment_viewpager.xml", baseResUrl + "activity_fragment_viewpager.xml"));
+
+                        mBeans.add(new FunctionDetailBean("ViewTargetActivity.xml", baseJavaUrl + "ViewTargetActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_view.xml", baseResUrl + "activity_view.xml"));
+
+                        mBeans.add(new FunctionDetailBean("AnimateActivity.xml", baseJavaUrl + "AnimateActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_content.xml", baseResUrl + "activity_content.xml"));
+
+                        mBeans.add(new FunctionDetailBean("KeepTitleActivity.xml", baseJavaUrl + "KeepTitleActivity.java"));
+                        mBeans.add(new FunctionDetailBean("activity_fragment.xml", baseResUrl + "activity_fragment.xml"));
                         showDetail();
                     }
                 });
