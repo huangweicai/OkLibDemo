@@ -59,7 +59,7 @@ public class EmptyDataViewActivity extends BaseAppActivity {
     }
 
     public void duanwang(View view) {
-        emptyDataView.updateEmptyState(true, R.drawable.photo_error, "网络访问或数据出错");
+        emptyDataView.updateEmptyState(true, R.drawable.oklib_photo_error, "网络访问或数据出错");
         emptyDataView.updateHintTextState(14, getResources().getColor(R.color.white));
         emptyDataView.updateReloadBtnState(14, getResources().getColor(R.color.white), R.drawable.round_blood_pressure);
         emptyDataView.setBackgroundResource(R.color.blue);
@@ -72,7 +72,7 @@ public class EmptyDataViewActivity extends BaseAppActivity {
     }
 
     public void kongshuju(View view) {
-        emptyDataView.updateEmptyState(false, R.drawable.photo_empty, "一条数据都没有噢，赶紧去测量吧~");
+        emptyDataView.updateEmptyState(false, R.drawable.oklib_photo_empty, "一条数据都没有噢，赶紧去测量吧~");
         emptyDataView.updateHintTextState(14, getResources().getColor(R.color.white));
         emptyDataView.updateReloadBtnState(14, getResources().getColor(R.color.white), R.drawable.round_blood_pressure);
         emptyDataView.setBackgroundResource(R.color.orange);

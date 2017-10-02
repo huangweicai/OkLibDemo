@@ -15,8 +15,8 @@ import com.oklib.demo.common_components.chart.fragment.CurveChartFragment;
 import com.oklib.demo.common_components.chart.fragment.CustomBloodChartFragment;
 import com.oklib.demo.common_components.chart.fragment.HistogramBarChartFragment;
 import com.oklib.demo.common_components.chart.fragment.LineChartFragment;
+import com.oklib.demo.common_components.chart.fragment.SnoreBarChartViewFragment;
 import com.oklib.demo.common_components.chart.fragment.SportBarChartFragment;
-import com.oklib.demo.common_components.chart.fragment.StackBarChartFragment;
 import com.oklib.view.CommonToolBar;
 
 import static com.oklib.demo.Common.BASE_JAVA;
@@ -127,7 +127,7 @@ public class ChartActivity extends BaseAppActivity {
                     return chartFragment;
                 } else if (position == 6) {
                     //堆叠柱状图
-                    StackBarChartFragment chartFragment = new StackBarChartFragment();
+                    SnoreBarChartViewFragment chartFragment = new SnoreBarChartViewFragment();
                     chartFragment.showChart();
                     return chartFragment;
                 }

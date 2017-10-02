@@ -245,7 +245,7 @@ public class SpanActivity extends BaseAppActivity {
                 // blur
                 mBlurMaskFilterSpan.setRadius(25 * (1.00001f - (Float) animation.getAnimatedValue()));
 
-                // shadow
+                // oklib_shadow
                 mShadowSpan.setDx(16 * (0.5f - (Float) animation.getAnimatedValue()));
                 mShadowSpan.setDy(16 * (0.5f - (Float) animation.getAnimatedValue()));
 
