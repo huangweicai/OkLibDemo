@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@drawable/oklib_bg_toast_loading"
+    android:minHeight="100dp"
+    android:minWidth="130dp"
+    android:orientation="vertical">
+
+    <com.oklib.widget.dialog.view.GifMovieView
+        android:id="@+id/iv_loading"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="onGifClick"
+        custom:oklib_gif="@drawable/oklib_loading_large" />
+
+    <TextView
+        android:id="@+id/loading_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="300dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="加载中..."
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+</LinearLayout>

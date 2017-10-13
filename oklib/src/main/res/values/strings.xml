@@ -1,0 +1,30 @@
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="toast_message">Toast message</string>
+
+    <string-array name="oklib_fading_examples">
+        <item>谢霆锋</item>
+        <item>张学友</item>
+        <item>周星驰</item>
+        <item>刘德华</item>
+        <item>李连杰</item>
+        <item>甄子丹</item>
+    </string-array>
+
+    <string name="oklib_folder_all">All Images</string>
+    <string name="oklib_preview">Preview</string>
+    <string name="oklib_msg_no_camera">No system camera found</string>
+    <string name="oklib_msg_amount_limit">Select images amount is limit</string>
+    <string name="oklib_action_done">Done</string>
+    <string name="oklib_photo_unit">Shot</string>
+    <string name="oklib_tip_take_photo">Take photo</string>
+
+    <!--pickerview-->
+    <string name="oklib_pickerview_cancel">取消</string>
+    <string name="oklib_pickerview_submit">确定</string>
+    <string name="oklib_pickerview_year">年</string>
+    <string name="oklib_pickerview_month">月</string>
+    <string name="oklib_pickerview_day">日</string>
+    <string name="oklib_pickerview_hours">时</string>
+    <string name="oklib_pickerview_minutes">分</string>
+    <string name="oklib_pickerview_seconds">秒</string>
+</resources>

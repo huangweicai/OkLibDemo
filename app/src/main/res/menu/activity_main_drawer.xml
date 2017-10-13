@@ -18,6 +18,10 @@
             android:id="@+id/exchange_area"
             android:icon="@drawable/exchange_icon"
             android:title="技术交流" />
+        <item
+            android:id="@+id/load_apk_page"
+            android:icon="@drawable/load_apk_icon"
+            android:title="下载界面" />
     </group>
 
     <item android:title="Communicate">

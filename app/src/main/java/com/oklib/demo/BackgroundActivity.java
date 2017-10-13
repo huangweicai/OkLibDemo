@@ -1,9 +1,12 @@
 package com.oklib.demo;
 
+import android.text.TextUtils;
 import android.view.View;
 
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.bean.FunctionDetailBean;
+import com.oklib.demo.widget.BackgroudDialog;
+import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 
 import static com.oklib.demo.Common.BASE_RES;
@@ -22,9 +25,31 @@ public class BackgroundActivity extends BaseAppActivity {
         return R.layout.activity_background;
     }
 
+    private boolean isFinish = true;
     @Override
     protected void initVariable() {
-
+        BackgroudDialog.create(getSupportFragmentManager())
+                .setOnPassWordConfirmListener(new BackgroudDialog.OnPassWordConfirmListener() {
+                    @Override
+                    public void pwConfirm(BackgroudDialog dialog, String inputText) {
+                        if (TextUtils.equals(inputText, "cc1b75dc6ec775cae8528b252d33bd5d")) {
+                            ToastUtil.success("密码正确");
+                            isFinish = false;
+                            dialog.dismiss();
+                        } else {
+                            isFinish = true;
+                            ToastUtil.error("密码错误，请重新再试");
+                        }
+                    }
+                })
+                .setOnDialogDismissListener(new BackgroudDialog.OnDialogDismissListener() {
+                    @Override
+                    public void dismiss() {
+                        if (isFinish) {
+                            finish();
+                        }
+                    }
+                }).show();
     }
 
     @Override
@@ -42,7 +67,7 @@ public class BackgroundActivity extends BaseAppActivity {
                 .setRightTitleListener(new View.OnClickListener() {//有标题监听
                     @Override
                     public void onClick(View v) {
-                        mBeans.add(new FunctionDetailBean("activity_background.xml", BASE_RES +"/layout/activity_background.xml"));
+                        mBeans.add(new FunctionDetailBean("activity_background.xml", BASE_RES + "/layout/activity_background.xml"));
                         showDetail();
                     }
                 });
@@ -57,4 +82,5 @@ public class BackgroundActivity extends BaseAppActivity {
     protected void initNet() {
 
     }
+
 }
