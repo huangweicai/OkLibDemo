@@ -4,15 +4,26 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bmoblib.BmobQueryHelp;
+import com.bmoblib.bean.CommoTools;
+import com.bmoblib.bean.CommonComponents;
+import com.bmoblib.bean.IntegrationFramework;
+import com.bmoblib.bean.WindowRelated;
 import com.oklib.base.BaseFragment;
 import com.oklib.base.BaseRcvAdapter;
 import com.oklib.demo.adapter.MainRvAdapter;
 import com.oklib.demo.bean.MainBean;
+import com.oklib.util.FastJsonUtil;
+import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonRefreshLayout;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+import cn.bmob.v3.exception.BmobException;
 
 /**
  * 时间：2017/8/5
@@ -67,100 +78,100 @@ public class MainRvFragment extends BaseFragment implements CommonRefreshLayout.
      * 描述：请求网络
      */
     private void requestNet() {
-//        switch (type) {
-//            case 0:
-//                BmobQueryHelp.queryIntegrationFramework(page, new BmobQueryHelp.OnIntegrationFrameworkListener() {
-//                    @Override
-//                    public void result(List<IntegrationFramework> object, BmobException e) {
-//                        if (e == null) {
-//                            String fastJsonStr = FastJsonUtil.list2Json(object);
-//                            mainList.clear();
-//                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
-//                            //金额降序排序处理
-//                            Collections.sort(mainList, new Comparator<MainBean>() {
-//                                @Override
-//                                public int compare(MainBean bean1, MainBean bean2) {
-//                                    //比较规则，金额比较，升序排序(左比右)
-//                                    return bean1.getPage().compareTo(bean2.getPage());
-//                                }
-//                            });
-//                        } else {
-//                            ToastUtil.show("请求数据异常");
-//                        }
-//                        processList();
-//                    }
-//                });
-//                break;
-//            case 1:
-//                BmobQueryHelp.queryCommonComponents(page, new BmobQueryHelp.OnCommonComponentsListener() {
-//                    @Override
-//                    public void result(List<CommonComponents> object, BmobException e) {
-//                        if (e == null) {
-//                            String fastJsonStr = FastJsonUtil.list2Json(object);
-//                            mainList.clear();
-//                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
-//                            //金额降序排序处理
-//                            Collections.sort(mainList, new Comparator<MainBean>() {
-//                                @Override
-//                                public int compare(MainBean bean1, MainBean bean2) {
-//                                    //比较规则，金额比较，升序排序(左比右)
-//                                    return bean1.getPage().compareTo(bean2.getPage());
-//                                }
-//                            });
-//                        } else {
-//                            ToastUtil.show("请求数据异常");
-//                        }
-//                        processList();
-//                    }
-//                });
-//                break;
-//            case 2:
-//                BmobQueryHelp.queryCommoTools(page, new BmobQueryHelp.OnCommoToolsListener() {
-//                    @Override
-//                    public void result(List<CommoTools> object, BmobException e) {
-//                        if (e == null) {
-//                            String fastJsonStr = FastJsonUtil.list2Json(object);
-//                            mainList.clear();
-//                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
-//                            //金额降序排序处理
-//                            Collections.sort(mainList, new Comparator<MainBean>() {
-//                                @Override
-//                                public int compare(MainBean bean1, MainBean bean2) {
-//                                    //比较规则，金额比较，升序排序(左比右)
-//                                    return bean1.getPage().compareTo(bean2.getPage());
-//                                }
-//                            });
-//                        } else {
-//                            ToastUtil.show("请求数据异常");
-//                        }
-//                        processList();
-//                    }
-//                });
-//                break;
-//            case 3:
-//                BmobQueryHelp.queryWindowRelated(page, new BmobQueryHelp.OnWindowRelatedListener() {
-//                    @Override
-//                    public void result(List<WindowRelated> object, BmobException e) {
-//                        if (e == null) {
-//                            String fastJsonStr = FastJsonUtil.list2Json(object);
-//                            mainList.clear();
-//                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
-//                            //金额降序排序处理
-//                            Collections.sort(mainList, new Comparator<MainBean>() {
-//                                @Override
-//                                public int compare(MainBean bean1, MainBean bean2) {
-//                                    //比较规则，金额比较，升序排序(左比右)
-//                                    return bean1.getPage().compareTo(bean2.getPage());
-//                                }
-//                            });
-//                        } else {
-//                            ToastUtil.show("请求数据异常");
-//                        }
-//                        processList();
-//                    }
-//                });
-//                break;
-//        }
+        switch (type) {
+            case 0:
+                BmobQueryHelp.queryIntegrationFramework(page, new BmobQueryHelp.OnIntegrationFrameworkListener() {
+                    @Override
+                    public void result(List<IntegrationFramework> object, BmobException e) {
+                        if (e == null) {
+                            String fastJsonStr = FastJsonUtil.list2Json(object);
+                            mainList.clear();
+                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
+                            //金额降序排序处理
+                            Collections.sort(mainList, new Comparator<MainBean>() {
+                                @Override
+                                public int compare(MainBean bean1, MainBean bean2) {
+                                    //比较规则，金额比较，升序排序(左比右)
+                                    return bean1.getPage().compareTo(bean2.getPage());
+                                }
+                            });
+                        } else {
+                            ToastUtil.show("请求数据异常");
+                        }
+                        processList();
+                    }
+                });
+                break;
+            case 1:
+                BmobQueryHelp.queryCommonComponents(page, new BmobQueryHelp.OnCommonComponentsListener() {
+                    @Override
+                    public void result(List<CommonComponents> object, BmobException e) {
+                        if (e == null) {
+                            String fastJsonStr = FastJsonUtil.list2Json(object);
+                            mainList.clear();
+                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
+                            //金额降序排序处理
+                            Collections.sort(mainList, new Comparator<MainBean>() {
+                                @Override
+                                public int compare(MainBean bean1, MainBean bean2) {
+                                    //比较规则，金额比较，升序排序(左比右)
+                                    return bean1.getPage().compareTo(bean2.getPage());
+                                }
+                            });
+                        } else {
+                            ToastUtil.show("请求数据异常");
+                        }
+                        processList();
+                    }
+                });
+                break;
+            case 2:
+                BmobQueryHelp.queryCommoTools(page, new BmobQueryHelp.OnCommoToolsListener() {
+                    @Override
+                    public void result(List<CommoTools> object, BmobException e) {
+                        if (e == null) {
+                            String fastJsonStr = FastJsonUtil.list2Json(object);
+                            mainList.clear();
+                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
+                            //金额降序排序处理
+                            Collections.sort(mainList, new Comparator<MainBean>() {
+                                @Override
+                                public int compare(MainBean bean1, MainBean bean2) {
+                                    //比较规则，金额比较，升序排序(左比右)
+                                    return bean1.getPage().compareTo(bean2.getPage());
+                                }
+                            });
+                        } else {
+                            ToastUtil.show("请求数据异常");
+                        }
+                        processList();
+                    }
+                });
+                break;
+            case 3:
+                BmobQueryHelp.queryWindowRelated(page, new BmobQueryHelp.OnWindowRelatedListener() {
+                    @Override
+                    public void result(List<WindowRelated> object, BmobException e) {
+                        if (e == null) {
+                            String fastJsonStr = FastJsonUtil.list2Json(object);
+                            mainList.clear();
+                            mainList = FastJsonUtil.json2List(fastJsonStr, MainBean.class);
+                            //金额降序排序处理
+                            Collections.sort(mainList, new Comparator<MainBean>() {
+                                @Override
+                                public int compare(MainBean bean1, MainBean bean2) {
+                                    //比较规则，金额比较，升序排序(左比右)
+                                    return bean1.getPage().compareTo(bean2.getPage());
+                                }
+                            });
+                        } else {
+                            ToastUtil.show("请求数据异常");
+                        }
+                        processList();
+                    }
+                });
+                break;
+        }
     }
 
     /**

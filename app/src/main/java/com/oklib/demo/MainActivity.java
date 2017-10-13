@@ -24,11 +24,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.bmoblib.BmobQueryHelp;
+import com.bmoblib.bean.Notice;
+import com.bmoblib.bean.Version;
+import com.oklib.AppPaths;
+import com.oklib.base.BaseDialogFragment;
 import com.oklib.demo.base.BaseAppActivity;
 import com.oklib.demo.util.PackageInfoUtil;
 import com.oklib.util.Debug;
+import com.oklib.util.FileUtil;
+import com.oklib.util.IntentUtil;
 import com.oklib.util.NetUtil;
-import com.oklib.util.camera.help.InitAppDirHelp;
 import com.oklib.util.http.OkGo;
 import com.oklib.util.http.callback.FileCallback;
 import com.oklib.util.permission.PermissionFail;
@@ -37,9 +43,11 @@ import com.oklib.util.permission.PermissionSuccess;
 import com.oklib.util.toast.ToastUtil;
 import com.oklib.view.CommonToolBar;
 import com.oklib.view.TextViewMarquee;
+import com.oklib.widget.ConfirmDialog;
 
 import java.io.File;
 
+import cn.bmob.v3.exception.BmobException;
 import okhttp3.Call;
 import okhttp3.Response;
 
@@ -78,11 +86,11 @@ public class MainActivity extends BaseAppActivity
         //setSupportActionBar(toolbar);
         toolbar.setCenterTitle("OkLib库演示", 17, R.color.app_white_color);
         toolbar.setImmerseState(this);
-        toolbar.setRightTitle("支持详细", 14, R.color.app_white_color).setRightTitleListener(new View.OnClickListener() {
+        toolbar.setRightTitle("资源详细", 14, R.color.app_white_color).setRightTitleListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, SupportingDetailsActivity.class);
-                intent.putExtra(Common.TITLE, "支持详细");
+                intent.putExtra(Common.TITLE, "资源详细");
                 startActivity(intent);
             }
         });
@@ -110,7 +118,7 @@ public class MainActivity extends BaseAppActivity
             public Fragment getItem(int position) {
                 Bundle bundle = new Bundle();
                 bundle.putInt("type", position);
-                return MainFragment.getInstance(bundle);
+                return MainRvFragment.getInstance(bundle);
             }
 
             @Override
@@ -127,29 +135,29 @@ public class MainActivity extends BaseAppActivity
 
     @Override
     protected void initNet() {
-//        BmobQueryHelp.queryNotice(new BmobQueryHelp.OnNoticeListener() {
-//            @Override
-//            public void result(final Notice notice, BmobException e) {
-//                if (notice.isShowNotice()) {
-//                    tvm_textViewMarquee.setVisibility(View.VISIBLE);
-//                    marqueeLine.setVisibility(View.VISIBLE);
-//                }else{
-//                    tvm_textViewMarquee.setVisibility(View.GONE);
-//                    marqueeLine.setVisibility(View.GONE);
-//                }
-//                tvm_textViewMarquee.setText(notice.getNoticeText());
-//                tvm_textViewMarquee.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent = new Intent(context, WebViewActivity.class);
-//                        intent.putExtra(Common.TITLE, "通知");
-//                        intent.putExtra(Common.URL, notice.getUrl());
-//                        intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
-//                        startActivity(intent);
-//                    }
-//                });
-//            }
-//        });
+        BmobQueryHelp.queryNotice(new BmobQueryHelp.OnNoticeListener() {
+            @Override
+            public void result(final Notice notice, BmobException e) {
+                if (notice.isShowNotice()) {
+                    tvm_textViewMarquee.setVisibility(View.VISIBLE);
+                    marqueeLine.setVisibility(View.VISIBLE);
+                } else {
+                    tvm_textViewMarquee.setVisibility(View.GONE);
+                    marqueeLine.setVisibility(View.GONE);
+                }
+                tvm_textViewMarquee.setText(notice.getNoticeText());
+                tvm_textViewMarquee.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(context, WebViewActivity.class);
+                        intent.putExtra(Common.TITLE, "通知");
+                        intent.putExtra(Common.URL, notice.getUrl());
+                        intent.putExtra(WebViewActivity.IS_SHOW_WEB_URL, true);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 
     private void setStateBarStyle() {
@@ -211,6 +219,8 @@ public class MainActivity extends BaseAppActivity
                     Intent intent = new Intent(context, ExchangeAreaActivity.class);
                     intent.putExtra(Common.TITLE, "技术交流");
                     startActivity(intent);
+                }  else if (id == R.id.load_apk_page) {
+                    IntentUtil.localWebOpenUrl(context, getResources().getString(R.string.load_apk_url));
                 } else if (id == R.id.jianshu) {//简书
                     Intent intent = new Intent(context, WebViewActivity.class);
                     intent.putExtra(Common.TITLE, "简书");
@@ -279,52 +289,53 @@ public class MainActivity extends BaseAppActivity
 
     private int curVersionCode;
     private String apkUrl;
+
     //版本更新
     private void versionUpdate() {
         curVersionCode = PackageInfoUtil.getVersionCode(context);
-//        BmobQueryHelp.queryUpdate(new BmobQueryHelp.OnUpdateQueryListener() {
-//            @Override
-//            public void result(Version versionBean, BmobException e) {
-//                apkUrl = versionBean.getApkUrl();
-//                if (curVersionCode < versionBean.getVersionCode()) {
-//                    if (versionBean.isforce()) {
-//                        //强制更新
-//                        PermissionGen.needPermission(MainActivity.this, 201,
-//                                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-//                    }else{
-//                        //更新提示窗口
-//                        showUpdateWin(versionBean);
-//                    }
-//                }else{
-//                    ToastUtil.show("当前版本已是最新版本"+PackageInfoUtil.getVersionName(context));
-//                }
-//
-//            }
-//        });
+        BmobQueryHelp.queryUpdate(new BmobQueryHelp.OnUpdateQueryListener() {
+            @Override
+            public void result(Version versionBean, BmobException e) {
+                apkUrl = versionBean.getApkUrl();
+                if (curVersionCode < versionBean.getVersionCode()) {
+                    if (versionBean.isforce()) {
+                        //强制更新
+                        PermissionGen.needPermission(MainActivity.this, 201,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    } else {
+                        //更新提示窗口
+                        showUpdateWin(versionBean);
+                    }
+                } else {
+                    ToastUtil.show("当前版本已是最新版本" + PackageInfoUtil.getVersionName(context));
+                }
+
+            }
+        });
     }
 
     //更新提示窗口
-//    private void showUpdateWin(final Version versionBean) {
-//        ConfirmDialog dialog = ConfirmDialog.create(getSupportFragmentManager());
-//        dialog.setTitle("发现新版本：库"+versionBean.getVersionName()+"（"+ FileUtil.formatFileSize(versionBean.getTargetSize())+"）");
-//        dialog.setContent(versionBean.getUpdateLog());
-//        dialog.show();
-//        dialog.setOnConfirmListener(new BaseDialogFragment.OnConfirmListener() {
-//            @Override
-//            public void confirm(View v) {
-//                PermissionGen.needPermission(MainActivity.this, 201,
-//                        Manifest.permission.WRITE_EXTERNAL_STORAGE);
-//            }
-//        });
-//    }
+    private void showUpdateWin(final Version versionBean) {
+        ConfirmDialog dialog = ConfirmDialog.create(getSupportFragmentManager());
+        dialog.setTitle("发现新版本：库" + versionBean.getVersionName() + "（" + FileUtil.formatFileSize(versionBean.getTargetSize()) + "）");
+        dialog.setContent(versionBean.getUpdateLog());
+        dialog.show();
+        dialog.setOnConfirmListener(new BaseDialogFragment.OnConfirmListener() {
+            @Override
+            public void confirm(View v) {
+                PermissionGen.needPermission(MainActivity.this, 201,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            }
+        });
+    }
 
     @PermissionSuccess(requestCode = 201)
     public void hasPermissionToLoad() {
-        Debug.d("isWifi:"+ NetUtil.isWifi(context));
+        Debug.d("isWifi:" + NetUtil.isWifi(context));
         if (NetUtil.isWifi(context)) {
             ToastUtil.show("开始下载...");
             downLoadApk(apkUrl);
-        }else{
+        } else {
             AlertDialog.Builder dialog = new AlertDialog.Builder(context);
             dialog.setCancelable(false);
             dialog.setMessage("当前网络是移动网络，确定下载食趣新版本？");
@@ -382,19 +393,19 @@ public class MainActivity extends BaseAppActivity
     private void downLoadApk(String apkUrl) {
         OkGo.get(apkUrl)
                 .tag(this)
-                .execute(new FileCallback(InitAppDirHelp.getInstance().mAppDir, "/食趣.apk") {//文件下载时，需要指定下载的文件目录和文件名
+                .execute(new FileCallback(AppPaths.getInstance().mExternalFilesRootDir, "/食趣.apk") {//文件下载时，需要指定下载的文件目录和文件名
                     @Override
                     public void onSuccess(File file, Call call, Response response) {
                         // file 即为文件数据，文件保存在指定目录
-                        Debug.d("length:"+file.length());
-                        Debug.d("file:"+file.getAbsolutePath());
+                        Debug.d("length:" + file.length());
+                        Debug.d("file:" + file.getAbsolutePath());
                         installApk(context, file);
                     }
 
                     @Override
                     public void downloadProgress(long currentSize, long totalSize, float progress, long networkSpeed) {
                         //这里回调下载进度(该回调在主线程,可以直接更新ui)
-                        Debug.d("progress:"+progress);
+                        Debug.d("progress:" + progress);
                     }
                 });
     }

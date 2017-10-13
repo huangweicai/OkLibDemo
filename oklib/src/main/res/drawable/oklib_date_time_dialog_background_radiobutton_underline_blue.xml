@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 连框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="#FFAAAAAA"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#8833B5E5"/>
+        </shape>
+    </item>
+
+    <!--上面 为 设置 阴影 效果-->
+
+    <!-- 选中 显示 的 颜色-->
+    <item
+        android:bottom="3dp">
+        <shape>
+            <solid android:color="#33B5E5"/>
+        </shape>
+    </item>
+
+    <item
+        android:bottom="7dp">
+        <shape>
+            <solid android:color="#ffffff"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oklib.util.camera.view.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.oklib.util.camera.view.SquaredImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/oklib_default_error" />
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/checkmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="5.5dp"
+        android:layout_marginTop="5.5dp"
+        android:src="@drawable/oklib_btn_unselected" />
+
+</com.oklib.util.camera.view.SquareFrameLayout>
