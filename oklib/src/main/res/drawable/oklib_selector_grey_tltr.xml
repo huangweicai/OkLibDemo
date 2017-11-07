@@ -1,0 +1,5 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/oklib_round_gray_tltr_p" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/oklib_round_gray_tltr"></item>
+</selector>

@@ -1,0 +1,106 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.14"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "IS_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+//        release {
+//            buildConfigField "boolean", "IS_DEBUG", "false"
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+    }
+
+//    sourceSets {
+//        main {
+//            manifest.srcFile 'src/main/AndroidManifest.xml'
+//            java.srcDirs = ['src/main/java', 'src/main/aidl']
+//            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+//            aidl.srcDirs = ['src/main/aidl']
+//            res.srcDirs = ['src/main/res']
+//            assets.srcDirs = ['src/main/assets']
+//        }
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    compile 'com.android.support:design:26.0.0-alpha1'
+
+    //系统
+    compile 'com.android.support:percent:22.2.0'
+//    compile 'com.android.support:percent:25.3.1'
+
+
+    //三方
+    //-----------------依赖-----------------
+    //Glide4.0
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    //compile 'com.github.bumptech.glide:compiler:4.0.0-RC0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0'//含okio包，与比目okio重复冲突
+    compile 'com.alibaba:fastjson:1.2.35'
+    //OkGO
+    //    compile 'com.lzy.net:okgo:+'        //版本号使用 + 可以自动引用最新版
+    //    compile 'com.lzy.net:okrx:+'        //版本号使用 + 可以自动引用最新版
+    //    compile 'com.lzy.net:okserver:+'    //版本号使用 + 可以自动引用最新版
+//        compile 'com.lzy.net:okgo:2.0.0'//影响比目lib，重复冲突
+    //可以单独使用，不需要依赖下方的扩展包
+    //    compile 'com.lzy.net:okrx:0.1.0'
+    //RxJava扩展支持，根据需要添加
+    //    compile 'com.lzy.net:okserver:1.1.0'
+    //===============logger日志框架===============
+    compile 'com.orhanobut:logger:2.1.1'
+    //===============material-dialogs===============
+    //    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
+    // If you want to use the GPU Filters
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    //==================自定义Toast布局 tastytoast==================
+    compile 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+    //-----------------弃用-----------------
+    //compile 'com.github.bumptech.glide:glide:3.6.1'
+    //===========glide转换bitmap常用类的库（高斯模糊、透明度、圆形等） transformations需要============
+    //compile 'jp.wasabeef:glide-transformations:2.0.2'
+    //compile project(':multi-image-selector')//这种形式无法提交到jcenter
+    compile 'com.squareup.picasso:picasso:2.4.0'//camera包使用到
+    //compile 'com.github.lzyzsd:circleprogress:1.2.1'//多样式进度条
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'//okhttp
+    compile 'com.google.zxing:core:3.3.0'//二维码
+    //视频播放相关
+    //  required, enough for most devices.
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.0'
+    //  Other ABIs: optional
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.0'
+    //  compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.0'
+    //  compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.0'
+    //  ExoPlayer as IMediaPlayer: optional, experimental
+    //  compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.0'
+}
+
+//gradlew bintrayUpload
+//必须放在底部，否则报：Error:Cause: android.compileSdkVersion is missing!
+//apply from: "https://raw.githubusercontent.com/xiaopansky/android-library-publish-to-jcenter/master/bintrayUpload.gradle"
+apply from: "bintrayUpload.gradle"//使用本地文件，忽略注释语法错误
