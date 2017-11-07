@@ -11,7 +11,7 @@ import com.oklib.OkLibApp;
 import com.taobao.sophix.PatchStatus;
 import com.taobao.sophix.SophixManager;
 import com.taobao.sophix.listener.PatchLoadStatusListener;
-import com.tencent.bugly.crashreport.CrashReport;
+//import com.tencent.bugly.crashreport.CrashReport;
 
 import hwc.loadsir.LoadSirApp;
 
@@ -43,7 +43,7 @@ public class AppOkLib extends OkLibApp {
         //初始化比目
         BmoBHelp.initBmob(this);
         //bugly
-        CrashReport.initCrashReport(getApplicationContext(), "36087ab55d", false);
+//        CrashReport.initCrashReport(getApplicationContext(), "36087ab55d", false);
         //LoadSir初始化
         LoadSirApp.onCreate();
     }
