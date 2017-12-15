@@ -1,0 +1,1 @@
+include ':app', ':imageloaderlib', ':databaselib', ':videoplaylib', ':cameralib', ':httplib', ':componentlib', ':windowlib', ':utillib', ':bmoblib', ':loadsir', ':expressionlib', ':TPAutoVerifyCode', ':mobsmslib', ':shortmessagesdkgui', ':smssdk', ':customcameralib', ':oklibhelp'

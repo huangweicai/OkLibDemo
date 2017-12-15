@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.coorchice.supertextview.MainActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_0"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="10dp"
+                app:oklib_solid="@color/oklib_opacity_5_red" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_2_1"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="全圆角矩形"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="40dp"
+                app:oklib_solid="#85219E" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="方形边框"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_solid="#78C3ED"
+                app:oklib_stroke_color="#5166ED"
+                app:oklib_stroke_width="5dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="圆角边框"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="10dp"
+                app:oklib_solid="#228609"
+                app:oklib_stroke_color="#FE4926"
+                app:oklib_stroke_width="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="圆形"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="40dp"
+                app:oklib_solid="#008673" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="圆形边框"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="40dp"
+                app:oklib_solid="#5D4FB0"
+                app:oklib_stroke_color="#BDAB96"
+                app:oklib_stroke_width="5dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="圆形边框"
+                android:textColor="@color/oklib_black"
+                android:textSize="14sp"
+                app:oklib_corner="40dp"
+                app:oklib_solid="@color/oklib_transparent"
+                app:oklib_stroke_color="@color/oklib_a233be"
+                app:oklib_stroke_width="5dp" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="左上圆角"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="15dp"
+                app:oklib_left_top_corner="true"
+                app:oklib_solid="#ed652f" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/stv_6"
+                android:gravity="center"
+                android:text="右上圆角"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="15dp"
+                app:oklib_right_top_corner="true"
+                app:oklib_solid="#ff443f" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/stv_6"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="左下圆角"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="15dp"
+                app:oklib_left_bottom_corner="true"
+                app:oklib_solid="#ed50a2" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/stv_6"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/stv_6"
+                android:gravity="center"
+                android:text="右下圆角"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="15dp"
+                app:oklib_right_bottom_corner="true"
+                app:oklib_solid="#c12ded" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_10"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/stv_9"
+                android:gravity="center"
+                android:text="设置两个圆角"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="15dp"
+                app:oklib_left_top_corner="true"
+                app:oklib_right_top_corner="true"
+                app:oklib_solid="#ed9581" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_11"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/stv_10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/stv_9"
+                android:gravity="center"
+                android:text="设置三个圆角"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="15dp"
+                app:oklib_left_bottom_corner="true"
+                app:oklib_right_bottom_corner="true"
+                app:oklib_right_top_corner="true"
+                app:oklib_solid="#EDD315" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_12"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="空心文字"
+                android:textSize="18sp"
+                app:oklib_solid="#EEF3E2"
+                app:oklib_text_fill_color="@color/oklib_transparent"
+                app:oklib_text_stroke="true"
+                app:oklib_text_stroke_color="#811D99"
+                app:oklib_text_stroke_width="1dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_13"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="文字描边"
+                android:textSize="18sp"
+                app:oklib_solid="#D9B0E2"
+                app:oklib_text_fill_color="@color/oklib_white"
+                app:oklib_text_stroke="true"
+                app:oklib_text_stroke_color="#461B50"
+                app:oklib_text_stroke_width="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_14"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="bottom|center"
+                android:paddingBottom="1dp"
+                android:text="状态图 1"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="10dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/emoji_kiss" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_15"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="1dp"
+                android:text="状态图 2"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_corner="10dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="20dp"
+                app:oklib_state_drawable_width="20dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_16"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:paddingLeft="23dp"
+                android:text="状态图 3"
+                android:textColor="@color/oklib_white"
+                android:textSize="10sp"
+                app:oklib_corner="40dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="20dp"
+                app:oklib_state_drawable_mode="left"
+                app:oklib_state_drawable_padding_left="10dp"
+                app:oklib_state_drawable_width="20dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_16_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:paddingBottom="1dp"
+                android:text="状态图 4"
+                android:textColor="@color/oklib_white"
+                android:textSize="14sp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#4CBDD2"
+                app:oklib_state_drawable="@drawable/triangle"
+                app:oklib_state_drawable_height="30dp"
+                app:oklib_state_drawable_mode="leftTop"
+                app:oklib_state_drawable_width="30dp" />
+        </LinearLayout>
+
+        <com.hwc.oklib.view.stv.SuperTextView
+            android:id="@+id/stv_17"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="使用Adjuster实现动画效果"
+            android:textColor="@color/oklib_white"
+            android:textSize="16dp"
+            app:oklib_corner="25dp"
+            app:oklib_solid="@color/oklib_purple" />
+
+        <com.hwc.oklib.view.stv.SuperTextView
+            android:id="@+id/stv_18"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="使用Adjuster实现Ripple效果"
+            android:textColor="@color/oklib_white"
+            android:textSize="16dp"
+            app:oklib_corner="25dp"
+            app:oklib_solid="#ED86AE" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_19"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="BEFORE_DRAWABLE"
+                android:textColor="@color/oklib_black"
+                android:textSize="7dp"
+                android:textStyle="bold"
+                app:oklib_corner="20dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#FF0000"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="20dp"
+                app:oklib_state_drawable_width="20dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_20"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="BEFORE_TEXT"
+                android:textColor="@color/oklib_black"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                app:oklib_corner="20dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#A58FED"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="30dp"
+                app:oklib_state_drawable_width="30dp" />
+
+            <com.hwc.oklib.view.stv.SuperTextView
+                android:id="@+id/stv_21"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="AT_LAST"
+                android:textColor="@color/oklib_black"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                app:oklib_corner="20dp"
+                app:oklib_isShowState="true"
+                app:oklib_solid="#A58FED"
+                app:oklib_state_drawable="@drawable/emoji_kiss"
+                app:oklib_state_drawable_height="30dp"
+                app:oklib_state_drawable_width="30dp" />
+        </LinearLayout>
+
+
+        <!--<com.coorchice.library.SuperTextView-->
+        <!--android:layout_width="115dp"-->
+        <!--android:layout_height="115dp"-->
+        <!--android:gravity="bottom|center"-->
+        <!--android:paddingBottom="3dp"-->
+        <!--android:text="SuperTextView"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="14sp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:isShowState="true"-->
+        <!--app:solid="#4CBDD2"-->
+        <!--app:state_drawable="@drawable/emoji_kiss"-->
+        <!--/>-->
+
+        <com.hwc.oklib.view.stv.SuperTextView
+            android:id="@+id/stv_22"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="shader_topToBottom"
+            android:textColor="@color/oklib_white"
+            android:textSize="14sp"
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="topToBottom"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
+
+        <com.hwc.oklib.view.stv.SuperTextView
+            android:id="@+id/stv_23"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="shader_bottomToTop"
+            android:textColor="@color/oklib_white"
+            android:textSize="14sp"
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="bottomToTop"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
+
+        <com.hwc.oklib.view.stv.SuperTextView
+            android:id="@+id/stv_24"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="shader_leftTopRight"
+            android:textColor="@color/oklib_white"
+            android:textSize="14sp"
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="leftTopRight"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
+
+        <com.hwc.oklib.view.stv.SuperTextView
+            android:id="@+id/stv_26"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="shader_rightToLeft"
+            android:textColor="@color/oklib_white"
+            android:textSize="14sp"
+            app:oklib_corner="10dp"
+            app:oklib_shaderEnable="true"
+            app:oklib_shaderEndColor="@color/oklib_pink"
+            app:oklib_shaderMode="rightToLeft"
+            app:oklib_shaderStartColor="@color/oklib_main_blue"
+            app:oklib_solid="@color/oklib_main_blue" />
+
+    </LinearLayout>
+</ScrollView>

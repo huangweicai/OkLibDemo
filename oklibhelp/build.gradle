@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    testCompile 'junit:junit:4.12'
+
+//    compile project(':bmoblib')
+//    compile project(':cameralib')
+//    compile project(':componentlib')
+//    compile project(':databaselib')
+//    compile project(':httplib')
+//    compile project(':imageloaderlib')
+//    compile project(':utillib')
+//    compile project(':windowlib')
+//
+//    compile project(':TPAutoVerifyCode')
+//    compile project(':mobsmslib')
+//
+//    compile project(':expressionlib')
+//    compile project(':loadsir')
+//    compile project(':videoplaylib')
+
+
+    //aar形式引用
+    //bmob
+    compile(name: 'bmoblib-release', ext: 'aar')
+    compile 'cn.bmob.android:bmob-sdk:3.5.6'
+    //cameralib
+    compile(name: 'cameralib-release', ext: 'aar')
+    compile(name: 'customcameralib-release', ext: 'aar')
+    //组件库
+    compile(name: 'componentlib-release', ext: 'aar')
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.android.support:percent:22.2.0'//百分比布局系统
+    //    compile 'com.google.zxing:core:3.3.0'//二维码
+    compile 'com.android.support:design:26.0.0-alpha1'
+    //sugar数据库
+    compile(name: 'databaselib-release', ext: 'aar')
+    //http
+    compile(name: 'httplib-release', ext: 'aar')
+    compile 'com.alibaba:fastjson:1.2.35'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    //图片加载
+    compile(name: 'imageloaderlib-release', ext: 'aar')
+    //短信
+    compile(name: 'mobsmslib-release', ext: 'aar')
+    compile(name: 'shortmessagesdkgui-release', ext: 'aar')
+    compile(name: 'smssdk-release', ext: 'aar')
+    //验证码自动输入
+    compile(name: 'TPAutoVerifyCode-release', ext: 'aar')
+    //工具类
+    compile(name: 'utillib-release', ext: 'aar')
+    compile 'com.sdsmdg.tastytoast:tastytoast:0.1.1'//tastytoast吐司工具
+    compile 'com.alibaba:fastjson:1.2.35'
+//    //窗口相关
+    compile(name: 'windowlib-release', ext: 'aar')
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.alibaba:fastjson:1.2.35'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+
+
+
+}

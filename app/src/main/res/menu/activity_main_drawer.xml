@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/collect"
+            android:icon="@drawable/collect_icon"
+            android:title="我的收藏" />
+        <item
+            android:id="@+id/feedback_to_improve"
+            android:icon="@drawable/feedback_icon"
+            android:title="反馈改进" />
+        <item
+            android:id="@+id/check_updates"
+            android:icon="@drawable/check_update_icon"
+            android:title="检测更新" />
+        <item
+            android:id="@+id/exchange_area"
+            android:icon="@drawable/exchange_icon"
+            android:title="技术交流" />
+        <item
+            android:id="@+id/load_apk_page"
+            android:icon="@drawable/load_apk_icon"
+            android:title="下载界面" />
+        <item
+            android:id="@+id/jianshu"
+            android:icon="@mipmap/jianshu_icon"
+            android:title="简书" />
+        <item
+            android:id="@+id/github"
+            android:icon="@mipmap/github_icon"
+            android:title="GitHub" />
+    </group>
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout_icon"
+        android:title="退出登录" />
+
+<!--    <item android:title="">
+        &lt;!&ndash;为了有条横线&ndash;&gt;
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/logout_icon"
+                android:title="退出登录" />
+        </menu>
+    </item>-->
+
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hwc.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <com.hwc.oklib.view.KeyBoardSystem
+        android:id="@+id/pwdinputbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        app:oklib_borderColor="#303F9F"
+        app:oklib_borderWidth="4dp"
+        app:oklib_circleColor="#FF4081"
+        app:oklib_circleSize="6dp"
+        app:oklib_isCustomKeyboard="false"
+        app:oklib_needCursor="true"
+        app:oklib_pwdNum="8"
+        app:oklib_pwdVisible="true"
+        app:oklib_textColor="#FF4081"
+        app:oklib_textSize="12dp" />
+
+    <Button
+        android:id="@+id/clearbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:text="清空" />
+
+    <com.hwc.oklib.view.KeyBoardCustomRandom
+        android:id="@+id/magickeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:oklib_deleteNormalBgColor="#0000ff"
+        app:oklib_deletePressBgColor="#ff00ff"
+        app:oklib_lineColor="#ff0000"
+        app:oklib_lineWidth="2dp"
+        app:oklib_numbersColor="#00ff00"
+        app:oklib_numbersNormalBgColor="#ffff00"
+        app:oklib_numbersPressBgColor="#00ffff"
+        app:oklib_numbersSize="15dp"
+        app:oklib_randomKeyBoard="true" />
+
+</RelativeLayout>

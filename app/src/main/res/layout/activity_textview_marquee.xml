@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hwc.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="原创：一个专注于让项目开发更简单的框架-OkLib原创：一个专注于让项目开发更简单的框架-OkLib原创：一个专注于让项目开发更简单的框架-OkLib" />
+
+    <com.hwc.oklib.view.TextViewMarquee
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="原创：一个专注于让项目开发更简单的框架-OkLib原创：一个专注于让项目开发更简单的框架-OkLib原创：一个专注于让项目开发更简单的框架-OkLib" />
+
+    <com.hwc.oklib.view.TextViewMarquee
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="原创：一个专注于让项目开发更简单的框架-OkLib原创：一个专注于让项目开发更简单的框架-OkLib原创：一个专注于让项目开发更简单的框架-OkLib" />
+
+</LinearLayout>

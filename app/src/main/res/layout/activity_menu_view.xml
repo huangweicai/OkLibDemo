@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hwc.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#666666">
+
+            <!--右下角纵向8个-->
+            <com.hwc.oklib.view.menu_view.YMenuView
+                android:id="@+id/ymv1"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:visibility="gone"
+                app:oklib_menuButtonBackGround="@drawable/oklib_setting"
+                app:oklib_optionColumns="1"
+                app:oklib_optionPositionCounts="4"
+                app:oklib_optionsBackGround="@drawable/oklib_background_option_button" />
+
+            <!--右下角3竖8个-->
+            <com.hwc.oklib.view.menu_view.YMenuView
+                android:id="@+id/ymv2"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentRight="true"
+                app:oklib_menuButtonBackGround="@drawable/oklib_setting"
+                app:oklib_optionColumns="3"
+                app:oklib_optionPositionCounts="8"
+                app:oklib_optionToParentXMargin="50dp"
+                app:oklib_optionsBackGround="@drawable/oklib_background_option_button"
+                app:oklib_sd_animMode="FROM_RIGHT" />
+
+            <!--右下角横向5个-->
+            <com.hwc.oklib.view.menu_view.YMenuView
+                android:id="@+id/ymv3"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/ymv1"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:oklib_menuButtonBackGround="@drawable/oklib_setting"
+                app:oklib_optionColumns="5"
+                app:oklib_optionPositionCounts="5"
+                app:oklib_optionToParentXMargin="80dp"
+                app:oklib_optionToParentYMargin="25dp"
+                app:oklib_optionsBackGround="@drawable/oklib_background_option_button"
+                app:oklib_sd_animMode="FROM_BUTTON_LEFT" />
+
+
+            <!--Circle8-->
+            <com.hwc.oklib.view.menu_view.Circle8YMenu
+                android:id="@+id/ymv4"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ymv2"
+                android:layout_marginTop="20dp"
+                app:oklib_menuButtonBackGround="@drawable/oklib_setting"
+                app:oklib_optionColumns="1"
+                app:oklib_optionPositionCounts="8"
+                app:oklib_optionXMargin="60dp"
+                app:oklib_optionsBackGround="@drawable/oklib_background_option_button" />
+
+            <!--Tree-->
+            <com.hwc.oklib.view.menu_view.TreeYMenu
+                android:id="@+id/ymv5"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/ymv4"
+                android:layout_marginTop="20dp"
+                app:oklib_menuButtonBackGround="@drawable/oklib_setting"
+                app:oklib_menuToParentYMargin="60dp"
+                app:oklib_optionColumns="1"
+                app:oklib_optionPositionCounts="9"
+                app:oklib_optionXMargin="40dp"
+                app:oklib_optionYMargin="40dp"
+                app:oklib_optionsBackGround="@drawable/oklib_background_option_button"
+                app:oklib_sd_duration="400" />
+
+            <!--Square-->
+            <com.hwc.oklib.view.menu_view.SquareYMenu
+                android:id="@+id/ymv6"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/ymv5"
+                android:layout_marginTop="20dp"
+                app:oklib_menuButtonBackGround="@drawable/oklib_setting"
+                app:oklib_optionPositionCounts="8"
+                app:oklib_optionXMargin="50dp"
+                app:oklib_optionYMargin="50dp"
+                app:oklib_optionsBackGround="@drawable/oklib_background_option_button"
+                app:oklib_sd_duration="400" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
