@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hwc.oklib.R;
-import com.hwc.oklib.view.EditTextWithDelete;
 import com.hwc.oklib.util.MD5Util;
+import com.hwc.oklib.view.EditTextWithDelete;
 import com.hwc.oklib.window.base.BaseDialogFragment;
 
 

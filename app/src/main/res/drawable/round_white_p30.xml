@@ -12,5 +12,5 @@
         android:topRightRadius="30dp" />
     <stroke
         android:width="1px"
-        android:color="@color/white" />
+        android:color="@color/lock_view_white" />
 </shape>

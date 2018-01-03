@@ -29,9 +29,9 @@ import com.hwc.oklib.common_components.span.util.BlurMaskFilterSpan;
 import com.hwc.oklib.common_components.span.util.ForegroundAlphaColorSpan;
 import com.hwc.oklib.common_components.span.util.ForegroundAlphaColorSpanGroup;
 import com.hwc.oklib.common_components.span.util.ShadowSpan;
-import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.util.SpanUtils;
 import com.hwc.oklib.util.toast.ToastUtil;
+import com.hwc.oklib.view.CommonToolBar;
 
 import static com.hwc.oklib.Common.BASE_RES;
 

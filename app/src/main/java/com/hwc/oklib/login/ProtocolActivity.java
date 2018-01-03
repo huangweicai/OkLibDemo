@@ -66,7 +66,7 @@ public class ProtocolActivity extends BaseAppActivity {
             title = "隐私政策";
             showStr = StreamUtil.getInstance().getString(getResources().openRawResource(R.raw.privacy_policy));
         }
-        ctb_toolbar.setCenterTitle(title, 18, R.color.white);
+        ctb_toolbar.setCenterTitle(title, 18, R.color.lock_view_white);
 
         //设置其他的属性
         mTv_Protocol = (TextView) findViewById(R.id.activity_login_protocol_des_tv);

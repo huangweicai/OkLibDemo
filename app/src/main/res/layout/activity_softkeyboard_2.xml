@@ -23,7 +23,7 @@
         android:id="@+id/ll_date"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/white"
+        android:background="@color/lock_view_white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
@@ -68,7 +68,7 @@
         android:id="@+id/ll_time"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/white"
+        android:background="@color/lock_view_white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
@@ -97,7 +97,7 @@
         android:id="@+id/ll_count"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/white"
+        android:background="@color/lock_view_white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
@@ -136,7 +136,7 @@
         android:layout_marginTop="30dp"
         android:background="#900000ff"
         android:text="保存"
-        android:textColor="@color/white"
+        android:textColor="@color/lock_view_white"
         android:textSize="20dp" />
 
     <include layout="@layout/include_numkeyboard" />

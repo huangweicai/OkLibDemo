@@ -32,7 +32,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:text="一个专注于让开发更加简单的工具库"
-        android:textColor="@color/white" />
+        android:textColor="@color/lock_view_white" />
 
     <TextView
         android:visibility="gone"
@@ -42,7 +42,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="A focus on getting more simple framework of project development"
-        android:textColor="@color/white" />
+        android:textColor="@color/lock_view_white" />
 
     <View
         android:layout_width="match_parent"

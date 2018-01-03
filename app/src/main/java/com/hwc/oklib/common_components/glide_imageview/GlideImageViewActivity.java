@@ -19,13 +19,13 @@ import com.hwc.oklib.R;
 import com.hwc.oklib.base.BaseAppActivity;
 import com.hwc.oklib.bean.FunctionDetailBean;
 import com.hwc.oklib.common_components.glide_imageview.image.SingleImageActivity;
-import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.imageloader.gimage.GlideImageLoader;
 import com.hwc.oklib.imageloader.gimage.GlideImageView;
 import com.hwc.oklib.imageloader.gimage.ShapeImageView;
 import com.hwc.oklib.imageloader.gimage.progress.CircleProgressView;
 import com.hwc.oklib.imageloader.gimage.progress.OnGlideImageViewListener;
 import com.hwc.oklib.imageloader.gimage.progress.OnProgressListener;
+import com.hwc.oklib.view.CommonToolBar;
 
 import java.util.Random;
 

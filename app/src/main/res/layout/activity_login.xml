@@ -77,7 +77,7 @@
                 android:gravity="center_vertical"
                 android:maxLines="1"
                 android:text="@string/login_signin_username"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <com.hwc.oklib.view.EditTextWithDelete
@@ -88,7 +88,7 @@
                 android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:inputType="number"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 tools:ignore="RtlCompat" />
 
@@ -96,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -112,7 +112,7 @@
                 android:layout_height="20dp"
                 android:gravity="center_vertical"
                 android:text="@string/login_signin_pwd_des"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
 
@@ -126,7 +126,7 @@
                 android:inputType="textPassword"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 tools:ignore="RtlCompat" />
 
@@ -134,7 +134,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
 
             <ImageView
                 android:id="@+id/icon_see"
@@ -174,7 +174,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
                 android:text="@string/login_signin_tv_forgetpwd"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -201,7 +201,7 @@
                 android:gravity="center_vertical"
                 android:maxLines="1"
                 android:text="@string/login_signin_username"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <com.hwc.oklib.view.EditTextWithDelete
@@ -213,7 +213,7 @@
                 android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:inputType="number"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 tools:ignore="RtlCompat" />
 
@@ -221,7 +221,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -237,7 +237,7 @@
                 android:layout_height="20dp"
                 android:gravity="center_vertical"
                 android:text="@string/login_signin_pwd_set"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <android.support.v7.widget.AppCompatEditText
@@ -251,7 +251,7 @@
                 android:inputType="textPassword"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 tools:ignore="RtlCompat" />
 
@@ -259,7 +259,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
 
         </RelativeLayout>
 
@@ -279,7 +279,7 @@
                 android:layout_marginBottom="3dp"
                 android:gravity="center_vertical"
                 android:text="@string/login_register_code_des"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <android.support.v7.widget.AppCompatEditText
@@ -296,7 +296,7 @@
                 android:inputType="number"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <com.hwc.oklib.view.RecodeView
@@ -315,7 +315,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
 
         </RelativeLayout>
 
@@ -343,7 +343,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/activity_login_register_protocol_check"
                 android:text="同意"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="12sp" />
 
             <TextView
@@ -353,7 +353,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/activity_login_register_protocol_"
                 android:text="@string/login_register_private_protocol"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="12sp" />
 
             <TextView
@@ -363,7 +363,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/activity_login_register_protocol"
                 android:text="与"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="12sp" />
 
             <TextView
@@ -373,7 +373,7 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/activity_login_register_midea_protocol_"
                 android:text="@string/login_register_midea_protocol"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="12sp" />
         </RelativeLayout>
     </LinearLayout>
@@ -411,13 +411,13 @@
                 android:background="@null"
                 android:gravity="bottom|end"
                 android:text="@string/tourist"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
         </LinearLayout>
 
     </RelativeLayout>

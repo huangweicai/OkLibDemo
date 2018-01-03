@@ -26,6 +26,25 @@ import static com.hwc.oklib.Common.BASE_JAVA;
 public abstract class BaseAppActivity extends BaseCommonUseActivity {
     public Context context;
     public LoadingDialog mWaitDialog;
+
+    @Override
+    protected void beforeLayout() {
+    }
+
+    @Override
+    protected void afterLayout() {
+    }
+
+    @Override
+    protected void initNet() {
+
+    }
+
+    @Override
+    protected void initVariable() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         context = this;

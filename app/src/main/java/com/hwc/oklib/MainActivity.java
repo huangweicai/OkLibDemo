@@ -164,8 +164,8 @@ public class MainActivity extends BaseAppActivity
         tv_intro.setOnClickListener(this);
         ll_background.setOnClickListener(this);
         iv_headPortrait.loadImage(UserManager.getUserBean().getHeadPicture(), R.mipmap.head_icon);
-        tv_nickName.setText(TextUtils.isEmpty(UserManager.getUserBean().getNickName())?"昵称":UserManager.getUserBean().getNickName());
-        tv_intro.setText(TextUtils.isEmpty(UserManager.getUserBean().getIntro())?"暂无介绍":UserManager.getUserBean().getIntro());
+        tv_nickName.setText(TextUtils.isEmpty(UserManager.getUserBean().getNickName())?"昵称": UserManager.getUserBean().getNickName());
+        tv_intro.setText(TextUtils.isEmpty(UserManager.getUserBean().getIntro())?"暂无介绍": UserManager.getUserBean().getIntro());
     }
 
 

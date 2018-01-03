@@ -12,7 +12,6 @@ import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.view.base.BaseListActivity;
 import com.hwc.oklib.view.base.BaseRcvAdapter;
 import com.hwc.oklib.widget.CenterWinListDialog;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

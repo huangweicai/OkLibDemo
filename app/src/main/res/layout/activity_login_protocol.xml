@@ -13,7 +13,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/lock_view_white">
 
         <TextView
             android:id="@+id/activity_login_protocol_des_tv"

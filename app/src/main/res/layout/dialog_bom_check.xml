@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="核对清单"
+        android:textColor="@color/black_color"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工单号："
+            android:textColor="@color/gray_text_color"
+            android:textSize="12sp" />
+
+        <com.hwc.oklib.view.TextViewMarquee
+            android:id="@+id/tv_work_order_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text=""
+            android:textColor="@color/black_color"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品编码："
+            android:textColor="@color/gray_text_color"
+            android:textSize="12sp" />
+
+        <com.hwc.oklib.view.TextViewMarquee
+            android:id="@+id/tv_product_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text=""
+            android:textColor="@color/black_color"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物料描述："
+            android:textColor="@color/gray_text_color"
+            android:textSize="12sp" />
+
+        <com.hwc.oklib.view.TextViewMarquee
+            android:id="@+id/tv_material_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text=""
+            android:textColor="@color/gray_text_color"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/drawable_gray_right_angle_line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/gray_color"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="150"
+                android:gravity="center"
+                android:text="物料编码"
+                android:textColor="@color/black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="190"
+                android:gravity="center"
+                android:text="物料描述"
+                android:textColor="@color/black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="130"
+                android:gravity="center"
+                android:text="单机用量"
+                android:textColor="@color/black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="130"
+                android:gravity="center"
+                android:text="位置"
+                android:textColor="@color/black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="130"
+                android:gravity="center"
+                android:text="标记"
+                android:textColor="@color/black_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <com.hwc.oklib.view.CommonRefreshLayout
+            android:id="@+id/rv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+
+        <!--小于号-->
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_gray_line"
+            android:gravity="center"
+            android:text="&lt;"
+            android:textColor="@color/black_color"
+            android:textSize="16sp" />
+
+        <!--item宽高40，间隙3-->
+        <com.hwc.oklib.view.NoScrollViewPager
+            android:id="@+id/vp_page"
+            android:layout_width="218dp"
+            android:layout_height="40dp"/>
+
+        <!--大于号-->
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_gray_line"
+            android:gravity="center"
+            android:text="&gt;"
+            android:textColor="@color/black_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <com.hwc.oklib.view.StateButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:oklib_normalBackgroundColor="@color/blue_color"
+        app:oklib_pressedBackgroundColor="@color/blue_colorDark"
+        app:oklib_radius="2dp"
+        app:oklib_round="true"
+        app:oklib_unableBackgroundColor="@android:color/holo_red_light" />
+
+
+</LinearLayout>

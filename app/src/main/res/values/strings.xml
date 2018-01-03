@@ -58,4 +58,9 @@
     <string name="login_signin_username">手机</string>
     <string name="login_btn_commit">确定</string>
     <string name="tourist">游客进入</string>
+
+    <string name="action_color_solid">Solid Color</string>
+    <string name="action_color_gradient">Gradient</string>
+    <string name="action_sound_usage">Sound Used from</string>
+
 </resources>

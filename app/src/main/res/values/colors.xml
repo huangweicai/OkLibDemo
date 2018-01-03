@@ -108,4 +108,15 @@
     <color name="radio_group_bg_1">#E95064</color>
     <color name="radio_group_bg_2">#EC8391</color>
     <color name="line_bg">#EEEEEE</color>
+
+    <color name="gray_color">#F8F8F8</color>
+    <color name="gray_text_color">#595C66</color>
+    <color name="white_lucency_color">#90ffffff</color>
+    <color name="black_color">#0A0C12</color>
+    <color name="white_color">#ffffff</color>
+    <color name="blue_color">#FF00ADFE</color>
+    <color name="blue_colorDark">#1678a4</color>
+
+    <color name="mine_shaft">#303030</color>
+
 </resources>

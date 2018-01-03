@@ -5,10 +5,10 @@ import android.os.Handler;
 import android.view.View;
 
 import com.hwc.oklib.R;
+import com.hwc.oklib.util.DpUtils;
+import com.hwc.oklib.view.SnoreBarChartView;
 import com.hwc.oklib.view.base.BaseFragment;
 import com.hwc.oklib.view.chart.BaseChartView;
-import com.hwc.oklib.util.DensityUtils;
-import com.hwc.oklib.view.SnoreBarChartView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,14 +55,14 @@ public class SnoreBarChartViewFragment extends BaseFragment {
             @Override
             public void run() {
 
-                barChartViewDay.setChartViewWidth(DensityUtils.dp2px(context, 600));
+                barChartViewDay.setChartViewWidth(DpUtils.dp2px(context, 600));
                 barChartViewDay.getStackBarChartView()
                         .setHighPillarColor(new int[]{0xFFB2DDF2, 0x90B2DDF2})//高处低压
                         .setCenterPillarColor(new int[]{0xFF4DB1E2, 0x904DB1E2})
                         .setLowPillarColor(new int[]{0xFF007CB7, 0x90007CB7})//低处高压
                         .setDatumLineColor(0x90222222)//虚线颜色
                         .setDottedLine(true)//是否显示虚线
-                        .setPillarGap(DensityUtils.dp2px(context, 3))//以上子类内容，必须写在下面方法上面
+                        .setPillarGap(DpUtils.dp2px(context, 3))//以上子类内容，必须写在下面方法上面
                         .isShowDatumLine_X(false)
                         .isShowDatumLine_Y(true)
                         .setType(BaseChartView.DAY)
@@ -70,22 +70,22 @@ public class SnoreBarChartViewFragment extends BaseFragment {
                         .refreshData(getDayData());
 
 
-                barChartViewWeek.setChartViewWidth(DensityUtils.dp2px(context, 320));
+                barChartViewWeek.setChartViewWidth(DpUtils.dp2px(context, 320));
                 barChartViewWeek.getStackBarChartView()
                         .setHighPillarColor(new int[]{0xFFB2DDF2, 0x90B2DDF2})//高处低压
                         .setCenterPillarColor(new int[]{0xFF4DB1E2, 0x904DB1E2})
                         .setLowPillarColor(new int[]{0xFF007CB7, 0x90007CB7})//低处高压
                         .setDatumLineColor(0x90222222)//虚线颜色
                         .setDottedLine(true)//是否显示虚线
-                        .setPillarWidth(DensityUtils.dp2px(context, 25))
-                        .setPillarGap(DensityUtils.dp2px(context, 3))//以上子类内容，必须写在下面方法上面
+                        .setPillarWidth(DpUtils.dp2px(context, 25))
+                        .setPillarGap(DpUtils.dp2px(context, 3))//以上子类内容，必须写在下面方法上面
                         .isShowDatumLine_X(false)
                         .isShowDatumLine_Y(true)
                         .setType(BaseChartView.WEEK)
                         .setYMaxValue(150)
                         .refreshData(getWeekData());
 
-                barChartViewMonth.setChartViewWidth(DensityUtils.dp2px(context, 320));
+                barChartViewMonth.setChartViewWidth(DpUtils.dp2px(context, 320));
                 barChartViewMonth.setyMaxValue(700);
                 barChartViewMonth.getStackBarChartView()
                         .setHighPillarColor(new int[]{0xFFB2DDF2, 0x90B2DDF2})//高处低压
@@ -93,7 +93,7 @@ public class SnoreBarChartViewFragment extends BaseFragment {
                         .setLowPillarColor(new int[]{0xFF007CB7, 0x90007CB7})//低处高压
                         .setDatumLineColor(0x90222222)//虚线颜色
                         .setDottedLine(true)//是否显示虚线
-                        .setPillarGap(DensityUtils.dp2px(context, 3))//以上子类内容，必须写在下面方法上面
+                        .setPillarGap(DpUtils.dp2px(context, 3))//以上子类内容，必须写在下面方法上面
                         .isShowDatumLine_X(false)
                         .isShowDatumLine_Y(true)
                         .setType(BaseChartView.MONTH)

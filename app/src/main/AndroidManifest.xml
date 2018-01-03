@@ -119,6 +119,7 @@
         <activity android:name=".window_related.EditWinActivity" />
         <activity android:name=".common_components.SoftKeyboardActivity" />
         <activity android:name=".common_components.SoftKeyboard2Activity" />
+
         <!--自定义相机 start-->
         <activity
             android:name="com.github.florent37.camerafragment.PreviewActivity"
@@ -130,6 +131,14 @@
             android:name=".integration_framework.custom_camera.CameraFragmentMainActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".common_components.LabelViewActivity" />
+        <activity android:name=".common_components.FloatViewActivity" />
+        <activity android:name=".window_related.PageDialogActivity" />
+        <activity android:name=".common_components.TempControlViewActivity" />
+        <activity android:name=".common_components.PatternLockViewActivity" />
+        <activity android:name=".common_components.ratingbar.RatingBarEntryActivity" />
+        <activity android:name=".common_components.ShootViewActivity" />
+        <activity android:name=".common_components.DebugKitActivity" />
+        <activity android:name=".common_components.MusicwaveActivity" />
         <!--自定义相机 end-->
 
         <!--广播，监听安装卸载-->
@@ -192,5 +201,10 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--音频view-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
 
 </manifest>

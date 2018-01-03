@@ -9,11 +9,11 @@ import com.hwc.oklib.Common;
 import com.hwc.oklib.R;
 import com.hwc.oklib.base.BaseAppActivity;
 import com.hwc.oklib.bean.FunctionDetailBean;
-import com.hwc.oklib.view.CommonToolBar;
-import com.hwc.oklib.view.ProgressWebView;
 import com.hwc.oklib.util.active_permission.PermissionFail;
 import com.hwc.oklib.util.active_permission.PermissionGen;
 import com.hwc.oklib.util.active_permission.PermissionSuccess;
+import com.hwc.oklib.view.CommonToolBar;
+import com.hwc.oklib.view.ProgressWebView;
 
 import static com.hwc.oklib.Common.BASE_RES;
 

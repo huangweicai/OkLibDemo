@@ -9,9 +9,9 @@ import com.hwc.oklib.Common;
 import com.hwc.oklib.R;
 import com.hwc.oklib.base.BaseAppActivity;
 import com.hwc.oklib.bean.FunctionDetailBean;
-import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.imageloader.gimage.GlideImageView;
 import com.hwc.oklib.util.toast.ToastUtil;
+import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.window.CenterWinListDialog;
 
 import java.util.ArrayList;

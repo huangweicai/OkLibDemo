@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@color/app_color" />
 
+    <!--该布局宽高属性一定要match_parent，view移动的区域-->
     <com.hwc.oklib.view.DraggableFrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,7 +24,7 @@
             android:background="@color/orange"
             android:gravity="center"
             android:text="拖拽我试试"
-            android:textColor="@color/white"
+            android:textColor="@color/lock_view_white"
             android:textSize="16sp" />
     </com.hwc.oklib.view.DraggableFrameLayout>
 </LinearLayout>

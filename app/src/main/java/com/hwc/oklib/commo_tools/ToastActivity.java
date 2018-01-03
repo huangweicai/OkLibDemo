@@ -10,9 +10,9 @@ import com.hwc.oklib.Common;
 import com.hwc.oklib.R;
 import com.hwc.oklib.base.BaseAppActivity;
 import com.hwc.oklib.bean.FunctionDetailBean;
-import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.util.toast.SnackbarUtil;
 import com.hwc.oklib.util.toast.ToastUtil;
+import com.hwc.oklib.view.CommonToolBar;
 import com.sdsmdg.tastytoast.TastyToast;
 
 import static com.hwc.oklib.AppOkLib.application;

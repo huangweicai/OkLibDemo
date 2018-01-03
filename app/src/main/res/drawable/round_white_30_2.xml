@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 填充颜色 -->
-    <solid android:color="@color/white" />
+    <solid android:color="@color/lock_view_white" />
 
     <!-- 圆角度数 -->
     <corners
@@ -11,5 +11,5 @@
         android:topLeftRadius="30dp"
         android:topRightRadius="30dp" />
     <stroke android:width="1px"
-        android:color="@color/white"/>
+        android:color="@color/lock_view_white"/>
 </shape>

@@ -78,7 +78,7 @@ public class TechnicalDataAddActivity extends BaseAppActivity implements Compoun
 
         //邀请码
         ed_inviteCode.setText("" + SPUtils.get(context, "inviteCode", ""));
-        ed_inviteCode.setSelection(((String)SPUtils.get(context, "inviteCode", "")).length());
+        ed_inviteCode.setSelection(((String) SPUtils.get(context, "inviteCode", "")).length());
 
         cb_remember.setOnCheckedChangeListener(this);
         //true会回调监听，false不回调监听

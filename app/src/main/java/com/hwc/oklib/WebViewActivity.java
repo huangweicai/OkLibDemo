@@ -5,9 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hwc.oklib.base.BaseAppActivity;
+import com.hwc.oklib.util.SysShareUtil;
 import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.view.ProgressWebView;
-import com.hwc.oklib.util.SysShareUtil;
 
 
 /**

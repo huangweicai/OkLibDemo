@@ -17,12 +17,12 @@ import com.hwc.oklib.bean.FunctionDetailBean;
 import com.hwc.oklib.camera.MultiImageSelectorActivity;
 import com.hwc.oklib.camera.help.CameraManager;
 import com.hwc.oklib.camera.help.CameraUtil;
-import com.hwc.oklib.util.toast.ToastUtil;
-import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.util.FileUtil;
 import com.hwc.oklib.util.active_permission.PermissionFail;
 import com.hwc.oklib.util.active_permission.PermissionGen;
 import com.hwc.oklib.util.active_permission.PermissionSuccess;
+import com.hwc.oklib.util.toast.ToastUtil;
+import com.hwc.oklib.view.CommonToolBar;
 
 import java.io.File;
 import java.util.List;
@@ -180,8 +180,8 @@ public class CameraActivity extends BaseAppActivity {
                     CameraManager.mCurrentFile = new File(CameraManager.mNewPhotoUri.getPath());
                     CameraManager.mlocitionFileUrl = FileUtil.getRealFilePath(context, CameraManager.mNewPhotoUri);
 
-                    ToastUtil.show("裁剪成功："+CameraManager.mlocitionFileUrl);
-                    Log.d("TAG", "CameraManager.mlocitionFileUrl："+CameraManager.mlocitionFileUrl);
+                    ToastUtil.show("裁剪成功："+ CameraManager.mlocitionFileUrl);
+                    Log.d("TAG", "CameraManager.mlocitionFileUrl："+ CameraManager.mlocitionFileUrl);
                     iv_image.setImageBitmap(BitmapFactory.decodeFile(CameraManager.mlocitionFileUrl));
                 }
             }

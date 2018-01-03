@@ -243,7 +243,7 @@ public class SignInActivity extends BaseAppActivity implements View.OnClickListe
     private void changeCheck() {
         if (activityLoginRadio1.isChecked()) {
             isRegister = false;
-            activityLoginRadio1.setTextColor(getResources().getColor(R.color.white));
+            activityLoginRadio1.setTextColor(getResources().getColor(R.color.lock_view_white));
             activityLoginRadio2.setTextColor(getResources().getColor(R.color.white_70));
             activityLoginPanelLogin.setVisibility(View.VISIBLE);
             btnTourist.setVisibility(View.VISIBLE);
@@ -252,7 +252,7 @@ public class SignInActivity extends BaseAppActivity implements View.OnClickListe
         } else {
             isRegister = true;
             activityLoginRadio1.setTextColor(getResources().getColor(R.color.white_70));
-            activityLoginRadio2.setTextColor(getResources().getColor(R.color.white));
+            activityLoginRadio2.setTextColor(getResources().getColor(R.color.lock_view_white));
             activityLoginPanelLogin.setVisibility(View.GONE);
             btnTourist.setVisibility(View.GONE);
             activityLoginPanelRegister.setVisibility(View.VISIBLE);

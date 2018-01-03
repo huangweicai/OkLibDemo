@@ -16,14 +16,14 @@ import com.hwc.oklib.base.BaseAppActivity;
 import com.hwc.oklib.camera.MultiImageSelectorActivity;
 import com.hwc.oklib.camera.help.CameraManager;
 import com.hwc.oklib.camera.help.CameraUtil;
-import com.hwc.oklib.view.CommonToolBar;
-import com.hwc.oklib.view.qrcode.code.QRCodeView;
-import com.hwc.oklib.view.qrcode.zxing.QRCodeDecoder;
-import com.hwc.oklib.view.qrcode.zxing.ZXingView;
 import com.hwc.oklib.util.FileUtil;
 import com.hwc.oklib.util.active_permission.PermissionFail;
 import com.hwc.oklib.util.active_permission.PermissionGen;
 import com.hwc.oklib.util.active_permission.PermissionSuccess;
+import com.hwc.oklib.view.CommonToolBar;
+import com.hwc.oklib.view.qrcode.code.QRCodeView;
+import com.hwc.oklib.view.qrcode.zxing.QRCodeDecoder;
+import com.hwc.oklib.view.qrcode.zxing.ZXingView;
 
 import java.io.File;
 import java.util.List;
@@ -100,6 +100,7 @@ public class QRCodeActivity extends BaseAppActivity implements QRCodeView.Delega
         super.onDestroy();
     }
 
+    //振动
     private void vibrate() {
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         vibrator.vibrate(200);
@@ -109,8 +110,10 @@ public class QRCodeActivity extends BaseAppActivity implements QRCodeView.Delega
     public void onScanQRCodeSuccess(String result) {
         Log.i(TAG, "result:" + result);
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
-        vibrate();
-        mQRCodeView.startSpot();
+        //vibrate();
+        //mQRCodeView.startSpot();
+
+        mQRCodeView.startSpotAndShowRect();//开始识别扫描框，包括二维码、条形码
     }
 
     @Override

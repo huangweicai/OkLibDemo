@@ -30,7 +30,7 @@
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/iv_headPortrait"
             android:text="天鬼"
-            android:textColor="@color/white"
+            android:textColor="@color/lock_view_white"
             android:textSize="16sp" />
 
         <TextView
@@ -43,7 +43,7 @@
             android:ellipsize="end"
             android:maxLines="2"
             android:text="专注移动客户端开发"
-            android:textColor="@color/white"
+            android:textColor="@color/lock_view_white"
             android:textSize="12sp" />
 
     </RelativeLayout>

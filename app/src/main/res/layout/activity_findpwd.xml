@@ -25,7 +25,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="46dp"
         android:text="@string/login_signin_tv_forgetpwd"
-        android:textColor="@color/white"
+        android:textColor="@color/lock_view_white"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -48,7 +48,7 @@
                 android:gravity="center_vertical"
                 android:maxLines="1"
                 android:text="@string/login_signin_username"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
             <com.hwc.oklib.view.EditTextWithDelete
@@ -60,7 +60,7 @@
                 android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:inputType="number"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 android:layout_toRightOf="@+id/activity_forget_tv_username" />
 
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -84,7 +84,7 @@
                 android:layout_height="20dp"
                 android:gravity="center_vertical"
                 android:text="@string/login_signin_npwd_des"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
 
@@ -99,7 +99,7 @@
                 android:inputType="textPassword"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 android:layout_toRightOf="@+id/activity_forget_tv_pwd" />
 
@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
 
         </RelativeLayout>
 
@@ -127,7 +127,7 @@
                 android:layout_marginBottom="3dp"
                 android:gravity="center_vertical"
                 android:text="@string/login_register_code_des"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp" />
 
 
@@ -144,7 +144,7 @@
                 android:inputType="number"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:textColor="@color/white"
+                android:textColor="@color/lock_view_white"
                 android:textSize="14sp"
                 android:layout_toRightOf="@+id/activity_forget_tv_code" />
 
@@ -164,7 +164,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white" />
+                android:background="@color/lock_view_white" />
 
         </RelativeLayout>
 

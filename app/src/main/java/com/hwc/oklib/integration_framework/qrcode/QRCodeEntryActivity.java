@@ -9,10 +9,10 @@ import com.hwc.oklib.Common;
 import com.hwc.oklib.R;
 import com.hwc.oklib.base.BaseAppActivity;
 import com.hwc.oklib.bean.FunctionDetailBean;
-import com.hwc.oklib.view.CommonToolBar;
 import com.hwc.oklib.util.active_permission.PermissionFail;
 import com.hwc.oklib.util.active_permission.PermissionGen;
 import com.hwc.oklib.util.active_permission.PermissionSuccess;
+import com.hwc.oklib.view.CommonToolBar;
 
 import static com.hwc.oklib.Common.BASE_JAVA;
 import static com.hwc.oklib.Common.BASE_RES;
@@ -55,6 +55,7 @@ public class QRCodeEntryActivity extends BaseAppActivity {
         //Toast.makeText(context, "权限请求成功", Toast.LENGTH_LONG).show();
 
         //二维码使用相关
+        //注意：最好先请求权限，再跳到二维码扫描界面，避免第一次摄像头使用权限问题
         Intent intent = new Intent(this, QRCodeActivity.class);
         intent.putExtra(Common.TITLE, "二维码使用");
         startActivity(intent);
