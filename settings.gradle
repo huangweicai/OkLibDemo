@@ -1,0 +1,1 @@
+include ':app', ':util', ':util', ':http', ':view', ':zxing', ':camera', ':window', ':glideview'

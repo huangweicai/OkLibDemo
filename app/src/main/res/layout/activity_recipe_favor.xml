@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:clipChildren="false"
+        android:overScrollMode="never"
+        android:scrollbarSize="4dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/bg_scrollbar"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e0000000"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/orange"
+        android:textSize="30sp"
+        android:visibility="gone" />
+</RelativeLayout>

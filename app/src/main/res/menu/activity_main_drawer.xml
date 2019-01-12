@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/my_collect"
+            android:icon="@drawable/collect_icon"
+            android:title="我的收藏" />
+        <item
+            android:id="@+id/check_update"
+            android:icon="@drawable/item_check_update_icon"
+            android:title="检查更新" />
+        <item
+            android:id="@+id/get_code"
+            android:icon="@drawable/item_get_code_icon"
+            android:title="获取源码" />
+        <item
+            android:id="@+id/reward"
+            android:icon="@drawable/item_reward_icon"
+            android:title="打赏支持" />
+
+    </group>
+
+</menu>

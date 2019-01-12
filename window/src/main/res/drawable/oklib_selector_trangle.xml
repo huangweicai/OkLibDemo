@@ -1,0 +1,5 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/oklib_triangle_gray_p" android:state_pressed="true" />
+    <item android:drawable="@drawable/oklib_triangle_gray" />
+</selector>

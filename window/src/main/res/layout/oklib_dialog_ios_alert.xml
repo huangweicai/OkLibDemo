@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/oklib_bg_ios_roundcorner"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="3"
+        android:paddingBottom="12dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="12dp"
+        android:text="支持自定义边框圆角、背景透明度、字体大小与色值等。 列表选择框可以接收List与Arrays的数据源，详细见demo"
+        android:textColor="@color/oklib_text_title_11"
+        android:textSize="@dimen/oklib_title_txt_size"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="5dp"
+                android:text="支持"
+                android:textColor="@color/oklib_text_msg_33"
+                android:textSize="@dimen/oklib_msg_txt_size" />
+
+            <EditText
+                android:id="@+id/et_1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/oklib_edittext_nomal"
+                android:cursorVisible="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/oklib_text_input_44"
+                android:textColorHint="@color/oklib_text_gray_light"
+                android:textCursorDrawable="@drawable/oklib_et_cursor"
+                android:textSize="@dimen/oklib_input_txt_size" />
+
+            <EditText
+                android:id="@+id/et_2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/oklib_edittext_nomal"
+                android:cursorVisible="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/oklib_text_input_44"
+                android:textColorHint="@color/oklib_text_gray_light"
+                android:textCursorDrawable="@drawable/oklib_et_cursor"
+                android:textSize="@dimen/oklib_input_txt_size" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/oklib_line_dd" />
+
+    <LinearLayout
+        android:id="@+id/ll_container_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/oklib_selector_btn_press_left_bottom"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="1"
+            android:textColor="@color/oklib_ios_btntext_blue"
+            android:textSize="@dimen/oklib_btn_txt_size" />
+
+        <View
+            android:id="@+id/line_btn2"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/oklib_line_dd" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/oklib_selector_btn_press_no_corner"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:text="2"
+            android:textColor="@color/oklib_ios_btntext_blue"
+            android:textSize="@dimen/oklib_btn_txt_size" />
+
+        <View
+            android:id="@+id/line_btn3"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/oklib_line_dd" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/oklib_selector_btn_press_right_bottom"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:text="3"
+            android:textColor="@color/oklib_ios_btntext_blue"
+            android:textSize="@dimen/oklib_btn_txt_size" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_1_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/oklib_selector_btn_press_no_corner"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="5dp"
+
+            android:text="1"
+            android:textColor="@color/oklib_ios_btntext_blue"
+            android:textSize="@dimen/oklib_btn_txt_size" />
+
+        <View
+            android:id="@+id/line_btn2_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/oklib_line_dd" />
+
+        <Button
+            android:id="@+id/btn_2_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/oklib_selector_btn_press_no_corner"
+            android:gravity="center"
+            android:minHeight="48dp"
+
+            android:padding="5dp"
+            android:text="2"
+            android:textColor="@color/oklib_ios_btntext_blue"
+            android:textSize="@dimen/oklib_btn_txt_size" />
+
+        <View
+            android:id="@+id/line_btn3_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/oklib_line_dd" />
+
+        <Button
+            android:id="@+id/btn_3_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/oklib_selector_btn_press_all_bottom"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="5dp"
+
+            android:text="3"
+            android:textColor="@color/oklib_ios_btntext_blue"
+            android:textSize="@dimen/oklib_btn_txt_size" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

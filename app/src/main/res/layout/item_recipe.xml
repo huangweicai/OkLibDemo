@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_shoucang1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Label1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:fontFamily="sans-serif-light"
+            android:lines="1"
+            android:singleLine="true"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            style="@style/Label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="0"
+            android:textSize="56sp" />
+
+        <TextView
+            android:id="@+id/tv_time_label"
+            style="@style/Label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/tv_duration"
+            android:fontFamily="sans-serif-light"
+            android:text="分"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/superscript_collection"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:paddingRight="6dp"
+        android:src="@drawable/icon_close"
+        android:visibility="visible" />
+</RelativeLayout>

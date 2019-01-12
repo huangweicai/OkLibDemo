@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oklib">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name=".OkLibApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_oklib_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_oklib_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <!--sugar数据库-->
+        <meta-data android:name="DATABASE" android:value="oklib.db"/>
+        <meta-data android:name="VERSION" android:value="1"/>
+        <meta-data android:name="QUERY_LOG" android:value="true"/>
+        <meta-data android:name="DOMAIN_PACKAGE_NAME"  android:value="com.oklib.bean"/>
+
+        <!--7.0动态权限-->
+<!--        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>-->
+
+        <activity
+            android:name="com.oklib.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WebViewActivity"/>
+        <activity android:name=".CollectActivity" />
+        <activity android:name=".view_lib.refresh.RefreshActivity" />
+        <activity android:name=".win_lib.ConfirmDialogActivity" />
+        <activity android:name=".mix_lib.PermissionActivity" />
+        <activity android:name=".win_lib.MultiSelectListPopActivity" />
+        <activity android:name=".mix_lib.CameraActivity" />
+        <activity android:name=".view_lib.chart.ChartActivity" />
+        <activity android:name=".view_lib.DragLayoutActivity" />
+        <activity android:name=".view_lib.glideview.GlideImageViewActivity" />
+        <activity android:name=".view_lib.glideview.GlideImageViewListActivity" />
+        <activity android:name=".view_lib.pickerview.PickerViewActivity" />
+        <activity android:name=".view_lib.pickerview.JsonDataActivity" />
+        <activity android:name=".view_lib.pickerview.FragmentTestActivity" />
+        <activity android:name=".view_lib.ratingbar.RatingBarEntryActivity" />
+        <activity android:name=".view_lib.span.SpanActivity" />
+        <activity android:name=".view_lib.tablayout.TabLayoutActivity" />
+        <activity android:name=".view_lib.vp_hss.VPHorizontalSlidingScaleActivity" />
+        <activity android:name=".view_lib.drag_item.RecipeFavorActivity" />
+        <activity android:name=".view_lib.drag_scroll_layout.ViewPagerlidingLayoutActivity" />
+        <activity android:name=".view_lib.SpanActivity" />
+        <activity android:name=".view_lib.ToolbarActivity" />
+        <activity android:name=".view_lib.ClockViewActivity" />
+        <activity android:name=".view_lib.AliLoadingViewActivity" />
+        <activity android:name=".view_lib.AVLoadingIndicatorViewActivity" />
+        <activity android:name=".view_lib.EmptyDataViewActivity" />
+        <activity android:name=".view_lib.FllowerViewActivity" />
+        <activity android:name=".view_lib.HighLightActivity" />
+        <activity android:name=".view_lib.LabelViewActivity" />
+        <activity android:name=".view_lib.LetterNavActivity" />
+        <activity android:name=".view_lib.LauncherViewActivity" />
+        <activity android:name=".view_lib.MiClockViewActivity" />
+        <activity android:name=".view_lib.PatternLockViewActivity" />
+        <activity android:name=".view_lib.ProgressViewActivity" />
+        <activity android:name=".view_lib.RubblerViewActivity" />
+        <activity android:name=".view_lib.ShapeSelectActivity" />
+        <activity android:name=".view_lib.ShootViewActivity" />
+        <activity android:name=".view_lib.SoftKeyboardCustomActivity" />
+        <activity android:name=".view_lib.TempControlViewActivity" />
+        <activity android:name=".view_lib.TextViewMarqueeActivity" />
+        <activity android:name=".mix_lib.http.HttpActivity" />
+        <activity android:name=".mix_lib.SugarActivity" />
+        <activity android:name=".win_lib.CenterListDialogActivity" />
+        <activity android:name=".win_lib.DateTimeActivity" />
+        <activity android:name=".win_lib.DialogViewActivity" />
+        <activity android:name=".win_lib.EditWinActivity" />
+        <activity android:name=".win_lib.LoadingDialogActivity" />
+        <activity android:name=".win_lib.RegionSelectActivity" />
+        <activity android:name=".win_lib.SearchDialogActivity" />
+        <activity android:name=".win_lib.PageDialogActivity" />
+        <activity android:name=".mix_lib.qrcode.GenerateQRCodeActivity" />
+        <activity android:name=".mix_lib.qrcode.QRCodeActivity" />
+        <activity android:name=".mix_lib.qrcode.QRCodeEntryActivity" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

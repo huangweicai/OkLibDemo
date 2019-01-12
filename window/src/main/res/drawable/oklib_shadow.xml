@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_1" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_2" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_3" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_4" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_5" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_6" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_7" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oklib_cardShadowColor_8" />
+            <corners android:radius="@dimen/oklib_cardRadius" />
+            <padding
+                android:bottom="@dimen/oklib_shadowBottom"
+                android:left="@dimen/oklib_shadowleft"
+                android:top="@dimen/oklib_shadowTop"
+                android:right="@dimen/oklib_shadowRight" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/oklib_round_corner" />
+            <solid android:color="@color/oklib_cardBodyColor" />
+            <!--<padding android:bottom="@dimen/cardRadius"
+                android:top="@dimen/cardRadius"
+                android:left="@dimen/cardRadius"
+                android:right="@dimen/cardRadius"
+                />-->
+        </shape>
+    </item>
+</layer-list>
+

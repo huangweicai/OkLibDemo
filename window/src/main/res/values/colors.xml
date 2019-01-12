@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="oklib_default_color">#f0f0f0</color>
+    <color name="oklib_dialog_line">#40555759</color>
+
+    <!--dialog大全-->
+    <color name="oklib_ios_btntext_blue">#007aff</color>
+    <color name="oklib_text_title_11">#111111</color>
+    <color name="oklib_text_msg_33">#333333</color>
+    <color name="oklib_text_input_44">#444444</color>
+    <color name="oklib_text_red">#ff0000</color>
+    <color name="oklib_text_item_33">#333333</color>
+    <color name="oklib_btn_alert">#222222</color>
+    <color name="oklib_line_dd">#cccccc</color>
+    <color name="oklib_ios_btn_normal">#ffffff</color>
+    <color name="oklib_ios_btn_pressed">#eeeeee</color>
+    <color name="oklib_bg_white">#ffffff</color>
+    <color name="oklib_text_gray">#999999</color>
+    <color name="oklib_text_gray_light">#B3B3B3</color>
+    <color name="oklib_text_black">#333333</color><!--正式发布时改成666666-->
+    <color name="oklib_text_black_light" >#666666</color><!--正式发布时改成666666-->
+
+    <!--multi_select_list_pop-->
+    <color name="oklib_light9grey">#EAEAEA</color>
+    <color name="oklib_divider_color">#D1D1D1</color>
+</resources>

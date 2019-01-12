@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oklib.view" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:allowBackup="true"
+        android:supportsRtl="true">
+        <service android:name=".fw.FloatVideoService"/>
+    </application>
+    <!--悬浮窗权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+</manifest>

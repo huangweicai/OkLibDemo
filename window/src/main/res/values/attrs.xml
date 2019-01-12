@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dialog大全-->
+    <declare-styleable name="oklib_GifMoviewView">
+        <attr name="oklib_gif" format="reference" />
+        <attr name="oklib_paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="oklib_CustomTheme">
+        <attr name="oklib_gifMoviewViewStyle" format="reference" />
+    </declare-styleable>
+</resources>

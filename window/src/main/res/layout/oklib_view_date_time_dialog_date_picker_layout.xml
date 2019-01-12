@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DatePicker android:id="@+id/datePicker"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:orientation="vertical">
+</DatePicker>

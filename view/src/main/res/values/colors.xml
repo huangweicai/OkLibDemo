@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="oklib_gray_bg">#F0F0F0</color>
+    <color name="oklib_dialog_bg">#bc000000</color>
+
+
+    <!--debugkit-->
+    <color name="debug_kit_primary">#8FB5C3</color>
+    <color name="debug_kit_background">#022735</color>
+    <color name="debug_kit_background_black">#000</color>
+    <color name="debug_kit_primary_light">#fff</color>
+    <color name="debug_kit_background_light">#8FB5C3</color>
+    <color name="debug_kit_background_black_light">#000</color>
+
+    <!--锁屏view-->
+    <color name="lock_view_white">#FFFF</color>
+    <color name="lock_view_pomegranate">#f4511e</color>
+
+    <!--pickerview-->
+    <color name="oklib_pickerview_timebtn_nor">#057dff</color>
+    <color name="oklib_pickerview_timebtn_pre">#c2daf5</color>
+    <color name="oklib_pickerview_bg_topbar">#f5f5f5</color>
+    <color name="oklib_pickerview_topbar_title">#000000</color>
+    <color name="oklib_pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="oklib_pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="oklib_pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <color name="oklib_pickerview_bgColor_overlay">#60000000</color>
+    <color name="oklib_pickerview_bgColor_default">#FFFFFFFF</color>
+
+
+    <!--字母导航-->
+    <color name="oklib_frame_black">#212633</color>
+    <color name="oklib_common_layout_bg">#F0F0F0</color>
+    <color name="oklib_colorMsgText">#666666</color>
+    <color name="oklib_colorSideBarBg">#3f000000</color>
+    <color name="oklib_colorDialogBg">#7f000000</color>
+    <color name="oklib_search_dialog_line">#fff00000</color>
+
+    <!--launcherView need-->
+    <color name="oklib_load_red">#fa007a</color>
+    <color name="oklib_load_purple">#935fe7</color>
+    <color name="oklib_load_yellow">#f9b11f</color>
+    <color name="oklib_load_blue">#009cfa</color>
+
+    <!--baidu加载view-->
+    <color name="oklib_color_red">#EA4346</color>
+    <color name="oklib_color_black">#646363</color>
+    <color name="oklib_color_blue">#3789F9</color>
+</resources>

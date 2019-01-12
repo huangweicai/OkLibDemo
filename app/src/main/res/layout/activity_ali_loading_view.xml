@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <com.oklib.view.AliLoadingStatusView
+        android:id="@+id/as_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:padding="3dp"
+        app:oklib_load_failure_color="#ff0000"
+        app:oklib_load_success_color="#00ff00"
+        app:oklib_loading_color="#0000ff"
+        app:oklib_progress_radius="20dp"
+        app:oklib_progress_width="3dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_init"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="加载中" />
+
+        <Button
+            android:id="@+id/btn_success"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="成功" />
+
+        <Button
+            android:id="@+id/btn_failure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="失败" />
+
+    </LinearLayout>
+</LinearLayout>

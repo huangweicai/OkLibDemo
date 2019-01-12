@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:monkey="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <com.oklib.view.MiClockView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        monkey:oklib_mv_backgroundColor="#237EAD"
+        monkey:oklib_mv_darkColor="#80ffffff"
+        monkey:oklib_mv_lightColor="#ffffff"
+        monkey:oklib_mv_textSize="14sp" />
+</LinearLayout>

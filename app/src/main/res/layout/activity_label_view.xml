@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <GridLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="8dp">
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="#ff4d32"
+            app:labelCenterPadding="8dp"
+            app:labelTopPadding="15dp"
+            app:textContent="爆款热销"
+            app:textContentSize="14sp"
+            app:textContentStyle="bold"
+            app:textTitle="12:24"
+            app:textTitleSize="9sp" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="@android:color/darker_gray"
+            app:labelCenterPadding="8dp"
+            app:labelTopPadding="15dp"
+            app:textContent="爆款热销"
+            app:textContentColor="#f167"
+            app:textContentSize="14sp"
+            app:textTitle="12:24"
+            app:textTitleColor="#ff4d32"
+            app:textTitleSize="9sp"
+            app:textTitleStyle="italic" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="@android:color/darker_gray"
+            app:labelBottomPadding="15dp"
+            app:labelCenterPadding="10dp"
+            app:labelTopPadding="25dp"
+            app:textContent="爆款热销"
+            app:textContentColor="#f167"
+            app:textContentSize="15sp"
+            app:textTitle="12:24"
+            app:textTitleColor="#ff4d32"
+            app:textTitleSize="15sp"
+            app:textTitleStyle="italic" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="#ff4d32"
+            app:direction="rightTop"
+            app:labelCenterPadding="8dp"
+            app:labelTopPadding="15dp"
+            app:textContent="爆款热销"
+            app:textContentSize="14sp"
+            app:textContentStyle="bold"
+            app:textTitle="12:24"
+            app:textTitleSize="9sp" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="#ff4d32"
+            app:direction="rightTop"
+            app:labelCenterPadding="5dp"
+            app:labelTopDistance="15dp"
+            app:labelTopPadding="10dp"
+            app:textContent="爆款热销"
+            app:textContentSize="14sp"
+            app:textContentStyle="bold"
+            app:textTitle="12:24"
+            app:textTitleSize="9sp" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="#032dd0"
+            app:labelCenterPadding="5dp"
+            app:labelTopDistance="20dp"
+            app:labelTopPadding="5dp"
+            app:textContent="我是打酱油的"
+            app:textContentSize="8sp"
+            app:textContentStyle="bold"
+            app:textTitle="折扣"
+            app:textTitleSize="10sp" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="#032dd0"
+            app:labelTopDistance="20dp"
+            app:labelTopPadding="10dp"
+            app:textContent="我是打酱油的"
+            app:textContentSize="8sp"
+            app:textContentStyle="bold" />
+
+        <com.oklib.view.label.LabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundColor="#ff4d32"
+            app:labelTopPadding="20dp"
+            app:textContent="火爆"
+            app:textContentSize="15sp"
+            app:textContentStyle="bold" />
+
+        <com.oklib.view.label.LabelImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:background="#f323d4"
+            android:src="@mipmap/ic_launcher"
+            app:backgroundColor="@color/colorPrimaryDark"
+            app:direction="leftTop"
+            app:labelBottomPadding="10dp"
+            app:labelTopDistance="20dp"
+            app:labelTopPadding="10dp"
+            app:textContent="晚场"
+            app:textContentSize="14sp" />
+
+        <com.oklib.view.label.LabelImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:background="#f3a212"
+            android:src="@mipmap/ic_launcher"
+            app:backgroundColor="@color/colorPrimaryDark"
+            app:direction="rightTop"
+            app:labelBottomPadding="10dp"
+            app:labelTopDistance="20dp"
+            app:labelTopPadding="10dp"
+            app:textContent="晚场"
+            app:textContentSize="14sp" />
+
+        <com.oklib.view.label.LabelLinearLayout
+            android:layout_width="170dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical"
+            app:backgroundColor="@color/colorPrimaryDark"
+            app:direction="rightTop"
+            app:labelBottomPadding="10dp"
+            app:labelTopDistance="20dp"
+            app:labelTopPadding="10dp"
+            app:textContent="晚场"
+            app:textContentSize="14sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TitleXXXX"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_launcher" />
+        </com.oklib.view.label.LabelLinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_orange_dark"
+            android:orientation="horizontal">
+
+            <com.oklib.view.label.LabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundColor="#ff4d32"
+                app:labelCenterPadding="8dp"
+                app:labelTopPadding="15dp"
+                app:textContent="爆款热销"
+                app:textContentSize="14sp"
+                app:textContentStyle="bold"
+                app:textTitle="12:24"
+                app:textTitleSize="9sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="占位符号"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+</LinearLayout>

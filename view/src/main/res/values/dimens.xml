@@ -1,0 +1,36 @@
+<resources>
+    <dimen name="oklib_image_size">120dp</dimen>
+    <dimen name="oklib_space_size">2dp</dimen>
+    <dimen name="oklib_folder_cover_size">72dp</dimen>
+
+    <!--锁屏view-->
+    <dimen name="pattern_lock_path_width">3dp</dimen>
+    <dimen name="pattern_lock_dot_size">10dp</dimen>
+    <dimen name="pattern_lock_dot_selected_size">24dp</dimen>
+
+    <!--标签view-->
+    <dimen name="default_label_title_size">10sp</dimen>
+    <dimen name="default_label_content_size">12sp</dimen>
+    <dimen name="default_label_top_padding">15dp</dimen>
+    <dimen name="default_label_bottom_padding">10dp</dimen>
+
+    <!--dialog大全-->
+    <dimen name="oklib_round_corner">5dp</dimen>
+    <dimen name="oklib_line_1px">1px</dimen>
+    <dimen name="oklib_btn_txt_size">14sp</dimen>
+    <dimen name="oklib_title_txt_size">17sp</dimen>
+    <dimen name="oklib_msg_txt_size">14sp</dimen>
+    <dimen name="oklib_item_txt_size">14sp</dimen>
+    <dimen name="oklib_input_txt_size">14sp</dimen>
+
+    <!--pickerview-->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="oklib_pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮padding -->
+    <dimen name="oklib_pickerview_topbar_padding">20dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="oklib_pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="oklib_pickerview_topbar_title_textsize">18sp</dimen>
+    <!-- 选项文字大小 -->
+    <dimen name="oklib_pickerview_textsize">20sp</dimen>
+</resources>

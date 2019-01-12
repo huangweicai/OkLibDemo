@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CameraLib</string>
+
+    <string name="oklib_folder_all">All Images</string>
+    <string name="oklib_preview">Preview</string>
+    <string name="oklib_msg_no_camera">No system camera found</string>
+    <string name="oklib_msg_amount_limit">Select images amount is limit</string>
+    <string name="oklib_action_done">Done</string>
+    <string name="oklib_photo_unit">Shot</string>
+    <string name="oklib_tip_take_photo">Take photo</string>
+
+</resources>

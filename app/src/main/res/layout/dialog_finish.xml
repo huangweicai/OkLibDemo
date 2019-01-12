@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#90ff0000"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_hint_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/btn_eye" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="烹饪完成，请及时享用"
+        android:textColor="#ffffff"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tv_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="小提示，享用完后，加入少量水并按“点动清洗”\n按键，可以轻松清洗杯子"
+        android:textColor="#ffffff"
+        android:textSize="26sp" />
+
+</LinearLayout>

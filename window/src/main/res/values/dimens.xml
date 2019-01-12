@@ -1,0 +1,11 @@
+<resources>
+    <!--dialog大全-->
+    <dimen name="oklib_round_corner">5dp</dimen>
+    <dimen name="oklib_line_1px">1px</dimen>
+    <dimen name="oklib_btn_txt_size">14sp</dimen>
+    <dimen name="oklib_title_txt_size">17sp</dimen>
+    <dimen name="oklib_msg_txt_size">14sp</dimen>
+    <dimen name="oklib_item_txt_size">14sp</dimen>
+    <dimen name="oklib_input_txt_size">14sp</dimen>
+
+</resources>

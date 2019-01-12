@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oklib.view.CommonToolBar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_percent_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="start"
+                android:text="开始动画" />
+
+            <com.oklib.view.progress.PercentCircleProgressView
+                android:id="@+id/pcv_circle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                app:oklib_pcv_animDuration="1000"
+                app:oklib_pcv_centerTextColor="#000000"
+                app:oklib_pcv_centerTextSize="40sp"
+                app:oklib_pcv_centerUnitTextColor="#0000ff"
+                app:oklib_pcv_centerUnitTextSize="16sp"
+                app:oklib_pcv_finishProgressColor="#f0f000"
+                app:oklib_pcv_finishProgressLineSize="8dp"
+                app:oklib_pcv_progressCircleLineSize="4dp"
+                app:oklib_pcv_progressCircleRadiusSize="5dp"
+                app:oklib_pcv_unfinishProgressColor="#ffffff"
+                app:oklib_pcv_unfinishProgressLineSize="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="目前最大值15（可动态改），当前值不大于最大值" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#f0f0f0" />
+
+            <Button
+                android:id="@+id/btn_c_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="start"
+                android:text="圆形进度条，开始赋值" />
+
+            <com.oklib.view.progress.CircleProgressView
+                android:id="@+id/circleProgressbar"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/btn_h_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="start"
+                android:text="水平进度条，开始赋值" />
+
+            <com.oklib.view.progress.HorizontalProgressBar
+                android:id="@+id/horizontalProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_margin="20dp"
+                app:oklib_pb_bg_color="#0000FF"
+                app:oklib_pb_max="100"
+                app:oklib_pb_padding="0dp"
+                app:oklib_pb_pb_color="#FF00FF"
+                app:oklib_pb_progress="60" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f0f0f0" />
+
+            <com.oklib.view.progress.DonutProgressView
+                android:id="@+id/donut_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                custom:oklib_donut_finished_color="#ff0000"
+                custom:oklib_donut_progress="30"
+                custom:oklib_donut_text_color="#0000ff"
+                custom:oklib_donut_text_size="12sp" />
+
+            <com.oklib.view.progress.ArcProgressView
+                android:id="@+id/arc_progress"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="50dp"
+                android:background="#214193"
+                custom:oklib_arc_bottom_text="MEMORY"
+                custom:oklib_arc_progress="55" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

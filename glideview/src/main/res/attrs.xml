@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--GlideImageView相关-->
+    <declare-styleable name="oklib_ShapeImageViewStyle">
+        <attr name="oklib_siv_border_width" format="dimension"/>
+        <attr name="oklib_siv_border_color" format="color"/>
+        <attr name="oklib_siv_radius" format="dimension"/>
+        <attr name="oklib_siv_pressed_alpha" format="float"/>
+        <attr name="oklib_siv_pressed_color" format="color"/>
+        <attr name="oklib_siv_shape_type" format="enum">
+            <enum name="rectangle" value="0"/>
+            <enum name="circle" value="1"/>
+        </attr>
+    </declare-styleable>
+    <!--GlideImageView进度显示相关-->
+    <declare-styleable name="oklib_CircleProgressView">
+        <attr name="oklib_cpv_progressNormalColor" format="color"/>
+        <attr name="oklib_cpv_progressReachColor" format="color"/>
+        <attr name="oklib_cpv_progressTextColor" format="color"/>
+        <attr name="oklib_cpv_progressTextSize" format="dimension"/>
+        <attr name="oklib_cpv_progressTextOffset" format="dimension"/>
+        <attr name="oklib_cpv_progressNormalSize" format="dimension"/>
+        <attr name="oklib_cpv_progressReachSize" format="dimension"/>
+        <attr name="oklib_cpv_radius" format="dimension"/>
+        <attr name="oklib_cpv_progressTextVisible" format="boolean"/>
+        <attr name="oklib_cpv_progressStartArc" format="integer"/>
+        <attr name="oklib_cpv_progressTextSkewX" format="dimension"/>
+        <attr name="oklib_cpv_progressTextPrefix" format="string"/>
+        <attr name="oklib_cpv_progressTextSuffix" format="string"/>
+        <attr name="oklib_cpv_innerBackgroundColor" format="color"/>
+        <attr name="oklib_cpv_progressStyle" format="enum">
+            <enum name="Normal" value="0"/>
+            <enum name="FillInner" value="1"/>
+            <enum name="FillInnerArc" value="2"/>
+        </attr>
+        <attr name="oklib_cpv_innerProgressColor" format="color"/>
+        <attr name="oklib_cpv_innerPadding" format="dimension"/>
+        <attr name="oklib_cpv_outerColor" format="color"/>
+        <attr name="oklib_cpv_outerSize" format="dimension"/>
+        <attr name="oklib_cpv_reachCapRound" format="boolean"/>
+    </declare-styleable>
+</resources>

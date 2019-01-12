@@ -1,0 +1,16 @@
+<resources>
+    <dimen name="oklib_image_size">120dp</dimen>
+    <dimen name="oklib_space_size">2dp</dimen>
+    <dimen name="oklib_folder_cover_size">72dp</dimen>
+
+    <!--pickerview-->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="oklib_pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮padding -->
+    <dimen name="oklib_pickerview_topbar_padding">20dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="oklib_pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="oklib_pickerview_topbar_title_textsize">18sp</dimen>
+    <!-- 选项文字大小 -->
+    <dimen name="oklib_pickerview_textsize">20sp</dimen>
+</resources>

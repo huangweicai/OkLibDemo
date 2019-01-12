@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--命名：oklib_功能_属性-->
+
+
+    <!--musicwave-->
+    <declare-styleable name="MusicWave">
+        <attr name="waveThickness" format="float" />
+        <attr name="waveColor" format="color" />
+        <attr name="colorGradient" format="boolean" />
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+    </declare-styleable>
+
+    <!--快门view-->
+    <declare-styleable name="ShootRefreshView">
+        <attr name="shootview_strokeColor" format="color|reference" />
+        <attr name="shootview_strokeWidth" format="dimension|reference" />
+        <attr name="shootview_gradientStartColor" format="color|reference" />
+        <attr name="shootview_gradientEndColor" format="color|reference" />
+    </declare-styleable>
+
+    <!--RatingBar-->
+    <declare-styleable name="BaseRatingBar">
+        <attr name="srb_numStars" format="integer" />
+        <attr name="srb_rating" format="float" />
+        <attr name="srb_starPadding" format="dimension" />
+        <attr name="srb_drawableEmpty" format="reference" />
+        <attr name="srb_drawableFilled" format="reference" />
+        <attr name="srb_isIndicator" format="boolean" />
+        <attr name="srb_scrollable" format="boolean" />
+        <attr name="srb_clickable" format="boolean" />
+        <attr name="srb_clearRatingEnabled" format="boolean" />
+        <attr name="srb_starWidth" format="dimension" />
+        <attr name="srb_starHeight" format="dimension" />
+        <attr name="srb_stepSize" format="float" />
+    </declare-styleable>
+
+    <!--锁屏view-->
+    <declare-styleable name="PatternLockView">
+        <attr name="dotCount" format="integer"/>
+        <attr name="dotNormalSize" format="dimension"/>
+        <attr name="dotSelectedSize" format="dimension"/>
+        <attr name="pathWidth" format="dimension"/>
+        <attr name="aspectRatioEnabled" format="boolean"/>
+        <attr name="aspectRatio" format="enum">
+            <enum name="square" value="0"/>
+            <enum name="width_bias" value="1"/>
+            <enum name="height_bias" value="2"/>
+        </attr>
+        <attr name="normalStateColor" format="color"/>
+        <attr name="correctStateColor" format="color"/>
+        <attr name="wrongStateColor" format="color"/>
+        <attr name="dotAnimationDuration" format="integer"/>
+        <attr name="pathEndAnimationDuration" format="integer"/>
+    </declare-styleable>
+
+    <!--百分比布局 percent-->
+    <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="fraction" />
+        <attr name="layout_heightPercent" format="fraction" />
+        <attr name="layout_marginPercent" format="fraction" />
+        <attr name="layout_marginLeftPercent" format="fraction" />
+        <attr name="layout_marginTopPercent" format="fraction" />
+        <attr name="layout_marginRightPercent" format="fraction" />
+        <attr name="layout_marginBottomPercent" format="fraction" />
+        <attr name="layout_marginStartPercent" format="fraction" />
+        <attr name="layout_marginEndPercent" format="fraction" />
+    </declare-styleable>
+
+
+    <!--菜单view-->
+    <declare-styleable name="oklib_YMenuView">
+        <attr name="oklib_optionButtonWidth" format="dimension" />
+        <attr name="oklib_optionButtonHeight" format="dimension" />
+        <attr name="oklib_menuButtonWidth" format="dimension" />
+        <attr name="oklib_menuButtonHeight" format="dimension" />
+        <attr name="oklib_menuToParentXMargin" format="dimension" />
+        <attr name="oklib_menuToParentYMargin" format="dimension" />
+        <attr name="oklib_optionPositionCounts" format="integer" />
+        <attr name="oklib_optionToParentYMargin" format="dimension" />
+        <attr name="oklib_optionToParentXMargin" format="dimension" />
+        <attr name="oklib_optionXMargin" format="dimension" />
+        <attr name="oklib_optionYMargin" format="dimension" />
+        <attr name="oklib_optionColumns" format="integer" />
+        <attr name="oklib_menuButtonBackGround" format="reference" />
+        <attr name="oklib_optionsBackGround" format="reference" />
+        <attr name="oklib_sd_animMode" format="enum">
+            <enum name="FROM_BUTTON_LEFT" value="0" />
+            <enum name="FROM_BUTTON_TOP" value="1" />
+            <enum name="FROM_RIGHT" value="2" />
+            <enum name="FROM_BOTTOM" value="3" />
+        </attr>
+        <attr name="oklib_sd_duration" format="integer" />
+        <attr name="oklib_menu_duration" format="integer" />
+        <attr name="oklib_isShowMenu" format="boolean" />
+    </declare-styleable>
+
+    <!--loadview大全-->
+    <declare-styleable name="oklib_AVLoadingIndicatorView">
+        <attr name="oklib_indicator">
+            <flag name="BallPulse" value="0" />
+            <flag name="BallGridPulse" value="1" />
+            <flag name="BallClipRotate" value="2" />
+            <flag name="BallClipRotatePulse" value="3" />
+            <flag name="SquareSpin" value="4" />
+            <flag name="BallClipRotateMultiple" value="5" />
+            <flag name="BallPulseRise" value="6" />
+            <flag name="BallRotate" value="7" />
+            <flag name="CubeTransition" value="8" />
+            <flag name="BallZigZag" value="9" />
+            <flag name="BallZigZagDeflect" value="10" />
+            <flag name="BallTrianglePath" value="11" />
+            <flag name="BallScale" value="12" />
+            <flag name="LineScale" value="13" />
+            <flag name="LineScaleParty" value="14" />
+            <flag name="BallScaleMultiple" value="15" />
+            <flag name="BallPulseSync" value="16" />
+            <flag name="BallBeat" value="17" />
+            <flag name="LineScalePulseOut" value="18" />
+            <flag name="LineScalePulseOutRapid" value="19" />
+            <flag name="BallScaleRipple" value="20" />
+            <flag name="BallScaleRippleMultiple" value="21" />
+            <flag name="BallSpinFadeLoader" value="22" />
+            <flag name="LineSpinFadeLoader" value="23" />
+            <flag name="TriangleSkewSpin" value="24" />
+            <flag name="Pacman" value="25" />
+            <flag name="BallGridBeat" value="26" />
+            <flag name="SemiCircleSpin" value="27" />
+        </attr>
+        <attr name="oklib_indicator_color" format="color" />
+    </declare-styleable>
+    <!--刮刮乐-->
+    <declare-styleable name="oklib_rubbler">
+        <attr name="oklib_foreground" format="reference" />
+    </declare-styleable>
+    <!--pickerview-->
+    <declare-styleable name="oklib_pickerview">
+        <attr name="oklib_pickerview_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="oklib_pickerview_textSize" format="dimension" />
+        <attr name="oklib_pickerview_textColorOut" format="color" />
+        <attr name="oklib_pickerview_textColorCenter" format="color" />
+        <attr name="oklib_pickerview_dividerColor" format="color" />
+        <attr name="oklib_pickerview_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+
+    <!--百度加载view-->
+    <declare-styleable name="oklib_LoadCircleView">
+        <!--圆的半径-->
+        <attr name="oklib_circle_radius" format="float" />
+        <!--持续时间-->
+        <attr name="oklib_duration" format="integer" />
+    </declare-styleable>
+
+    <!--支付宝加载状态-->
+    <declare-styleable name="oklib_AliLoadingStatusView">
+        <attr name="oklib_progress_width" format="dimension" />
+        <attr name="oklib_progress_radius" format="dimension" />
+        <attr name="oklib_loading_color" format="color" />
+        <attr name="oklib_load_success_color" format="color" />
+        <attr name="oklib_load_failure_color" format="color" />
+    </declare-styleable>
+
+    <!--自定义标题tab-->
+    <declare-styleable name="oklib_tabsegment">
+        <attr name="oklib_cornerRadius" format="dimension|reference" />
+        <attr name="oklib_colors" format="color|reference" />
+        <attr name="oklib_textSelectedColors" format="color|reference" />
+        <attr name="oklib_texts" format="string|reference" />
+        <attr name="android:textSize" />
+        <attr name="oklib_direction" format="enum">
+            <enum name="horizon" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="oklib_boundWidth" format="dimension|reference" />
+        <attr name="oklib_separatorWidth" format="dimension|reference" />
+        <attr name="oklib_gaps" format="dimension|reference" />
+        <attr name="oklib_horizonGap" format="dimension|reference" />
+        <attr name="oklib_verticalGap" format="dimension|reference" />
+    </declare-styleable>
+
+    <!--水平进度条-->
+    <declare-styleable name="oklib_HorizontalProgressBar">
+        <attr name="oklib_pb_padding" format="dimension" />
+        <attr name="oklib_pb_bg_color" format="color|reference" />
+        <attr name="oklib_pb_pb_color" format="color|reference" />
+        <attr name="oklib_pb_max" format="integer" />
+        <attr name="oklib_pb_progress" format="integer" />
+    </declare-styleable>
+    <!--三方进度条-->
+    <declare-styleable name="oklib_ArcProgressView">
+        <attr name="oklib_arc_progress" format="integer" />
+        <attr name="oklib_arc_angle" format="float" />
+        <attr name="oklib_arc_stroke_width" format="dimension" />
+        <attr name="oklib_arc_max" format="integer" />
+        <attr name="oklib_arc_unfinished_color" format="color" />
+        <attr name="oklib_arc_finished_color" format="color" />
+        <attr name="oklib_arc_text_size" format="dimension" />
+        <attr name="oklib_arc_text_color" format="color" />
+        <attr name="oklib_arc_suffix_text" format="string" />
+        <attr name="oklib_arc_suffix_text_size" format="dimension" />
+        <attr name="oklib_arc_suffix_text_padding" format="dimension" />
+        <attr name="oklib_arc_bottom_text" format="string" />
+        <attr name="oklib_arc_bottom_text_size" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="oklib_DonutProgressView">
+        <attr name="oklib_donut_progress" format="float" />
+        <attr name="oklib_donut_max" format="integer" />
+        <attr name="oklib_donut_unfinished_color" format="color" />
+        <attr name="oklib_donut_finished_color" format="color" />
+        <attr name="oklib_donut_finished_stroke_width" format="dimension" />
+        <attr name="oklib_donut_unfinished_stroke_width" format="dimension" />
+        <attr name="oklib_donut_text_size" format="dimension" />
+        <attr name="oklib_donut_text_color" format="color" />
+        <attr name="oklib_donut_prefix_text" format="string" />
+        <attr name="oklib_donut_suffix_text" format="string" />
+        <attr name="oklib_donut_text" format="string" />
+        <attr name="oklib_donut_background_color" format="color" />
+        <attr name="oklib_donut_inner_bottom_text" format="string" />
+        <attr name="oklib_donut_inner_bottom_text_size" format="dimension" />
+        <attr name="oklib_donut_inner_bottom_text_color" format="color" />
+        <attr name="oklib_donut_circle_starting_degree" format="integer" />
+        <attr name="oklib_donut_show_text" format="boolean" />
+        <attr name="oklib_donut_inner_drawable" format="reference" />
+    </declare-styleable>
+    <!--<declare-styleable name="Themes">
+        <attr name="circleProgressStyle" format="reference" />
+        <attr name="donutProgressStyle" format="reference" />
+        <attr name="arcProgressStyle" format="reference" />
+    </declare-styleable>-->
+
+
+    <!--仿小米时钟-->
+    <declare-styleable name="oklib_MiClockView">
+        <attr name="oklib_mv_backgroundColor" format="color" />
+        <attr name="oklib_mv_lightColor" format="color" />
+        <attr name="oklib_mv_darkColor" format="color" />
+        <attr name="oklib_mv_textSize" format="dimension" />
+    </declare-styleable>
+
+    <!--环形进度条-->
+    <declare-styleable name="oklib_ProgressCircleView">
+        <!--完成圆环的颜色-->
+        <attr name="oklib_pcv_finishProgressColor" format="color" />
+        <!--未完成圆环的颜色-->
+        <attr name="oklib_pcv_unfinishProgressColor" format="color" />
+        <!--完成距离弧线宽度-->
+        <attr name="oklib_pcv_finishProgressLineSize" format="dimension" />
+        <!--未完成距离弧线宽度-->
+        <attr name="oklib_pcv_unfinishProgressLineSize" format="dimension" />
+        <!--圆圈圆环弧线宽度-->
+        <attr name="oklib_pcv_progressCircleLineSize" format="dimension" />
+        <!--圆圈圆环弧线半径-->
+        <attr name="oklib_pcv_progressCircleRadiusSize" format="dimension" />
+        <!--目标距离值-->
+        <attr name="oklib_pcv_goalValue" format="float" />
+        <!--完成距离值-->
+        <attr name="oklib_pcv_achieveValue" format="float" />
+        <!--中间文本字体大小-->
+        <attr name="oklib_pcv_centerTextSize" format="dimension" />
+        <!--中间文本字体颜色-->
+        <attr name="oklib_pcv_centerTextColor" format="color" />
+        <!--中间文本单位大小-->
+        <attr name="oklib_pcv_centerUnitTextSize" format="dimension" />
+        <!--中间文本单位颜色-->
+        <attr name="oklib_pcv_centerUnitTextColor" format="color" />
+        <!--动画时长-->
+        <attr name="oklib_pcv_animDuration" format="integer" />
+    </declare-styleable>
+
+    <!--SuperTextView-->
+    <declare-styleable name="oklib_SuperTextView">
+        <attr name="oklib_corner" format="dimension" />
+        <attr name="oklib_left_top_corner" format="boolean" />
+        <attr name="oklib_right_top_corner" format="boolean" />
+        <attr name="oklib_left_bottom_corner" format="boolean" />
+        <attr name="oklib_right_bottom_corner" format="boolean" />
+        <attr name="oklib_solid" format="reference|color" />
+        <attr name="oklib_stroke_width" format="dimension" />
+        <attr name="oklib_stroke_color" format="reference|color" />
+        <attr name="oklib_state_drawable" format="reference" />
+        <attr name="oklib_state_drawable_width" format="dimension" />
+        <attr name="oklib_state_drawable_height" format="dimension" />
+        <attr name="oklib_state_drawable_padding_left" format="dimension" />
+        <attr name="oklib_state_drawable_padding_top" format="dimension" />
+        <attr name="oklib_isShowState" format="boolean" />
+        <attr name="oklib_text_stroke" format="boolean" />
+        <attr name="oklib_text_stroke_color" format="reference|color" />
+        <attr name="oklib_text_stroke_width" format="dimension" />
+        <attr name="oklib_text_fill_color" format="reference|color" />
+        <attr name="oklib_autoAdjust" format="boolean" />
+        <attr name="oklib_state_drawable_mode" format="enum">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+            <enum name="center" value="4" />
+            <enum name="fill" value="5" />
+            <enum name="leftTop" value="6" />
+            <enum name="rightTop" value="7" />
+            <enum name="leftBottom" value="8" />
+            <enum name="rightBottom" value="9" />
+        </attr>
+        <attr name="oklib_shaderStartColor" format="reference|color" />
+        <attr name="oklib_shaderEndColor" format="reference|color" />
+        <attr name="oklib_shaderMode" format="enum">
+            <enum name="topToBottom" value="0" />
+            <enum name="bottomToTop" value="1" />
+            <enum name="leftTopRight" value="2" />
+            <enum name="rightToLeft" value="3" />
+        </attr>
+        <attr name="oklib_shaderEnable" format="boolean" />
+    </declare-styleable>
+
+    <!--textview淡入淡出库-->
+    <declare-styleable name="oklib_fading_text_view">
+        <attr name="oklib_fading_texts" format="string" />
+        <attr name="oklib_fading_timeout" format="integer" />
+    </declare-styleable>
+
+    <!--动态shape，select-->
+    <declare-styleable name="oklib_StateButton">
+        <!--text color-->
+        <attr name="oklib_normalTextColor" format="color|reference" />
+        <attr name="oklib_pressedTextColor" format="color|reference" />
+        <attr name="oklib_unableTextColor" format="color|reference" />
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="oklib_strokeDashWidth" format="dimension|reference" />
+        <attr name="oklib_strokeDashGap" format="dimension|reference" />
+        <attr name="oklib_normalStrokeWidth" format="dimension|reference" />
+        <attr name="oklib_pressedStrokeWidth" format="dimension|reference" />
+        <attr name="oklib_unableStrokeWidth" format="dimension|reference" />
+        <attr name="oklib_normalStrokeColor" format="color|reference" />
+        <attr name="oklib_pressedStrokeColor" format="color|reference" />
+        <attr name="oklib_unableStrokeColor" format="color|reference" />
+        <!--background color-->
+        <attr name="oklib_normalBackgroundColor" format="color|reference" />
+        <attr name="oklib_pressedBackgroundColor" format="color|reference" />
+        <attr name="oklib_unableBackgroundColor" format="color|reference" />
+        <!--background radius-->
+        <attr name="oklib_radius" format="dimension|reference" />
+        <attr name="oklib_round" format="boolean|reference" />
+        <!--animation duration-->
+        <attr name="oklib_animationDuration" format="integer|reference" />
+    </declare-styleable>
+    <declare-styleable name="oklib_StateImageView">
+        <attr name="oklib_normalBackground" format="color|reference" />
+        <attr name="oklib_pressedBackground" format="color|reference" />
+        <attr name="oklib_unableBackground" format="color|reference" />
+        <!--animation duration-->
+        <attr name="oklib_AnimationDuration" format="integer|reference" />
+    </declare-styleable>
+
+    <!--CommonToolBar-->
+    <declare-styleable name="oklib_CommonToolBar">
+        <attr name="oklib_ifShowBack" format="boolean" />
+        <attr name="oklib_ifShowRight" format="boolean" />
+        <attr name="oklib_rightBtnText" format="string" />
+        <attr name="oklib_rightBtnTextSize" format="dimension" />
+        <attr name="oklib_rightBtnIcon" format="integer" />
+        <attr name="oklib_rightBtnIconFit" format="boolean" /><!--对应CommonToolBar的ifSetRightImage-->
+        <attr name="oklib_rightBtnTextColor" format="color" />
+        <attr name="oklib_centerBtnText" format="string" />
+        <attr name="oklib_centerBtnTextSize" format="dimension" />
+        <attr name="oklib_centerBtnTextColor" format="color" />
+    </declare-styleable>
+
+    <!--软键盘-->
+    <declare-styleable name="oklib_PasswordInputBox">
+        <!--是否使用自定义键盘-->
+        <attr name="oklib_isCustomKeyboard" format="boolean" />
+        <!--密码是否可见-->
+        <attr name="oklib_pwdVisible" format="boolean" />
+        <!--是否需要光标-->
+        <attr name="oklib_needCursor" format="boolean" />
+        <!--密码位数-->
+        <attr name="oklib_pwdNum" format="integer" />
+        <!--边框颜色-->
+        <attr name="oklib_borderColor" format="color|reference" />
+        <!--边框宽度-->
+        <attr name="oklib_borderWidth" format="dimension|reference" />
+        <!--密码不可见时符号圆的颜色-->
+        <attr name="oklib_circleColor" format="color|reference" />
+        <!--密码不可见时符号圆的半径-->
+        <attr name="oklib_circleSize" format="dimension|reference" />
+        <!--密码可见时的文本颜色-->
+        <attr name="oklib_textColor" format="color|reference" />
+        <!--密码可见时的文本大小-->
+        <attr name="oklib_textSize" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="oklib_MagicKeyBoard">
+        <!--是否开启随机键盘-->
+        <attr name="oklib_randomKeyBoard" format="boolean" />
+        <!--线条的宽度-->
+        <attr name="oklib_lineWidth" format="dimension|reference" />
+        <!--线条的颜色-->
+        <attr name="oklib_lineColor" format="color|reference" />
+        <!--数字的大小-->
+        <attr name="oklib_numbersSize" format="dimension|reference" />
+        <!--数字的颜色-->
+        <attr name="oklib_numbersColor" format="color|reference" />
+        <!--数字方格normal状态的背景颜色-->
+        <attr name="oklib_numbersNormalBgColor" format="color|reference" />
+        <!--数字方格press状态的背景颜色-->
+        <attr name="oklib_numbersPressBgColor" format="color|reference" />
+        <!--删除按键nromal状态的背景颜色-->
+        <attr name="oklib_deleteNormalBgColor" format="color|reference" />
+        <!--删除按键press状态的背景颜色-->
+        <attr name="oklib_deletePressBgColor" format="color|reference" />
+    </declare-styleable>
+
+    <!--标签view-->
+    <declare-styleable name="LabelView">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="textTitleColor" format="color"/>
+        <attr name="textContentColor" format="color"/>
+
+        <attr name="textTitle" format="string"/>
+        <attr name="textContent" format="string"/>
+
+        <attr name="textTitleSize" format="dimension"/>
+        <attr name="textContentSize" format="dimension"/>
+
+        <attr name="labelTopPadding" format="dimension"/>
+        <attr name="labelCenterPadding" format="dimension"/>
+        <attr name="labelBottomPadding" format="dimension"/>
+        <attr name="labelTopDistance" format="dimension"/>
+        <attr name="textTitleStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+            <enum name="bold" value="2"/>
+        </attr>
+        <attr name="textContentStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+            <enum name="bold" value="2"/>
+        </attr>
+        <attr name="direction">
+            <enum name="leftTop" value="-45"/>
+            <enum name="rightTop" value="45"/>
+        </attr>
+    </declare-styleable>
+</resources>

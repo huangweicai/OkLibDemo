@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UtilLib</string>
+    <string name="toast_message">Toast message</string>
+</resources>

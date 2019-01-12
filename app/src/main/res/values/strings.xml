@@ -1,0 +1,66 @@
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">工具库</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="normal_toast_with_icon">NORMAL TOAST (WITH ICON)</string>
+    <string name="normal_toast_without_icon">NORMAL TOAST (WITHOUT ICON)</string>
+    <string name="warning_toast">WARNING TOAST</string>
+    <string name="info_toast">INFO TOAST</string>
+    <string name="info_toast_with_formatting">INFO TOAST WITH FORMATTING</string>
+    <string name="error_toast">ERROR TOAST</string>
+    <string name="success_toast">SUCCESS TOAST</string>
+
+    <string name="transitional_image">the image of transition</string>
+    <string name="image_index">%1$d/%2$d</string>
+
+
+    <!--pickerview-->
+    <string name="picker_text_parse">解析数据</string>
+    <string name="picker_text_show">显示省市区选择器</string>
+    <string name="picker_time">时间选择器</string>
+    <string name="picker_province">条件选择器</string>
+    <string name="picker_custom_time">时间选择器自定义布局</string>
+    <string name="picker_custom_province">条件选择器自定义布局</string>
+    <string name="picker_custom_parent">自定义父容器</string>
+    <string name="picker_non_linkage">条件选择器(不联动)</string>
+    <string name="picker_json_parse_sample">省市区Json文件解析示例</string>
+
+
+    <string name="login_signin_title">用户登录</string>
+    <string name="login_signin_username_des">手机号码</string>
+    <string name="login_signin_pwd_des">密码</string>
+    <string name="login_signin_pwd_set">设置密码</string>
+    <string name="login_signin_npwd_des">新密码</string>
+    <string name="login_signin_btn_signin">登录</string>
+    <string name="login_signin_btn_register">用户注册</string>
+    <string name="login_signin_tv_forgetpwd">忘记密码</string>
+    <string name="login_register_title">用户注册</string>
+    <string name="login_register_hint_user">请输入手机号码</string>
+    <string name="login_register_hint_pwd">请输入6-20位密码</string>
+    <string name="login_register_send_vercode">发送验证码</string>
+    <string name="login_register_write_vercode">请输入验证码</string>
+    <string name="login_findpwd_title">找回密码</string>
+    <string name="login_register_finish">完&#160;&#160;&#160;&#160;成</string>
+    <string name="login_signin_protocol_des1">登录即表示您同意</string>
+    <string name="login_signin_protocol_des2">《美的平台服务协议》</string>
+    <string name="login_register">注册</string>
+    <string name="login_register_code_des">验证码</string>
+    <string name="login_register_get_code">获取验证码</string>
+    <string name="login_register_protocol">同意隐私权条款与美的服务协议</string>
+    <string name="login_register_private_protocol">隐私权条款</string>
+    <string name="login_register_midea_protocol">美的服务协议</string>
+    <string name="personal_info">个人信息</string>
+    <string name="finish">完成</string>
+    <string name="login_signin_username">手机</string>
+    <string name="login_btn_commit">确定</string>
+    <string name="tourist">游客进入</string>
+
+    <string name="action_color_solid">Solid Color</string>
+    <string name="action_color_gradient">Gradient</string>
+    <string name="action_sound_usage">Sound Used from</string>
+
+</resources>

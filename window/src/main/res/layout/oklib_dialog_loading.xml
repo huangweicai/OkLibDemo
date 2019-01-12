@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/oklib_round_dialog"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/oklib_pb_loading"
+            android:indeterminateDuration="500"
+            android:indeterminateOnly="true" />
+
+        <TextView
+            android:id="@+id/dialog_loading_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:textColor="#A0F8F8F8"
+            android:text="请稍后"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

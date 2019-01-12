@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 地区选择dialog动画 -->
+    <style name="oklib_common_single_dialog_window_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/oklib_region_selection_anim_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/oklib_region_selection_anim_dialog_exit</item>
+    </style>
+
+    <!-- 加载等待窗口 -->
+    <style name="oklib_LoadingDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- popup window 显示消失动画-->
+    <style name="oklib_PopWindowAnimStyle">
+        <item name="android:windowShowAnimation">@anim/oklib_dialog_enter</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowHideAnimation">@anim/oklib_dialog_exit</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
+
+</resources>
